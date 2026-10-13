@@ -6,7 +6,7 @@ Spec fields:
   kicker    small label above the headline, e.g. "For baseball parents"
   headline  main line in sentence case. Wrap words in *asterisks* to make them green.
   sub       optional supporting sentence under the headline
-  items     list of short lines (3-5, under ~40 characters each)
+  items     list of short lines (3-4, under ~32 characters each; bars may have 5)
   style     "list"      numbered rows (default)
             "dodont"    items start with "DO:" or "DON'T:"
             "poll"      lettered A/B/C options
@@ -32,8 +32,8 @@ FONTS = ROOT / "assets" / "fonts"
 BG_DEEP = "#060e19"
 BG = "#0e1b2c"
 INK = "#f2f4f7"
-SOFT = "#c9d0da"
-MUTED = "#8f99a8"
+SOFT = "#e3e8ef"
+MUTED = "#b4bdc9"
 GREEN = "#52b82f"
 GREEN_BAR = "#3ddc84"
 GREEN_DARK = "#248840"
@@ -78,12 +78,12 @@ def logo(size):
 # Faint line-art baseball used when there is no photo.
 BALL = f"""<svg class="ball" viewBox="0 0 600 600" width="820" height="820" fill="none">
 <circle cx="300" cy="300" r="296" stroke="rgba(255,255,255,.06)" stroke-width="2"/>
-<path d="M170 30 C60 170 60 430 170 570" stroke="rgba(82,184,47,.22)" stroke-width="2.5" stroke-dasharray="14 12"/>
-<path d="M430 30 C540 170 540 430 430 570" stroke="rgba(82,184,47,.22)" stroke-width="2.5" stroke-dasharray="14 12"/>
+<path d="M170 30 C60 170 60 430 170 570" stroke="rgba(82,184,47,.12)" stroke-width="2.5" stroke-dasharray="14 12"/>
+<path d="M430 30 C540 170 540 430 430 570" stroke="rgba(82,184,47,.12)" stroke-width="2.5" stroke-dasharray="14 12"/>
 </svg>"""
 
-CHECK = f'<svg viewBox="0 0 24 24" width="22" height="22"><path d="M5 12.5l4.2 4.2L19 7" fill="none" stroke="{GREEN_BAR}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>'
-CROSS = f'<svg viewBox="0 0 24 24" width="18" height="18"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="{MUTED}" stroke-width="3" stroke-linecap="round"/></svg>'
+CHECK = f'<svg viewBox="0 0 24 24" width="30" height="30"><path d="M5 12.5l4.2 4.2L19 7" fill="none" stroke="{GREEN_BAR}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+CROSS = f'<svg viewBox="0 0 24 24" width="24" height="24"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="{MUTED}" stroke-width="3" stroke-linecap="round"/></svg>'
 
 
 def rich(text):
@@ -125,12 +125,12 @@ def build(spec):
     hl = len(head.replace("*", ""))
 
     if style == "statement":
-        hsize = 116 if hl <= 30 else 100 if hl <= 48 else 86
+        hsize = 120 if hl <= 30 else 104 if hl <= 48 else 90
     else:
-        hsize = 100 if hl <= 22 else 90 if hl <= 32 else 80 if hl <= 44 else 70
+        hsize = 104 if hl <= 22 else 94 if hl <= 32 else 84 if hl <= 44 else 76
         if n >= 5 or style == "bars" or photo:
-            hsize = min(hsize, 84)
-    isize = 38 if n <= 3 else 36 if n <= 4 else 33
+            hsize = min(hsize, 86)
+    isize = 46 if n <= 3 else 43 if n <= 4 else 38
 
     body = ""
     if style == "versus" and n == 2:
@@ -161,49 +161,49 @@ body{{width:1080px;height:1080px;overflow:hidden;position:relative;color:{INK};f
  linear-gradient(100deg,rgba(36,136,64,.28),rgba(14,27,44,0) 50%)}}
 .ball{{position:absolute;right:-300px;top:-260px}}
 .frame{{position:absolute;inset:0;padding:68px 80px 0 80px;display:flex;flex-direction:column}}
-.brand{{display:flex;align-items:center;gap:14px;font:400 34px/1 Anton;letter-spacing:.035em}}
+.brand{{display:flex;align-items:center;gap:16px;font:400 40px/1 Anton;letter-spacing:.035em}}
 .brand span{{color:{GREEN}}}
-.grow{{flex:1}}
-.tag{{align-self:flex-start;font:700 21px/1 Text;letter-spacing:.02em;color:{BG_DEEP};background:{GOLD};
- padding:10px 18px;border-radius:999px;margin-bottom:26px}}
-.kick{{font:600 23px/1 Text;letter-spacing:.14em;text-transform:uppercase;color:{GREEN_BAR}}}
-h1{{font:700 {hsize}px/1.02 Display;letter-spacing:-.035em;margin-top:20px;max-width:920px}}
+.grow{{flex:1;min-height:48px}}
+.tag{{align-self:flex-start;font:700 26px/1 Text;color:{BG_DEEP};background:{GOLD};
+ padding:12px 22px;border-radius:999px;margin-bottom:26px}}
+.kick{{font:700 27px/1 Text;letter-spacing:.07em;text-transform:uppercase;color:{GREEN_BAR}}}
+h1{{font:700 {hsize}px/1.08 Display;letter-spacing:-.018em;margin-top:22px;max-width:930px}}
 em{{font-style:normal;color:{GREEN}}}
-.sub{{font:400 32px/1.35 Text;color:{SOFT};margin-top:24px;max-width:860px;letter-spacing:-.005em}}
+.sub{{font:500 36px/1.35 Text;color:{SOFT};margin-top:24px;max-width:900px}}
 ul{{list-style:none;margin-top:44px;display:flex;flex-direction:column}}
-li{{display:flex;align-items:center;gap:24px;font:500 {isize}px/1.2 Text;letter-spacing:-.012em;
- padding:{17 if n>4 else 20}px 0;border-top:1px solid rgba(255,255,255,.12)}}
-li:last-child{{border-bottom:1px solid rgba(255,255,255,.12)}}
-li.num b{{flex:none;width:46px;height:46px;border-radius:50%;display:grid;place-items:center;
- font:600 22px/1 Display;color:{GREEN_BAR};background:{GREEN_PILL}}}
-li.do b,li.dont b{{flex:none;width:46px;height:46px;border-radius:50%;display:grid;place-items:center}}
+li{{display:flex;align-items:center;gap:26px;font:600 {isize}px/1.22 Text;color:{INK};
+ padding:{18 if n>4 else 22}px 0;border-top:1.5px solid rgba(255,255,255,.16)}}
+li:last-child{{border-bottom:1.5px solid rgba(255,255,255,.16)}}
+li.num b{{flex:none;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;
+ font:700 30px/1 Display;color:{BG_DEEP};background:{GREEN_BAR}}}
+li.do b,li.dont b{{flex:none;width:58px;height:58px;border-radius:50%;display:grid;place-items:center}}
 li.do b{{background:{GREEN_PILL}}} li.dont b{{background:rgba(255,255,255,.07)}}
-li.dont span{{color:{MUTED}}}
-li.poll b{{flex:none;width:50px;height:50px;border-radius:12px;display:grid;place-items:center;
- font:600 24px/1 Display;border:1.5px solid rgba(255,255,255,.3)}}
-li.bar{{gap:20px;padding:15px 0}} li.bar b{{width:96px;font:700 30px/1 Display}}
-.track{{flex:1;height:16px;border-radius:8px;background:rgba(255,255,255,.08);position:relative}}
-.fill{{height:100%;border-radius:8px}} .track i{{position:absolute;left:70%;top:-6px;bottom:-6px;width:2px;background:{MUTED}}}
-.score{{width:48px;text-align:right;color:{SOFT};font:500 28px/1 Text}}
-li.bar u{{flex:none;width:150px;text-align:center;white-space:nowrap;text-decoration:none;font:600 19px/1 Text;
- padding:10px 0;border-radius:999px}}
+li.dont span{{color:{SOFT}}}
+li.poll b{{flex:none;width:60px;height:60px;border-radius:14px;display:grid;place-items:center;
+ font:700 30px/1 Display;border:1.5px solid rgba(255,255,255,.3)}}
+li.bar{{gap:20px;padding:17px 0}} li.bar b{{width:112px;font:700 36px/1 Display}}
+.track{{flex:1;height:20px;border-radius:10px;background:rgba(255,255,255,.08);position:relative}}
+.fill{{height:100%;border-radius:10px}} .track i{{position:absolute;left:70%;top:-6px;bottom:-6px;width:2px;background:{MUTED}}}
+.score{{width:56px;text-align:right;color:{INK};font:600 32px/1 Text}}
+li.bar u{{flex:none;width:176px;text-align:center;white-space:nowrap;text-decoration:none;font:700 24px/1 Text;
+ padding:12px 0;border-radius:999px}}
 u.in{{background:{GREEN_PILL};color:{GREEN_BAR}}} u.near{{background:rgba(119,198,253,.14);color:{SKY}}}
 .vs{{margin-top:44px;display:grid;grid-template-columns:1fr 1fr;gap:20px}}
 .vc{{padding:32px 32px 36px;border-radius:22px;display:flex;flex-direction:column;gap:22px;
- font:500 36px/1.22 Text;letter-spacing:-.012em;background:rgba(255,255,255,.035);border:1.5px solid rgba(255,255,255,.12)}}
-.vc b{{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;font:700 26px/1 Display}}
-.vc.a b{{background:{GREEN_PILL};color:{GREEN_BAR}}} .vc.b b{{background:rgba(119,198,253,.14);color:{SKY}}}
+ font:600 40px/1.22 Text;background:rgba(255,255,255,.05);border:2px solid rgba(255,255,255,.16)}}
+.vc b{{width:62px;height:62px;border-radius:50%;display:grid;place-items:center;font:700 32px/1 Display}}
+.vc.a b{{background:{GREEN_BAR};color:{BG_DEEP}}} .vc.b b{{background:{SKY};color:{BG_DEEP}}}
 .bottom{{margin:46px -80px 0;padding:28px 80px 34px;border-top:1px solid rgba(255,255,255,.10);
  display:flex;align-items:center;justify-content:space-between;position:relative}}
 .bottom:before{{content:"";position:absolute;left:80px;top:-2px;width:72px;height:3px;background:{GREEN};border-radius:2px}}
-.foot-l{{font:500 22px/1 Text;color:{MUTED};letter-spacing:.01em}}
-.url{{font:600 26px/1 Text;color:{INK};background:{GREEN_DARK};border-radius:999px;padding:15px 26px}}
+.foot-l{{font:500 25px/1 Text;color:{MUTED}}}
+.url{{font:700 30px/1 Text;color:{INK};background:{GREEN_DARK};border-radius:999px;padding:15px 26px}}
 .url span{{color:#c4f5d2}}
-.hash{{font:500 22px/1 Text;color:{SKY}}}
+.hash{{font:600 26px/1 Text;color:{SKY}}}
 </style></head><body>
 {bg}
 <div class="frame">
- <div class="brand">{logo(54)}<div>BASEBALL<span>FUTURE</span></div></div>
+ <div class="brand">{logo(62)}<div>BASEBALL<span>FUTURE</span></div></div>
  <div class="grow"></div>
  {tag}{kicker}<h1>{rich(head)}</h1>{sub}{body}
  <div class="bottom"><div class="foot-l">College baseball recruiting, made clear</div>{right}</div>
