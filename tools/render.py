@@ -1,23 +1,31 @@
 """Render a BaseballFuture social graphic (1080x1080 PNG) from a JSON spec.
 
+Look: black background, neon-green accents, heavy slanted all-caps headline with a green
+brush stroke, the BaseballFuture logo lockup at the top, and a baseballfuture.com call-to-action
+box at the bottom of EVERY graphic.
+
 Usage: python3 tools/render.py spec.json graphics/2026-10-13.png
 
 Spec fields:
   kicker    small label above the headline, e.g. "For baseball parents"
-  headline  main line in sentence case. Wrap words in *asterisks* to make them green.
-  sub       optional supporting sentence under the headline
-  items     list of short lines (3-4, under ~32 characters each; bars may have 5)
+  headline  main line. Rendered in caps. Wrap words in *asterisks* to make them green.
+  sub       optional supporting sentence under the headline (sentence case)
+  items     list of short lines (3-4, under ~30 characters each; bars may have 5)
   style     "list"      numbered rows (default)
             "dodont"    items start with "DO:" or "DON'T:"
-            "poll"      lettered A/B/C options
-            "versus"    exactly two items, option A vs option B
-            "statement" big headline only (items ignored)
+            "poll"      lettered A/B/C/D options
+            "versus"    exactly two items, option A vs option B (big VS in the middle)
+            "statement" big headline + sub only (items ignored)
             "bars"      items are "Label|score" (0-100), like the report's fit bars
+  ask       optional bold question in a green-bordered box above the footer,
+            e.g. "What's your choice? Reply A or B"; *asterisks* turn words green
   photo     optional path (relative to repo root) of a photo in assets/photos/.
-            The photo fills the top of the frame under a navy fade.
-  tag       optional gold pill, e.g. "Parents, weigh in"
-  footer    optional; on link days use "baseballfuture.com"
-  hashtag   optional, shown bottom-right when there is no footer link
+            The photo fills the right side and fades into black on the left.
+  cta       optional footer line above the URL (default "See what the numbers say at")
+  hashtag   optional, shown under the footer box (default "#BaseballRecruiting")
+
+The footer box with baseballfuture.com is always drawn; a PNG cannot carry a clickable link,
+so the clickable URL goes in the caption (see PLAYBOOK.md).
 
 Exits with "OVERFLOW" if the content does not fit; shorten the copy and rerun.
 """
@@ -27,19 +35,18 @@ from playwright.sync_api import sync_playwright
 
 ROOT = Path(__file__).resolve().parent.parent
 FONTS = ROOT / "assets" / "fonts"
+LOGO = ROOT / "assets" / "brand" / "logo-lockup.png"
 
-# Brand tokens sampled from baseballfuture.com
-BG_DEEP = "#060e19"
-BG = "#0e1b2c"
-INK = "#f2f4f7"
-SOFT = "#e3e8ef"
-MUTED = "#b4bdc9"
-GREEN = "#52b82f"
-GREEN_BAR = "#3ddc84"
-GREEN_DARK = "#248840"
-GREEN_PILL = "#143a26"
-SKY = "#77c6fd"
-GOLD = "#f5c518"
+# Brand tokens (from the BaseballFuture reference posts)
+BLACK = "#050705"
+PANEL = "rgba(14,18,14,.86)"
+INK = "#ffffff"
+SOFT = "#e6ebe6"
+MUTED = "#a9b3a9"
+NEON = "#6fe32a"      # main green
+NEON_HI = "#8cff3f"   # highlights / glow
+NEON_DK = "#2f8f12"
+LINE = "rgba(255,255,255,.14)"
 
 
 def data_uri(path):
@@ -54,43 +61,57 @@ def face(family, file, weight):
 
 
 FACES = "".join([
-    face("Anton", "Anton-Regular.ttf", 400),               # wordmark only
-    face("Display", "InterDisplay-Medium.otf", 500),
-    face("Display", "InterDisplay-SemiBold.otf", 600),
-    face("Display", "InterDisplay-Bold.otf", 700),
-    face("Text", "Inter-Regular.otf", 400),
-    face("Text", "Inter-Medium.otf", 500),
-    face("Text", "Inter-SemiBold.otf", 600),
-    face("Text", "Inter-Bold.otf", 700),
+    face("Anton", "Anton-Regular.ttf", 400),
+    face("Barlow", "Barlow-Medium.ttf", 500),
+    face("Barlow", "Barlow-SemiBold.ttf", 600),
+    face("Barlow", "Barlow-Bold.ttf", 700),
+    face("Barlow", "Barlow-ExtraBold.ttf", 800),
 ])
 
-
-def logo(size):
-    return f"""<svg viewBox="0 0 100 100" width="{size}" height="{size}">
-<circle cx="50" cy="50" r="41" fill="none" stroke="{INK}" stroke-width="7"/>
-<path d="M38 22 C22 40 24 66 34 82" fill="none" stroke="#6b7480" stroke-width="3"/>
-<path d="M30 84 C42 70 56 50 72 22" fill="none" stroke="{INK}" stroke-width="3"/>
-<g stroke="{GREEN}" stroke-width="5" stroke-linecap="round">
-<path d="M33 72 l9 -2"/><path d="M40 62 l9 -2"/><path d="M47 52 l9 -2"/><path d="M54 42 l9 -2"/><path d="M61 32 l9 -2"/></g>
-<path d="M66 18 L84 10 L80 30 Z" fill="{GREEN}"/></svg>"""
-
-
-# Faint line-art baseball used when there is no photo.
-BALL = f"""<svg class="ball" viewBox="0 0 600 600" width="820" height="820" fill="none">
-<circle cx="300" cy="300" r="296" stroke="rgba(255,255,255,.06)" stroke-width="2"/>
-<path d="M170 30 C60 170 60 430 170 570" stroke="rgba(82,184,47,.12)" stroke-width="2.5" stroke-dasharray="14 12"/>
-<path d="M430 30 C540 170 540 430 430 570" stroke="rgba(82,184,47,.12)" stroke-width="2.5" stroke-dasharray="14 12"/>
+# Rough brush stroke used under the headline and behind "VS".
+BRUSH = f"""<svg class="brush" viewBox="0 0 600 40" preserveAspectRatio="none">
+<path d="M4 24 C60 14 140 12 230 13 C330 14 450 10 596 6 L590 15 C470 20 360 24 250 26
+ C170 28 90 31 14 36 Z" fill="{NEON}"/>
+<path d="M30 30 C120 24 260 22 420 20 L414 25 C280 28 150 31 40 34 Z" fill="{NEON_HI}" opacity=".55"/>
 </svg>"""
 
-CHECK = f'<svg viewBox="0 0 24 24" width="30" height="30"><path d="M5 12.5l4.2 4.2L19 7" fill="none" stroke="{GREEN_BAR}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>'
-CROSS = f'<svg viewBox="0 0 24 24" width="24" height="24"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="{MUTED}" stroke-width="3" stroke-linecap="round"/></svg>'
+# Neon slashes and glow in the corners when there is no photo.
+DECOR = f"""<svg class="decor" viewBox="0 0 1080 1080" width="1080" height="1080">
+<defs><filter id="n"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" stitchTiles="stitch"/>
+<feColorMatrix values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .05 0"/></filter></defs>
+<rect width="1080" height="1080" filter="url(#n)"/>
+<path d="M-30 560 L36 330 L48 330 L-18 560 Z" fill="{NEON}" opacity=".9"/>
+<path d="M-30 640 L44 380 L50 380 L-24 640 Z" fill="{NEON}" opacity=".4"/>
+<path d="M1120 760 L980 1120 L1010 1120 L1150 760 Z" fill="{NEON}" opacity=".9"/>
+<path d="M1120 640 L940 1120 L954 1120 L1134 640 Z" fill="{NEON}" opacity=".4"/>
+</svg>"""
+
+BARS_ICON = f"""<svg viewBox="0 0 60 60" width="64" height="64"><g fill="{NEON}">
+<rect x="4" y="38" width="12" height="18" rx="2"/><rect x="24" y="24" width="12" height="32" rx="2"/>
+<rect x="44" y="8" width="12" height="48" rx="2"/></g></svg>"""
+
+CHECK = f'<svg viewBox="0 0 24 24" width="34" height="34"><path d="M5 12.5l4.2 4.2L19 7" fill="none" stroke="{BLACK}" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+CROSS = f'<svg viewBox="0 0 24 24" width="28" height="28"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="#ff5a5a" stroke-width="3.4" stroke-linecap="round"/></svg>'
 
 
 def rich(text):
     return re.sub(r"\*(.+?)\*", r'<em>\1</em>', html.escape(text))
 
 
-def items_html(style, items):
+def slanted(text):
+    """Headline words as slanted inline-blocks, so every line leans the same way."""
+    out, green = [], False
+    for part in re.split(r"(\*)", text):
+        if part == "*":
+            green = not green
+            continue
+        for w in part.split():
+            cls = ' class="g"' if green else ""
+            out.append(f"<span{cls}>{html.escape(w)}</span>")
+    return " ".join(out)
+
+
+def items_html(style, items, isize):
     out = []
     if style == "dodont":
         for it in items:
@@ -100,20 +121,18 @@ def items_html(style, items):
                        f'<span>{rich(txt.strip())}</span></li>')
     elif style == "poll":
         for i, it in enumerate(items):
-            out.append(f'<li class="poll"><b>{chr(65+i)}</b><span>{rich(it)}</span></li>')
+            out.append(f'<li class="poll"><b><i>{chr(65+i)}</i></b><span>{rich(it)}</span></li>')
     elif style == "bars":
         for it in items:
             label, _, score = it.partition("|")
             s = max(0, min(100, int(score or 0)))
-            ok = s >= 70
             out.append(f'<li class="bar"><b>{html.escape(label)}</b><div class="track"><div class="fill" '
-                       f'style="width:{s}%;background:{GREEN_BAR if ok else SKY}"></div><i></i></div>'
-                       f'<span class="score">{s}</span><u class="{"in" if ok else "near"}">'
-                       f'{"In range" if ok else "Near range"}</u></li>')
+                       f'style="width:{s}%;opacity:{1 if s >= 70 else .55}"></div></div>'
+                       f'<span class="score">{s}</span></li>')
     else:
         for i, it in enumerate(items):
-            out.append(f'<li class="num"><b>{i+1}</b><span>{rich(it)}</span></li>')
-    return f'<ul class="{style}">{"".join(out)}</ul>'
+            out.append(f'<li class="num"><b><i>{i+1}</i></b><span>{rich(it)}</span></li>')
+    return f'<ul class="{style}" style="--is:{isize}px">{"".join(out)}</ul>'
 
 
 def build(spec):
@@ -123,95 +142,115 @@ def build(spec):
     photo = spec.get("photo")
     head = spec["headline"]
     hl = len(head.replace("*", ""))
+    wide = not photo
+    has_body = style != "statement" and items
 
+    # Headline size: Anton is condensed, so it can run large.
     if style == "statement":
-        hsize = 120 if hl <= 30 else 104 if hl <= 48 else 90
+        hsize = 150 if hl <= 24 else 128 if hl <= 40 else 110
+    elif has_body:
+        hsize = 116 if hl <= 18 else 100 if hl <= 28 else 88 if hl <= 40 else 78
     else:
-        hsize = 104 if hl <= 22 else 94 if hl <= 32 else 84 if hl <= 44 else 76
-        if n >= 5 or style == "bars" or photo:
-            hsize = min(hsize, 86)
-    isize = 46 if n <= 3 else 43 if n <= 4 else 38
+        hsize = 120
+    if not wide:
+        hsize = int(hsize * .82)
+    if style == "bars" or n >= 5:
+        hsize = min(hsize, 84)
+    if style == "versus":
+        hsize = min(hsize, 104)
+    isize = 44 if n <= 3 else 41 if n <= 4 else 36
 
     body = ""
     if style == "versus" and n == 2:
-        body = (f'<div class="vs"><div class="vc a"><b>A</b><span>{rich(items[0])}</span></div>'
-                f'<div class="vc b"><b>B</b><span>{rich(items[1])}</span></div></div>')
-    elif style != "statement" and items:
-        body = items_html(style, items)
+        body = (f'<div class="vs"><div class="vc"><b><i>A</i></b><span>{rich(items[0])}</span></div>'
+                f'<div class="vsmark"><span>VS</span></div>'
+                f'<div class="vc"><b><i>B</i></b><span>{rich(items[1])}</span></div></div>')
+    elif has_body:
+        body = items_html(style, items, isize)
 
     bg = (f'<div class="photo" style="background-image:url({data_uri(ROOT / photo)})"></div><div class="fade"></div>'
-          if photo else BALL)
-    tag = f'<div class="tag">{html.escape(spec["tag"])}</div>' if spec.get("tag") else ""
+          if photo else "")
     kicker = f'<div class="kick">{html.escape(spec["kicker"])}</div>' if spec.get("kicker") else ""
     sub = f'<p class="sub">{rich(spec["sub"])}</p>' if spec.get("sub") else ""
-    right = (f'<div class="url">{html.escape(spec["footer"])} <span>→</span></div>' if spec.get("footer")
-             else f'<div class="hash">{html.escape(spec.get("hashtag", ""))}</div>')
+    ask = f'<div class="ask">{rich(spec["ask"])}</div>' if spec.get("ask") else ""
+    cta = html.escape(spec.get("cta", "See what the numbers say at"))
+    hashtag = html.escape(spec.get("hashtag", "#BaseballRecruiting"))
+    center = style in ("versus", "statement") and wide
 
     return f"""<!doctype html><html><head><meta charset="utf-8"><style>{FACES}
 *{{margin:0;padding:0;box-sizing:border-box}}
-body{{width:1080px;height:1080px;overflow:hidden;position:relative;color:{INK};font-family:Text,sans-serif;
+body{{width:1080px;height:1080px;overflow:hidden;position:relative;color:{INK};font-family:Barlow,sans-serif;
  -webkit-font-smoothing:antialiased;
- background:radial-gradient(90% 70% at 85% 5%,#16304f 0%,rgba(14,27,44,0) 60%),
- radial-gradient(70% 60% at 0% 100%,rgba(36,136,64,.16) 0%,rgba(14,27,44,0) 60%),
- linear-gradient(180deg,{BG} 0%,{BG_DEEP} 100%)}}
-.photo{{position:absolute;left:0;right:0;top:0;height:{"620px" if style!="statement" else "1080px"};
- background-size:cover;background-position:center 30%;filter:grayscale(1) contrast(1.1) brightness(.85)}}
-.fade{{position:absolute;inset:0;background:
- linear-gradient(180deg,rgba(6,14,25,.6) 0%,rgba(14,27,44,.2) 20%,rgba(14,27,44,.5) 40%,{BG} {"57%" if style!="statement" else "80%"},{BG_DEEP} 100%),
- linear-gradient(100deg,rgba(36,136,64,.28),rgba(14,27,44,0) 50%)}}
-.ball{{position:absolute;right:-300px;top:-260px}}
-.frame{{position:absolute;inset:0;padding:68px 80px 0 80px;display:flex;flex-direction:column}}
-.brand{{display:flex;align-items:center;gap:16px;font:400 40px/1 Anton;letter-spacing:.035em}}
-.brand span{{color:{GREEN}}}
-.grow{{flex:1;min-height:48px}}
-.tag{{align-self:flex-start;font:700 26px/1 Text;color:{BG_DEEP};background:{GOLD};
- padding:12px 22px;border-radius:999px;margin-bottom:26px}}
-.kick{{font:700 27px/1 Text;letter-spacing:.07em;text-transform:uppercase;color:{GREEN_BAR}}}
-h1{{font:700 {hsize}px/1.08 Display;letter-spacing:-.018em;margin-top:22px;max-width:930px}}
-em{{font-style:normal;color:{GREEN}}}
-.sub{{font:500 36px/1.35 Text;color:{SOFT};margin-top:24px;max-width:900px}}
-ul{{list-style:none;margin-top:44px;display:flex;flex-direction:column}}
-li{{display:flex;align-items:center;gap:26px;font:600 {isize}px/1.22 Text;color:{INK};
- padding:{18 if n>4 else 22}px 0;border-top:1.5px solid rgba(255,255,255,.16)}}
-li:last-child{{border-bottom:1.5px solid rgba(255,255,255,.16)}}
-li.num b{{flex:none;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;
- font:700 30px/1 Display;color:{BG_DEEP};background:{GREEN_BAR}}}
-li.do b,li.dont b{{flex:none;width:58px;height:58px;border-radius:50%;display:grid;place-items:center}}
-li.do b{{background:{GREEN_PILL}}} li.dont b{{background:rgba(255,255,255,.07)}}
+ background:radial-gradient(60% 45% at 50% 38%,rgba(111,227,42,.10) 0%,rgba(5,7,5,0) 70%),
+ radial-gradient(50% 40% at 100% 0%,rgba(111,227,42,.10) 0%,rgba(5,7,5,0) 70%),
+ linear-gradient(180deg,#0b0f0b 0%,{BLACK} 100%)}}
+.decor{{position:absolute;inset:0}}
+.photo{{position:absolute;right:0;top:0;bottom:0;width:640px;background-size:cover;background-position:center 25%}}
+.fade{{position:absolute;inset:0;background:linear-gradient(90deg,{BLACK} 38%,rgba(5,7,5,.75) 52%,rgba(5,7,5,0) 75%),
+ linear-gradient(0deg,{BLACK} 0%,rgba(5,7,5,0) 30%)}}
+.frame{{position:absolute;inset:0;padding:44px 64px 0;display:flex;flex-direction:column}}
+.brand{{display:flex;justify-content:{"center" if center else "flex-start"}}}
+.brand img{{height:76px}}
+.mid{{flex:1;display:flex;flex-direction:column;justify-content:center;{"align-items:center;text-align:center" if center else ""};
+ max-width:{"100%" if wide else "560px"}}}
+.kick{{font:700 30px/1 Barlow;letter-spacing:.12em;text-transform:uppercase;color:{NEON};margin-bottom:14px}}
+h1{{font:400 {hsize}px/.98 Anton;text-transform:uppercase;letter-spacing:.005em;text-shadow:0 4px 0 rgba(0,0,0,.35)}}
+h1 span{{display:inline-block;transform:skewX(-9deg)}}
+h1 .g{{font-style:normal;color:{NEON};text-shadow:0 0 28px rgba(111,227,42,.35)}}
+.brush{{display:block;width:{"78%" if center else "70%"};height:26px;margin:16px 0 0;{"align-self:center" if center else ""}}}
+.sub{{font:600 36px/1.25 Barlow;color:{SOFT};margin-top:20px;max-width:900px}}
+.sub em{{font-style:normal;color:{NEON};font-weight:800}}
+ul{{list-style:none;margin-top:30px;display:flex;flex-direction:column;gap:12px;align-self:stretch;text-align:left}}
+li{{display:flex;align-items:center;gap:22px;font:700 var(--is)/1.15 Barlow;color:{INK};
+ background:{PANEL};border:1.5px solid {LINE};border-left:6px solid {NEON};padding:14px 22px;transform:skewX(-6deg)}}
+li>*{{transform:skewX(6deg)}}
+li em{{font-style:normal;color:{NEON}}}
+li b{{flex:none;width:56px;height:56px;display:grid;place-items:center;background:{NEON};color:{BLACK};
+ font:400 34px/1 Anton}}
+li b i{{font-style:normal;transform:skewX(-6deg)}}
+li.dont{{border-left-color:#ff5a5a}} li.dont b{{background:rgba(255,90,90,.12);border:2px solid #ff5a5a}}
 li.dont span{{color:{SOFT}}}
-li.poll b{{flex:none;width:60px;height:60px;border-radius:14px;display:grid;place-items:center;
- font:700 30px/1 Display;border:1.5px solid rgba(255,255,255,.3)}}
-li.bar{{gap:20px;padding:17px 0}} li.bar b{{width:112px;font:700 36px/1 Display}}
-.track{{flex:1;height:20px;border-radius:10px;background:rgba(255,255,255,.08);position:relative}}
-.fill{{height:100%;border-radius:10px}} .track i{{position:absolute;left:70%;top:-6px;bottom:-6px;width:2px;background:{MUTED}}}
-.score{{width:56px;text-align:right;color:{INK};font:600 32px/1 Text}}
-li.bar u{{flex:none;width:176px;text-align:center;white-space:nowrap;text-decoration:none;font:700 24px/1 Text;
- padding:12px 0;border-radius:999px}}
-u.in{{background:{GREEN_PILL};color:{GREEN_BAR}}} u.near{{background:rgba(119,198,253,.14);color:{SKY}}}
-.vs{{margin-top:44px;display:grid;grid-template-columns:1fr 1fr;gap:20px}}
-.vc{{padding:32px 32px 36px;border-radius:22px;display:flex;flex-direction:column;gap:22px;
- font:600 40px/1.22 Text;background:rgba(255,255,255,.05);border:2px solid rgba(255,255,255,.16)}}
-.vc b{{width:62px;height:62px;border-radius:50%;display:grid;place-items:center;font:700 32px/1 Display}}
-.vc.a b{{background:{GREEN_BAR};color:{BG_DEEP}}} .vc.b b{{background:{SKY};color:{BG_DEEP}}}
-.bottom{{margin:46px -80px 0;padding:28px 80px 34px;border-top:1px solid rgba(255,255,255,.10);
- display:flex;align-items:center;justify-content:space-between;position:relative}}
-.bottom:before{{content:"";position:absolute;left:80px;top:-2px;width:72px;height:3px;background:{GREEN};border-radius:2px}}
-.foot-l{{font:500 25px/1 Text;color:{MUTED}}}
-.url{{font:700 30px/1 Text;color:{INK};background:{GREEN_DARK};border-radius:999px;padding:15px 26px}}
-.url span{{color:#c4f5d2}}
-.hash{{font:600 26px/1 Text;color:{SKY}}}
+li.bar{{gap:20px;padding:8px 22px}} li.bar b{{width:110px;background:none;color:{INK};font:400 40px/1 Anton;justify-content:start}}
+.track{{flex:1;height:24px;background:rgba(255,255,255,.08)}}
+.fill{{height:100%;background:linear-gradient(90deg,{NEON_DK},{NEON_HI})}}
+.score{{width:62px;text-align:right;font:400 38px/1 Anton;color:{NEON}}}
+.vs{{margin-top:34px;display:grid;grid-template-columns:1fr 120px 1fr;align-items:center;align-self:stretch}}
+.vc{{background:{PANEL};border:2px solid {NEON};padding:30px 28px 32px;display:flex;flex-direction:column;
+ align-items:flex-start;gap:18px;text-align:left;font:800 40px/1.12 Barlow;text-transform:uppercase;min-height:260px;
+ transform:skewX(-6deg)}}
+.vc>*{{transform:skewX(6deg)}} .vc em{{font-style:normal;color:{NEON}}}
+.vc b{{width:70px;height:70px;display:grid;place-items:center;background:{NEON};color:{BLACK};font:400 48px/1 Anton}}
+.vc b i{{font-style:normal}}
+.vsmark{{display:grid;place-items:center}}
+.vsmark span{{font:400 84px/1 Anton;transform:skewX(-10deg);color:{INK};
+ text-shadow:0 0 0 {NEON},4px 4px 0 {NEON_DK}}}
+.ask{{margin-top:28px;align-self:stretch;text-align:center;font:400 52px/1.05 Anton;text-transform:uppercase;
+ transform:skewX(-8deg);padding:16px 20px;border:2.5px solid {NEON};background:rgba(0,0,0,.6)}}
+.ask em{{font-style:normal;color:{NEON}}}
+.foot{{margin:26px 0 0;display:flex;align-items:center;gap:26px;padding:18px 34px;border:3px solid {NEON};
+ border-radius:22px;background:rgba(0,0,0,.78);box-shadow:0 0 30px rgba(111,227,42,.25),inset 0 0 24px rgba(111,227,42,.10)}}
+.foot .div{{width:2px;align-self:stretch;background:{NEON};opacity:.8}}
+.foot .t{{display:flex;flex-direction:column;gap:6px}}
+.foot .c{{font:700 30px/1 Barlow;color:{INK}}}
+.foot .u{{font:400 66px/1 Anton;color:{NEON};transform:skewX(-9deg);transform-origin:left bottom;
+ text-shadow:0 0 24px rgba(111,227,42,.35)}}
+.hash{{display:flex;align-items:center;gap:22px;margin:16px 0 26px;font:700 22px/1 Barlow;letter-spacing:.32em;color:{MUTED}}}
+.hash:before,.hash:after{{content:"";flex:1;height:1.5px;background:linear-gradient(90deg,rgba(111,227,42,0),{NEON})}}
+.hash:after{{background:linear-gradient(90deg,{NEON},rgba(111,227,42,0))}}
 </style></head><body>
-{bg}
+{DECOR if not photo else ""}{bg}
 <div class="frame">
- <div class="brand">{logo(62)}<div>BASEBALL<span>FUTURE</span></div></div>
- <div class="grow"></div>
- {tag}{kicker}<h1>{rich(head)}</h1>{sub}{body}
- <div class="bottom"><div class="foot-l">College baseball recruiting, made clear</div>{right}</div>
+ <div class="brand"><img src="{data_uri(LOGO)}" alt=""></div>
+ <div class="mid">{kicker}<h1>{slanted(head)}</h1>{BRUSH}{sub}{body}{ask}</div>
+ <div class="foot">{BARS_ICON}<div class="div"></div><div class="t"><div class="c">{cta}</div>
+  <div class="u">BaseballFuture.com</div></div></div>
+ <div class="hash">{hashtag.upper()}</div>
 </div></body></html>"""
 
 
 def main(spec_path, out_path):
     spec = json.loads(Path(spec_path).read_text())
+    spec = spec.get("graphic", spec)
     Path(out_path).parent.mkdir(parents=True, exist_ok=True)
     with sync_playwright() as p:
         b = p.chromium.launch()
@@ -219,7 +258,16 @@ def main(spec_path, out_path):
         pg.set_content(build(spec))
         pg.evaluate("document.fonts.ready")
         pg.wait_for_timeout(250)
-        over = pg.evaluate("document.querySelector('.bottom').getBoundingClientRect().bottom > 1081")
+        over = pg.evaluate("""(() => {
+          const m = document.querySelector('.mid');
+          const kids = [...m.children];
+          const top = Math.min(...kids.map(k => k.getBoundingClientRect().top));
+          const brand = document.querySelector('.brand').getBoundingClientRect().bottom;
+          const h = document.querySelector('.hash').getBoundingClientRect().bottom;
+          const wide = [...document.querySelectorAll('h1,li span,.vc span,.ask,.sub')]
+            .some(e => e.scrollWidth > e.clientWidth + 30);
+          return top < brand + 8 || h > 1080 || wide;
+        })()""")
         pg.screenshot(path=out_path, type="png")
         b.close()
     if over:
