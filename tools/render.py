@@ -1,6 +1,6 @@
 """Render a BaseballFuture social graphic (1080x1080 PNG) from a JSON spec.
 
-Look: black background, neon-green accents, heavy slanted all-caps headline with a green
+Look: near-black navy background, kelly-green accents, heavy slanted all-caps headline with a green
 brush stroke, the BaseballFuture logo lockup at the top, and a baseballfuture.com call-to-action
 box at the bottom of EVERY graphic.
 
@@ -35,17 +35,16 @@ from playwright.sync_api import sync_playwright
 
 ROOT = Path(__file__).resolve().parent.parent
 FONTS = ROOT / "assets" / "fonts"
-LOGO = ROOT / "assets" / "brand" / "logo-lockup.png"
 
 # Brand tokens (from the BaseballFuture reference posts)
-BLACK = "#050705"
-PANEL = "rgba(14,18,14,.86)"
+BLACK = "#060b12"
+PANEL = "rgba(16,24,34,.86)"
 INK = "#ffffff"
 SOFT = "#e6ebe6"
 MUTED = "#a9b3a9"
-NEON = "#6fe32a"      # main green
-NEON_HI = "#8cff3f"   # highlights / glow
-NEON_DK = "#2f8f12"
+GREEN = "#52b82f"     # brand kelly green (sampled from the logo)
+GREEN_HI = "#6cc94a"  # lighter tint, used sparingly
+GREEN_DK = "#2e7d23"  # deep green for fills
 LINE = "rgba(255,255,255,.14)"
 
 
@@ -71,8 +70,7 @@ FACES = "".join([
 # Rough brush stroke used under the headline and behind "VS".
 BRUSH = f"""<svg class="brush" viewBox="0 0 600 40" preserveAspectRatio="none">
 <path d="M4 24 C60 14 140 12 230 13 C330 14 450 10 596 6 L590 15 C470 20 360 24 250 26
- C170 28 90 31 14 36 Z" fill="{NEON}"/>
-<path d="M30 30 C120 24 260 22 420 20 L414 25 C280 28 150 31 40 34 Z" fill="{NEON_HI}" opacity=".55"/>
+ C170 28 90 31 14 36 Z" fill="{GREEN}"/>
 </svg>"""
 
 # Neon slashes and glow in the corners when there is no photo.
@@ -80,13 +78,22 @@ DECOR = f"""<svg class="decor" viewBox="0 0 1080 1080" width="1080" height="1080
 <defs><filter id="n"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" stitchTiles="stitch"/>
 <feColorMatrix values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .05 0"/></filter></defs>
 <rect width="1080" height="1080" filter="url(#n)"/>
-<path d="M-30 560 L36 330 L48 330 L-18 560 Z" fill="{NEON}" opacity=".9"/>
-<path d="M-30 640 L44 380 L50 380 L-24 640 Z" fill="{NEON}" opacity=".4"/>
-<path d="M1120 760 L980 1120 L1010 1120 L1150 760 Z" fill="{NEON}" opacity=".9"/>
-<path d="M1120 640 L940 1120 L954 1120 L1134 640 Z" fill="{NEON}" opacity=".4"/>
+<path d="M1120 800 L990 1120 L1004 1120 L1134 800 Z" fill="{GREEN}" opacity=".75"/>
+<path d="M1120 700 L956 1120 L962 1120 L1126 700 Z" fill="{GREEN}" opacity=".3"/>
 </svg>"""
 
-BARS_ICON = f"""<svg viewBox="0 0 60 60" width="64" height="64"><g fill="{NEON}">
+def logo(size):
+    """BaseballFuture mark (ball with stitched seam and arrow), drawn as vector so it stays crisp."""
+    return f"""<svg viewBox="0 0 100 100" width="{size}" height="{size}">
+<circle cx="50" cy="50" r="41" fill="none" stroke="#f2f4f7" stroke-width="7"/>
+<path d="M38 22 C22 40 24 66 34 82" fill="none" stroke="#6b7480" stroke-width="3"/>
+<path d="M30 84 C42 70 56 50 72 22" fill="none" stroke="#f2f4f7" stroke-width="3"/>
+<g stroke="{GREEN}" stroke-width="5" stroke-linecap="round">
+<path d="M33 72 l9 -2"/><path d="M40 62 l9 -2"/><path d="M47 52 l9 -2"/><path d="M54 42 l9 -2"/><path d="M61 32 l9 -2"/></g>
+<path d="M66 18 L84 10 L80 30 Z" fill="{GREEN}"/></svg>"""
+
+
+BARS_ICON = f"""<svg viewBox="0 0 60 60" width="64" height="64"><g fill="{GREEN}">
 <rect x="4" y="38" width="12" height="18" rx="2"/><rect x="24" y="24" width="12" height="32" rx="2"/>
 <rect x="44" y="8" width="12" height="48" rx="2"/></g></svg>"""
 
@@ -181,66 +188,66 @@ def build(spec):
 *{{margin:0;padding:0;box-sizing:border-box}}
 body{{width:1080px;height:1080px;overflow:hidden;position:relative;color:{INK};font-family:Barlow,sans-serif;
  -webkit-font-smoothing:antialiased;
- background:radial-gradient(60% 45% at 50% 38%,rgba(111,227,42,.10) 0%,rgba(5,7,5,0) 70%),
- radial-gradient(50% 40% at 100% 0%,rgba(111,227,42,.10) 0%,rgba(5,7,5,0) 70%),
- linear-gradient(180deg,#0b0f0b 0%,{BLACK} 100%)}}
+ background:radial-gradient(60% 45% at 50% 38%,rgba(82,184,47,.05) 0%,rgba(6,11,18,0) 70%),
+ radial-gradient(50% 40% at 100% 0%,rgba(30,60,110,.22) 0%,rgba(6,11,18,0) 70%),
+ linear-gradient(180deg,#0c1622 0%,{BLACK} 100%)}}
 .decor{{position:absolute;inset:0}}
 .photo{{position:absolute;right:0;top:0;bottom:0;width:640px;background-size:cover;background-position:center 25%}}
-.fade{{position:absolute;inset:0;background:linear-gradient(90deg,{BLACK} 38%,rgba(5,7,5,.75) 52%,rgba(5,7,5,0) 75%),
- linear-gradient(0deg,{BLACK} 0%,rgba(5,7,5,0) 30%)}}
+.fade{{position:absolute;inset:0;background:linear-gradient(90deg,{BLACK} 38%,rgba(6,11,18,.75) 52%,rgba(6,11,18,0) 75%),
+ linear-gradient(0deg,{BLACK} 0%,rgba(6,11,18,0) 30%)}}
 .frame{{position:absolute;inset:0;padding:44px 64px 0;display:flex;flex-direction:column}}
 .brand{{display:flex;justify-content:{"center" if center else "flex-start"}}}
-.brand img{{height:76px}}
+.brand{{align-items:center;gap:18px}}
+.wm{{font:400 50px/1 Anton;letter-spacing:.02em;color:#f2f4f7}} .wm span{{color:{GREEN}}}
 .mid{{flex:1;display:flex;flex-direction:column;justify-content:center;{"align-items:center;text-align:center" if center else ""};
  max-width:{"100%" if wide else "560px"}}}
-.kick{{font:700 30px/1 Barlow;letter-spacing:.12em;text-transform:uppercase;color:{NEON};margin-bottom:14px}}
+.kick{{font:700 30px/1 Barlow;letter-spacing:.12em;text-transform:uppercase;color:{GREEN};margin-bottom:14px}}
 h1{{font:400 {hsize}px/.98 Anton;text-transform:uppercase;letter-spacing:.005em;text-shadow:0 4px 0 rgba(0,0,0,.35)}}
 h1 span{{display:inline-block;transform:skewX(-9deg)}}
-h1 .g{{font-style:normal;color:{NEON};text-shadow:0 0 28px rgba(111,227,42,.35)}}
+h1 .g{{font-style:normal;color:{GREEN}}}
 .brush{{display:block;width:{"78%" if center else "70%"};height:26px;margin:16px 0 0;{"align-self:center" if center else ""}}}
 .sub{{font:600 36px/1.25 Barlow;color:{SOFT};margin-top:20px;max-width:900px}}
-.sub em{{font-style:normal;color:{NEON};font-weight:800}}
+.sub em{{font-style:normal;color:{GREEN};font-weight:800}}
 ul{{list-style:none;margin-top:30px;display:flex;flex-direction:column;gap:12px;align-self:stretch;text-align:left}}
 li{{display:flex;align-items:center;gap:22px;font:700 var(--is)/1.15 Barlow;color:{INK};
- background:{PANEL};border:1.5px solid {LINE};border-left:6px solid {NEON};padding:14px 22px;transform:skewX(-6deg)}}
+ background:{PANEL};border:1.5px solid {LINE};border-left:4px solid {GREEN};padding:14px 22px;transform:skewX(-6deg)}}
 li>*{{transform:skewX(6deg)}}
-li em{{font-style:normal;color:{NEON}}}
-li b{{flex:none;width:56px;height:56px;display:grid;place-items:center;background:{NEON};color:{BLACK};
+li em{{font-style:normal;color:{GREEN}}}
+li b{{flex:none;width:56px;height:56px;display:grid;place-items:center;background:{GREEN};color:{BLACK};
  font:400 34px/1 Anton}}
 li b i{{font-style:normal;transform:skewX(-6deg)}}
 li.dont{{border-left-color:#ff5a5a}} li.dont b{{background:rgba(255,90,90,.12);border:2px solid #ff5a5a}}
 li.dont span{{color:{SOFT}}}
 li.bar{{gap:20px;padding:8px 22px}} li.bar b{{width:110px;background:none;color:{INK};font:400 40px/1 Anton;justify-content:start}}
 .track{{flex:1;height:24px;background:rgba(255,255,255,.08)}}
-.fill{{height:100%;background:linear-gradient(90deg,{NEON_DK},{NEON_HI})}}
-.score{{width:62px;text-align:right;font:400 38px/1 Anton;color:{NEON}}}
+.fill{{height:100%;background:{GREEN}}}
+.score{{width:62px;text-align:right;font:400 38px/1 Anton;color:{INK}}}
 .vs{{margin-top:34px;display:grid;grid-template-columns:1fr 120px 1fr;align-items:center;align-self:stretch}}
-.vc{{background:{PANEL};border:2px solid {NEON};padding:30px 28px 32px;display:flex;flex-direction:column;
+.vc{{background:{PANEL};border:2px solid {LINE};border-top:4px solid {GREEN};padding:30px 28px 32px;display:flex;flex-direction:column;
  align-items:flex-start;gap:18px;text-align:left;font:800 40px/1.12 Barlow;text-transform:uppercase;min-height:260px;
  transform:skewX(-6deg)}}
-.vc>*{{transform:skewX(6deg)}} .vc em{{font-style:normal;color:{NEON}}}
-.vc b{{width:70px;height:70px;display:grid;place-items:center;background:{NEON};color:{BLACK};font:400 48px/1 Anton}}
+.vc>*{{transform:skewX(6deg)}} .vc em{{font-style:normal;color:{GREEN}}}
+.vc b{{width:70px;height:70px;display:grid;place-items:center;background:{GREEN};color:{BLACK};font:400 48px/1 Anton}}
 .vc b i{{font-style:normal}}
 .vsmark{{display:grid;place-items:center}}
 .vsmark span{{font:400 84px/1 Anton;transform:skewX(-10deg);color:{INK};
- text-shadow:0 0 0 {NEON},4px 4px 0 {NEON_DK}}}
+ text-shadow:4px 4px 0 {GREEN_DK}}}
 .ask{{margin-top:28px;align-self:stretch;text-align:center;font:400 52px/1.05 Anton;text-transform:uppercase;
- transform:skewX(-8deg);padding:16px 20px;border:2.5px solid {NEON};background:rgba(0,0,0,.6)}}
-.ask em{{font-style:normal;color:{NEON}}}
-.foot{{margin:26px 0 0;display:flex;align-items:center;gap:26px;padding:18px 34px;border:3px solid {NEON};
- border-radius:22px;background:rgba(0,0,0,.78);box-shadow:0 0 30px rgba(111,227,42,.25),inset 0 0 24px rgba(111,227,42,.10)}}
-.foot .div{{width:2px;align-self:stretch;background:{NEON};opacity:.8}}
+ transform:skewX(-8deg);padding:16px 20px;border:2px solid {LINE};background:rgba(0,0,0,.45)}}
+.ask em{{font-style:normal;color:{GREEN}}}
+.foot{{margin:26px 0 0;display:flex;align-items:center;gap:26px;padding:18px 34px;border:2.5px solid {GREEN};
+ border-radius:22px;background:rgba(0,0,0,.55)}}
+.foot .div{{width:2px;align-self:stretch;background:{LINE}}}
 .foot .t{{display:flex;flex-direction:column;gap:6px}}
 .foot .c{{font:700 30px/1 Barlow;color:{INK}}}
-.foot .u{{font:400 66px/1 Anton;color:{NEON};transform:skewX(-9deg);transform-origin:left bottom;
- text-shadow:0 0 24px rgba(111,227,42,.35)}}
+.foot .u{{font:400 66px/1 Anton;color:{GREEN};transform:skewX(-9deg);transform-origin:left bottom}}
 .hash{{display:flex;align-items:center;gap:22px;margin:16px 0 26px;font:700 22px/1 Barlow;letter-spacing:.32em;color:{MUTED}}}
-.hash:before,.hash:after{{content:"";flex:1;height:1.5px;background:linear-gradient(90deg,rgba(111,227,42,0),{NEON})}}
-.hash:after{{background:linear-gradient(90deg,{NEON},rgba(111,227,42,0))}}
+.hash:before,.hash:after{{content:"";flex:1;height:1.5px;background:linear-gradient(90deg,rgba(255,255,255,0),rgba(255,255,255,.25))}}
+.hash:after{{background:linear-gradient(90deg,rgba(255,255,255,.25),rgba(255,255,255,0))}}
 </style></head><body>
 {DECOR if not photo else ""}{bg}
 <div class="frame">
- <div class="brand"><img src="{data_uri(LOGO)}" alt=""></div>
+ <div class="brand">{logo(80)}<div class="wm">BASEBALL<span>FUTURE</span></div></div>
  <div class="mid">{kicker}<h1>{slanted(head)}</h1>{BRUSH}{sub}{body}{ask}</div>
  <div class="foot">{BARS_ICON}<div class="div"></div><div class="t"><div class="c">{cta}</div>
   <div class="u">BaseballFuture.com</div></div></div>

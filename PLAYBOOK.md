@@ -63,8 +63,8 @@ One caption for X and Facebook (the X account is Premium, so long posts are fine
 ## Graphic
 
 1. Write a spec JSON to `posts/YYYY-MM-DD.json` under a `"graphic"` key (see the docstring at the top of
-   `tools/render.py` for fields; samples are in `examples/`). The look is bold and sporty: black background,
-   neon green, slanted all-caps headline. Keep it short:
+   `tools/render.py` for fields; samples are in `examples/`). The look is bold and sporty: near-black navy background,
+   kelly green (#52b82f, from the logo) used as an accent, not a fill; slanted all-caps headline. Keep it short:
    headline under ~40 characters (it renders in caps), 3 to 4 items under ~30 characters each (bars may have 5).
    Wrap 1 to 3 words of the headline in *asterisks* for the green highlight.
    For debates and polls, add an `"ask"` line such as `"No wrong answer. *What's your choice?*"`.
