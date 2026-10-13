@@ -16,5 +16,19 @@
     ],
     "footer": "baseballfuture.com"
   },
-  "buffer_post_ids": {}
+  "buffer_post_ids": {
+    "x": {
+      "13:00": "6acdcb7cc210c8c6dd4f0282",
+      "16:00": "6acdcb9ac210c8c6dd4f0d3f"
+    },
+    "instagram": {
+      "13:00": "6acdcb893d6121df40445015",
+      "16:00": "skipped: existing post 6acd92709bf6c0ce17bac9b9 already due 16:00"
+    },
+    "facebook": {
+      "13:00": "6acdcb8daec88be081f98e3c",
+      "16:00": "6acdcba55462be2e903b40ca"
+    }
+  },
+  "caption_4pm": "Baseball parents: if your player catches, a fast pop time is only part of what college coaches want to see. (reworded variant for X/Facebook 4 PM; Buffer rejects identical text close together)"
 }
