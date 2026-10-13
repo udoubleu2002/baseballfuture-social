@@ -3,11 +3,11 @@
 Usage: python3 tools/render.py spec.json graphics/2026-10-13.png
 
 Spec fields:
-  kicker    small letter-spaced label, e.g. "For baseball parents"
-  headline  main line, set in caps. Wrap words in *asterisks* to make them green.
+  kicker    small label above the headline, e.g. "For baseball parents"
+  headline  main line in sentence case. Wrap words in *asterisks* to make them green.
   sub       optional supporting sentence under the headline
   items     list of short lines (3-5, under ~40 characters each)
-  style     "list"      numbered rows 01, 02, 03 (default)
+  style     "list"      numbered rows (default)
             "dodont"    items start with "DO:" or "DON'T:"
             "poll"      lettered A/B/C options
             "versus"    exactly two items, option A vs option B
@@ -18,6 +18,8 @@ Spec fields:
   tag       optional gold pill, e.g. "Parents, weigh in"
   footer    optional; on link days use "baseballfuture.com"
   hashtag   optional, shown bottom-right when there is no footer link
+
+Exits with "OVERFLOW" if the content does not fit; shorten the copy and rerun.
 """
 import base64, html, json, mimetypes, re, sys
 from pathlib import Path
@@ -30,7 +32,8 @@ FONTS = ROOT / "assets" / "fonts"
 BG_DEEP = "#060e19"
 BG = "#0e1b2c"
 INK = "#f2f4f7"
-MUTED = "#a1aab7"
+SOFT = "#c9d0da"
+MUTED = "#8f99a8"
 GREEN = "#52b82f"
 GREEN_BAR = "#3ddc84"
 GREEN_DARK = "#248840"
@@ -41,20 +44,24 @@ GOLD = "#f5c518"
 
 def data_uri(path):
     mime = mimetypes.guess_type(str(path))[0] or "application/octet-stream"
+    if str(path).endswith(".otf"):
+        mime = "font/otf"
     return f"data:{mime};base64,{base64.b64encode(Path(path).read_bytes()).decode()}"
 
 
 def face(family, file, weight):
-    return (f"@font-face{{font-family:'{family}';font-weight:{weight};"
-            f"src:url({data_uri(FONTS / file)}) format('truetype')}}")
+    return f"@font-face{{font-family:'{family}';font-weight:{weight};src:url({data_uri(FONTS / file)})}}"
 
 
 FACES = "".join([
-    face("Anton", "Anton-Regular.ttf", 400),
-    face("Barlow", "Barlow-Medium.ttf", 500),
-    face("Barlow", "Barlow-SemiBold.ttf", 600),
-    face("Barlow", "Barlow-Bold.ttf", 700),
-    face("Barlow", "Barlow-ExtraBold.ttf", 800),
+    face("Anton", "Anton-Regular.ttf", 400),               # wordmark only
+    face("Display", "InterDisplay-Medium.otf", 500),
+    face("Display", "InterDisplay-SemiBold.otf", 600),
+    face("Display", "InterDisplay-Bold.otf", 700),
+    face("Text", "Inter-Regular.otf", 400),
+    face("Text", "Inter-Medium.otf", 500),
+    face("Text", "Inter-SemiBold.otf", 600),
+    face("Text", "Inter-Bold.otf", 700),
 ])
 
 
@@ -68,30 +75,28 @@ def logo(size):
 <path d="M66 18 L84 10 L80 30 Z" fill="{GREEN}"/></svg>"""
 
 
-# Large stitched-ball illustration used when there is no photo.
-BALL = f"""<svg class="ball" viewBox="0 0 600 600" width="760" height="760">
-<defs><radialGradient id="bg" cx="40%" cy="35%" r="70%">
-<stop offset="0" stop-color="#1b2f4c"/><stop offset="1" stop-color="{BG}"/></radialGradient></defs>
-<circle cx="300" cy="300" r="290" fill="url(#bg)" stroke="rgba(255,255,255,.08)" stroke-width="3"/>
-<path d="M150 40 C40 180 40 420 150 560" fill="none" stroke="rgba(255,255,255,.10)" stroke-width="4"/>
-<path d="M450 40 C560 180 560 420 450 560" fill="none" stroke="rgba(255,255,255,.10)" stroke-width="4"/>
-<g stroke="{GREEN}" stroke-opacity=".55" stroke-width="7" stroke-linecap="round">
-{''.join(f'<path d="M{x1} {y} l-26 -14"/><path d="M{x2} {y} l26 -14"/>' for (x1, x2, y) in
-          [(118, 482, 110), (98, 502, 170), (88, 512, 235), (86, 514, 300), (88, 512, 365), (98, 502, 430), (118, 482, 490)])}
-</g></svg>"""
+# Faint line-art baseball used when there is no photo.
+BALL = f"""<svg class="ball" viewBox="0 0 600 600" width="820" height="820" fill="none">
+<circle cx="300" cy="300" r="296" stroke="rgba(255,255,255,.06)" stroke-width="2"/>
+<path d="M170 30 C60 170 60 430 170 570" stroke="rgba(82,184,47,.22)" stroke-width="2.5" stroke-dasharray="14 12"/>
+<path d="M430 30 C540 170 540 430 430 570" stroke="rgba(82,184,47,.22)" stroke-width="2.5" stroke-dasharray="14 12"/>
+</svg>"""
+
+CHECK = f'<svg viewBox="0 0 24 24" width="22" height="22"><path d="M5 12.5l4.2 4.2L19 7" fill="none" stroke="{GREEN_BAR}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+CROSS = f'<svg viewBox="0 0 24 24" width="18" height="18"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="{MUTED}" stroke-width="3" stroke-linecap="round"/></svg>'
 
 
 def rich(text):
     return re.sub(r"\*(.+?)\*", r'<em>\1</em>', html.escape(text))
 
 
-def items_html(style, items, isize):
+def items_html(style, items):
     out = []
     if style == "dodont":
         for it in items:
             kind, _, txt = it.partition(":")
             good = kind.strip().upper() == "DO"
-            out.append(f'<li class="{"do" if good else "dont"}"><b>{"DO" if good else "DON&#39;T"}</b>'
+            out.append(f'<li class="{"do" if good else "dont"}"><b>{CHECK if good else CROSS}</b>'
                        f'<span>{rich(txt.strip())}</span></li>')
     elif style == "poll":
         for i, it in enumerate(items):
@@ -104,10 +109,10 @@ def items_html(style, items, isize):
             out.append(f'<li class="bar"><b>{html.escape(label)}</b><div class="track"><div class="fill" '
                        f'style="width:{s}%;background:{GREEN_BAR if ok else SKY}"></div><i></i></div>'
                        f'<span class="score">{s}</span><u class="{"in" if ok else "near"}">'
-                       f'{"IN RANGE" if ok else "NEAR RANGE"}</u></li>')
+                       f'{"In range" if ok else "Near range"}</u></li>')
     else:
         for i, it in enumerate(items):
-            out.append(f'<li class="num"><b>{i+1:02d}</b><span>{rich(it)}</span></li>')
+            out.append(f'<li class="num"><b>{i+1}</b><span>{rich(it)}</span></li>')
     return f'<ul class="{style}">{"".join(out)}</ul>'
 
 
@@ -120,92 +125,88 @@ def build(spec):
     hl = len(head.replace("*", ""))
 
     if style == "statement":
-        hsize = 168 if hl <= 24 else 140 if hl <= 40 else 116
+        hsize = 116 if hl <= 30 else 100 if hl <= 48 else 86
     else:
-        hsize = 132 if hl <= 18 else 116 if hl <= 26 else 100 if hl <= 36 else 86
-        if n >= 5 or style in ("bars",):
-            hsize = min(hsize, 96)
-        if photo:
-            hsize = min(hsize, 104)
-    isize = 44 if n <= 3 else 40 if n <= 4 else 36
+        hsize = 100 if hl <= 22 else 90 if hl <= 32 else 80 if hl <= 44 else 70
+        if n >= 5 or style == "bars" or photo:
+            hsize = min(hsize, 84)
+    isize = 38 if n <= 3 else 36 if n <= 4 else 33
 
     body = ""
     if style == "versus" and n == 2:
         body = (f'<div class="vs"><div class="vc a"><b>A</b><span>{rich(items[0])}</span></div>'
-                f'<div class="vmid">OR</div><div class="vc b"><b>B</b><span>{rich(items[1])}</span></div></div>')
+                f'<div class="vc b"><b>B</b><span>{rich(items[1])}</span></div></div>')
     elif style != "statement" and items:
-        body = items_html(style, items, isize)
+        body = items_html(style, items)
 
     bg = (f'<div class="photo" style="background-image:url({data_uri(ROOT / photo)})"></div><div class="fade"></div>'
           if photo else BALL)
-    tag = f'<div class="tag">{html.escape(spec["tag"].upper())}</div>' if spec.get("tag") else ""
-    kicker = f'<div class="kick"><span></span>{html.escape(spec["kicker"].upper())}</div>' if spec.get("kicker") else ""
+    tag = f'<div class="tag">{html.escape(spec["tag"])}</div>' if spec.get("tag") else ""
+    kicker = f'<div class="kick">{html.escape(spec["kicker"])}</div>' if spec.get("kicker") else ""
     sub = f'<p class="sub">{rich(spec["sub"])}</p>' if spec.get("sub") else ""
-    right = (f'<div class="url">{html.escape(spec["footer"])}<span>→</span></div>' if spec.get("footer")
+    right = (f'<div class="url">{html.escape(spec["footer"])} <span>→</span></div>' if spec.get("footer")
              else f'<div class="hash">{html.escape(spec.get("hashtag", ""))}</div>')
 
     return f"""<!doctype html><html><head><meta charset="utf-8"><style>{FACES}
 *{{margin:0;padding:0;box-sizing:border-box}}
-body{{width:1080px;height:1080px;overflow:hidden;position:relative;color:{INK};font-family:Barlow,sans-serif;
- background:linear-gradient(160deg,#12233a 0%,{BG} 45%,{BG_DEEP} 100%)}}
-.photo{{position:absolute;left:0;right:0;top:0;height:{"640px" if style!="statement" else "1080px"};
- background-size:cover;background-position:center 30%;filter:grayscale(1) contrast(1.15) brightness(.8)}}
+body{{width:1080px;height:1080px;overflow:hidden;position:relative;color:{INK};font-family:Text,sans-serif;
+ -webkit-font-smoothing:antialiased;
+ background:radial-gradient(90% 70% at 85% 5%,#16304f 0%,rgba(14,27,44,0) 60%),
+ radial-gradient(70% 60% at 0% 100%,rgba(36,136,64,.16) 0%,rgba(14,27,44,0) 60%),
+ linear-gradient(180deg,{BG} 0%,{BG_DEEP} 100%)}}
+.photo{{position:absolute;left:0;right:0;top:0;height:{"620px" if style!="statement" else "1080px"};
+ background-size:cover;background-position:center 30%;filter:grayscale(1) contrast(1.1) brightness(.85)}}
 .fade{{position:absolute;inset:0;background:
- linear-gradient(180deg,rgba(6,14,25,.55) 0%,rgba(14,27,44,.25) 22%,rgba(14,27,44,.55) 42%,{BG} {"58%" if style!="statement" else "78%"},{BG_DEEP} 100%),
- linear-gradient(90deg,rgba(36,136,64,.30),rgba(14,27,44,0) 55%)}}
-.ball{{position:absolute;right:-250px;top:-210px;opacity:.95}}
-.grid{{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),
- linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:54px 54px}}
-.frame{{position:absolute;inset:0;padding:64px 72px 0 72px;display:flex;flex-direction:column}}
-.brand{{display:flex;align-items:center;gap:16px;font:400 40px/1 Anton;letter-spacing:.03em}}
+ linear-gradient(180deg,rgba(6,14,25,.6) 0%,rgba(14,27,44,.2) 20%,rgba(14,27,44,.5) 40%,{BG} {"57%" if style!="statement" else "80%"},{BG_DEEP} 100%),
+ linear-gradient(100deg,rgba(36,136,64,.28),rgba(14,27,44,0) 50%)}}
+.ball{{position:absolute;right:-300px;top:-260px}}
+.frame{{position:absolute;inset:0;padding:68px 80px 0 80px;display:flex;flex-direction:column}}
+.brand{{display:flex;align-items:center;gap:14px;font:400 34px/1 Anton;letter-spacing:.035em}}
 .brand span{{color:{GREEN}}}
 .grow{{flex:1}}
-.tag{{align-self:flex-start;font:800 22px/1 Barlow;letter-spacing:.14em;color:{BG_DEEP};background:{GOLD};
- padding:11px 18px;border-radius:999px;margin-bottom:22px}}
-.kick{{display:flex;align-items:center;gap:16px;font:800 24px/1 Barlow;letter-spacing:.22em;color:{GREEN_BAR}}}
-.kick span{{width:44px;height:4px;background:{GREEN};border-radius:2px}}
-h1{{font:400 {hsize}px/.94 Anton;text-transform:uppercase;letter-spacing:.004em;margin-top:20px;max-width:940px;
- text-shadow:0 4px 30px rgba(0,0,0,.35)}}
-h1 em,.sub em,li em,.vc em{{font-style:normal;color:{GREEN}}}
-.sub{{font:500 34px/1.3 Barlow;color:#c9d0da;margin-top:22px;max-width:860px}}
-ul{{list-style:none;margin-top:38px;display:flex;flex-direction:column}}
-li{{display:flex;align-items:center;gap:26px;font:600 {isize}px/1.15 Barlow;padding:{16 if n>4 else 19}px 0;
- border-top:2px solid rgba(255,255,255,.09)}}
-li:last-child{{border-bottom:2px solid rgba(255,255,255,.09)}}
-li.num b{{font:400 {isize+8}px/1 Anton;color:{GREEN};width:{isize+30}px;flex:none}}
-li.do b,li.dont b{{flex:none;width:118px;text-align:center;font:800 20px/1 Barlow;letter-spacing:.12em;padding:12px 0;border-radius:999px}}
-li.do b{{background:{GREEN_PILL};color:{GREEN_BAR}}}
-li.dont b{{background:rgba(255,255,255,.07);color:{MUTED}}}
-li.dont span{{color:{MUTED};text-decoration:line-through;text-decoration-color:rgba(161,170,183,.5);text-decoration-thickness:3px}}
-li.poll b{{flex:none;width:{isize+26}px;height:{isize+26}px;border-radius:14px;display:grid;place-items:center;
- font:400 {isize}px/1 Anton;border:2px solid rgba(255,255,255,.25)}}
-li.poll:first-child b{{background:{GREEN_DARK};border-color:{GREEN_DARK}}}
-li.bar{{gap:22px;font-size:34px;padding:14px 0}} li.bar b{{width:104px;font:800 34px/1 Barlow}}
-.track{{flex:1;height:22px;border-radius:11px;background:rgba(255,255,255,.08);position:relative}}
-.fill{{height:100%;border-radius:11px}} .track i{{position:absolute;left:70%;top:-7px;bottom:-7px;width:3px;background:{MUTED}}}
-.score{{width:52px;text-align:right;color:{MUTED};font-weight:600}}
-li.bar u{{flex:none;width:172px;text-align:center;white-space:nowrap;text-decoration:none;font:800 20px/1 Barlow;
- letter-spacing:.08em;padding:10px 0;border-radius:999px}}
-u.in{{background:{GREEN_PILL};color:{GREEN_BAR}}} u.near{{background:rgba(119,198,253,.15);color:{SKY}}}
-.vs{{margin-top:40px;display:flex;align-items:stretch;gap:0}}
-.vc{{flex:1;padding:34px 34px 38px;border-radius:24px;display:flex;flex-direction:column;gap:20px;font:600 40px/1.18 Barlow;
- background:rgba(255,255,255,.04);border:2px solid rgba(255,255,255,.10)}}
-.vc b{{font:400 74px/1 Anton}} .vc.a b{{color:{GREEN}}} .vc.b b{{color:{SKY}}}
-.vc.a{{border-color:rgba(82,184,47,.45)}} .vc.b{{border-color:rgba(119,198,253,.4)}}
-.vmid{{align-self:center;width:84px;text-align:center;font:400 40px/1 Anton;color:{MUTED}}}
-.bottom{{margin:40px -72px 0;padding:26px 72px 30px;border-top:6px solid {GREEN};background:rgba(6,14,25,.85);
- display:flex;align-items:center;justify-content:space-between}}
-.foot-l{{font:700 24px/1 Barlow;letter-spacing:.2em;color:{MUTED}}}
-.url{{font:700 30px/1 Barlow;color:{INK};background:{GREEN_DARK};border-radius:999px;padding:16px 30px;display:flex;gap:14px}}
-.url span{{color:#b9f5c9}}
-.hash{{font:700 26px/1 Barlow;color:{SKY}}}
+.tag{{align-self:flex-start;font:700 21px/1 Text;letter-spacing:.02em;color:{BG_DEEP};background:{GOLD};
+ padding:10px 18px;border-radius:999px;margin-bottom:26px}}
+.kick{{font:600 23px/1 Text;letter-spacing:.14em;text-transform:uppercase;color:{GREEN_BAR}}}
+h1{{font:700 {hsize}px/1.02 Display;letter-spacing:-.035em;margin-top:20px;max-width:920px}}
+em{{font-style:normal;color:{GREEN}}}
+.sub{{font:400 32px/1.35 Text;color:{SOFT};margin-top:24px;max-width:860px;letter-spacing:-.005em}}
+ul{{list-style:none;margin-top:44px;display:flex;flex-direction:column}}
+li{{display:flex;align-items:center;gap:24px;font:500 {isize}px/1.2 Text;letter-spacing:-.012em;
+ padding:{17 if n>4 else 20}px 0;border-top:1px solid rgba(255,255,255,.12)}}
+li:last-child{{border-bottom:1px solid rgba(255,255,255,.12)}}
+li.num b{{flex:none;width:46px;height:46px;border-radius:50%;display:grid;place-items:center;
+ font:600 22px/1 Display;color:{GREEN_BAR};background:{GREEN_PILL}}}
+li.do b,li.dont b{{flex:none;width:46px;height:46px;border-radius:50%;display:grid;place-items:center}}
+li.do b{{background:{GREEN_PILL}}} li.dont b{{background:rgba(255,255,255,.07)}}
+li.dont span{{color:{MUTED}}}
+li.poll b{{flex:none;width:50px;height:50px;border-radius:12px;display:grid;place-items:center;
+ font:600 24px/1 Display;border:1.5px solid rgba(255,255,255,.3)}}
+li.bar{{gap:20px;padding:15px 0}} li.bar b{{width:96px;font:700 30px/1 Display}}
+.track{{flex:1;height:16px;border-radius:8px;background:rgba(255,255,255,.08);position:relative}}
+.fill{{height:100%;border-radius:8px}} .track i{{position:absolute;left:70%;top:-6px;bottom:-6px;width:2px;background:{MUTED}}}
+.score{{width:48px;text-align:right;color:{SOFT};font:500 28px/1 Text}}
+li.bar u{{flex:none;width:150px;text-align:center;white-space:nowrap;text-decoration:none;font:600 19px/1 Text;
+ padding:10px 0;border-radius:999px}}
+u.in{{background:{GREEN_PILL};color:{GREEN_BAR}}} u.near{{background:rgba(119,198,253,.14);color:{SKY}}}
+.vs{{margin-top:44px;display:grid;grid-template-columns:1fr 1fr;gap:20px}}
+.vc{{padding:32px 32px 36px;border-radius:22px;display:flex;flex-direction:column;gap:22px;
+ font:500 36px/1.22 Text;letter-spacing:-.012em;background:rgba(255,255,255,.035);border:1.5px solid rgba(255,255,255,.12)}}
+.vc b{{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;font:700 26px/1 Display}}
+.vc.a b{{background:{GREEN_PILL};color:{GREEN_BAR}}} .vc.b b{{background:rgba(119,198,253,.14);color:{SKY}}}
+.bottom{{margin:46px -80px 0;padding:28px 80px 34px;border-top:1px solid rgba(255,255,255,.10);
+ display:flex;align-items:center;justify-content:space-between;position:relative}}
+.bottom:before{{content:"";position:absolute;left:80px;top:-2px;width:72px;height:3px;background:{GREEN};border-radius:2px}}
+.foot-l{{font:500 22px/1 Text;color:{MUTED};letter-spacing:.01em}}
+.url{{font:600 26px/1 Text;color:{INK};background:{GREEN_DARK};border-radius:999px;padding:15px 26px}}
+.url span{{color:#c4f5d2}}
+.hash{{font:500 22px/1 Text;color:{SKY}}}
 </style></head><body>
-{bg}<div class="grid"></div>
+{bg}
 <div class="frame">
- <div class="brand">{logo(64)}<div>BASEBALL<span>FUTURE</span></div></div>
+ <div class="brand">{logo(54)}<div>BASEBALL<span>FUTURE</span></div></div>
  <div class="grow"></div>
  {tag}{kicker}<h1>{rich(head)}</h1>{sub}{body}
- <div class="bottom"><div class="foot-l">COLLEGE BASEBALL RECRUITING</div>{right}</div>
+ <div class="bottom"><div class="foot-l">College baseball recruiting, made clear</div>{right}</div>
 </div></body></html>"""
 
 
@@ -218,7 +219,6 @@ def main(spec_path, out_path):
         pg.set_content(build(spec))
         pg.evaluate("document.fonts.ready")
         pg.wait_for_timeout(250)
-        # Fail loudly if content overflows the frame so a run can shorten copy and retry.
         over = pg.evaluate("document.querySelector('.bottom').getBoundingClientRect().bottom > 1081")
         pg.screenshot(path=out_path, type="png")
         b.close()
