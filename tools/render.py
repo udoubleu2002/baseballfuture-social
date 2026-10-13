@@ -46,8 +46,9 @@ ROOT = Path(__file__).resolve().parent.parent
 FONTS = ROOT / "assets" / "fonts"
 
 # Brand tokens (from the BaseballFuture reference posts)
-BLACK = "#060b12"
-PANEL = "rgba(16,24,34,.86)"
+BLACK = "#0a1524"   # deep end of the site navy
+NAVY = "#0e1b2c"    # site background blue (baseballfuture.com)
+PANEL = "rgba(22,40,64,.72)"
 INK = "#ffffff"
 SOFT = "#e6ebe6"
 MUTED = "#a9b3a9"
@@ -249,9 +250,8 @@ def build(spec):
 *{{margin:0;padding:0;box-sizing:border-box}}
 body{{width:1080px;height:1080px;overflow:hidden;position:relative;color:{INK};font-family:Barlow,sans-serif;
  -webkit-font-smoothing:antialiased;
- background:radial-gradient(60% 45% at 50% 38%,rgba(82,184,47,.05) 0%,rgba(6,11,18,0) 70%),
- radial-gradient(50% 40% at 100% 0%,rgba(30,60,110,.22) 0%,rgba(6,11,18,0) 70%),
- linear-gradient(180deg,#0c1622 0%,{BLACK} 100%)}}
+ background:radial-gradient(90% 70% at 85% 5%,#16304f 0%,rgba(14,27,44,0) 60%),
+ linear-gradient(180deg,{NAVY} 0%,{BLACK} 100%)}}
 .decor{{position:absolute;inset:0}}
 .vis{{position:absolute;right:0;top:132px;width:460px;height:740px;display:grid;place-items:center;z-index:1}}
 .vis.v-report{{right:-150px;width:720px}}
@@ -286,8 +286,8 @@ body{{width:1080px;height:1080px;overflow:hidden;position:relative;color:{INK};f
 .watch{{position:relative}} .wv{{position:absolute;left:0;right:0;top:150px;display:flex;flex-direction:column;align-items:center;gap:6px}}
 .watch .gn{{font-size:120px}} .watch .gl{{font-size:22px}}
 .photo{{position:absolute;right:0;top:0;bottom:0;width:640px;background-size:cover;background-position:center 25%}}
-.fade{{position:absolute;inset:0;background:linear-gradient(90deg,{BLACK} 38%,rgba(6,11,18,.75) 52%,rgba(6,11,18,0) 75%),
- linear-gradient(0deg,{BLACK} 0%,rgba(6,11,18,0) 30%)}}
+.fade{{position:absolute;inset:0;background:linear-gradient(90deg,{BLACK} 38%,rgba(10,21,36,.75) 52%,rgba(10,21,36,0) 75%),
+ linear-gradient(0deg,{BLACK} 0%,rgba(10,21,36,0) 30%)}}
 .frame{{position:absolute;inset:0;padding:44px 64px 0;display:flex;flex-direction:column}}
 .brand{{display:flex;justify-content:{"center" if center else "flex-start"}}}
 .brand{{align-items:center;gap:18px}}
@@ -328,23 +328,24 @@ li.bar{{gap:20px;padding:8px 22px}} li.bar b{{width:110px;background:none;color:
 .ask{{margin-top:24px;align-self:stretch;text-align:center;font:400 40px/1.05 Anton;text-transform:uppercase;
  transform:skewX(-8deg);padding:16px 20px;border:2px solid {LINE};background:rgba(0,0,0,.45)}}
 .ask em{{font-style:normal;color:{GREEN}}}
-.foot{{margin:26px 0 0;display:flex;align-items:center;gap:26px;padding:18px 34px;border:2.5px solid {GREEN};
- border-radius:22px;background:rgba(0,0,0,.55)}}
+.foot{{margin:22px 0 0;align-self:flex-start;display:flex;align-items:center;gap:18px;padding:12px 26px;
+ border:2px solid {GREEN};border-radius:16px;background:rgba(6,14,25,.6)}}
+.foot svg{{width:40px;height:40px}}
 .foot .div{{width:2px;align-self:stretch;background:{LINE}}}
-.foot .t{{display:flex;flex-direction:column;gap:6px}}
-.foot .c{{font:700 30px/1 Barlow;color:{INK}}}
-.foot .u{{font:400 66px/1 Anton;color:{GREEN};transform:skewX(-9deg);transform-origin:left bottom}}
-.hash{{display:flex;align-items:center;gap:22px;margin:16px 0 26px;font:700 22px/1 Barlow;letter-spacing:.32em;color:{MUTED}}}
-.hash:before,.hash:after{{content:"";flex:1;height:1.5px;background:linear-gradient(90deg,rgba(255,255,255,0),rgba(255,255,255,.25))}}
-.hash:after{{background:linear-gradient(90deg,rgba(255,255,255,.25),rgba(255,255,255,0))}}
+.foot .t{{display:flex;flex-direction:column;gap:4px}}
+.foot .c{{font:700 21px/1 Barlow;color:{INK}}}
+.foot .u{{font:400 42px/1 Anton;color:{GREEN};transform:skewX(-9deg);transform-origin:left bottom}}
+.bottom{{display:flex;align-items:center;justify-content:space-between;gap:24px;margin:22px 0 40px}}
+.bottom .foot{{margin:0}}
+.hash{{font:700 20px/1 Barlow;letter-spacing:.24em;color:{MUTED};margin-right:70px}}
 </style></head><body>
 {DECOR if vkind != "photo" else ""}{bg}
 <div class="frame">
  <div class="brand">{logo(80)}<div class="wm">BASEBALL<span>FUTURE</span></div></div>
  <div class="mid">{kicker}<h1>{slanted(head)}</h1>{BRUSH}{sub}{body}{ask}</div>
- <div class="foot">{BARS_ICON}<div class="div"></div><div class="t"><div class="c">{cta}</div>
+ <div class="bottom"><div class="foot">{BARS_ICON}<div class="div"></div><div class="t"><div class="c">{cta}</div>
   <div class="u">BaseballFuture.com</div></div></div>
- <div class="hash">{hashtag.upper()}</div>
+ <div class="hash">{hashtag.upper()}</div></div>
 </div></body></html>"""
 
 
