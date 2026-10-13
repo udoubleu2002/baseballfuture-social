@@ -19,8 +19,17 @@ Spec fields:
             "bars"      items are "Label|score" (0-100), like the report's fit bars
   ask       optional bold question in a green-bordered box above the footer,
             e.g. "What's your choice? Reply A or B"; *asterisks* turn words green
-  photo     optional path (relative to repo root) of a photo in assets/photos/.
-            The photo fills the right side and fades into black on the left.
+  visual    the picture on the right side (every post has one):
+            "report"    the BaseballFuture scouting-report mockup (assets/visuals/report-mockup.png)
+            "fitcard"   close-up of the report's "Athletic fit by level" bars (crisp vector);
+                        uses "fit": ["D1|68", "D2|82", ...] or the bars items; "best": "D2" highlights a row
+            "radar"     radar-gun readout; "stat": {"label": "Exit velocity", "value": "92.6", "unit": "MPH"}
+            "stopwatch" stopwatch readout; "stat": {"label": "60-yard dash", "value": "6.85", "unit": "SEC"}
+            "photo"     uses "photo" below
+            Default: "fitcard" for bars, otherwise "photo" if a photo is given, otherwise "report".
+            Numbers on visuals are labeled as a sample player.
+  photo     path (relative to repo root) of a player photo in assets/photos/ (for visual "photo").
+            It fills the right side and fades into the background on the left.
   cta       optional footer line above the URL (default "See what the numbers say at")
   hashtag   optional, shown under the footer box (default "#BaseballRecruiting")
 
@@ -46,6 +55,7 @@ GREEN = "#52b82f"     # brand kelly green (sampled from the logo)
 GREEN_HI = "#6cc94a"  # lighter tint, used sparingly
 GREEN_DK = "#2e7d23"  # deep green for fills
 LINE = "rgba(255,255,255,.14)"
+REPORT = ROOT / "assets" / "visuals" / "report-mockup.png"
 
 
 def data_uri(path):
@@ -118,6 +128,57 @@ def slanted(text):
     return " ".join(out)
 
 
+def fitcard(spec):
+    rows = spec.get("fit") or (spec.get("items") if spec.get("style") == "bars" else None) \
+        or ["D1|68", "D2|82", "NAIA|91", "JUCO|90", "D3|91"]
+    best = spec.get("best", "")
+    out = []
+    for r in rows:
+        label, _, score = r.partition("|")
+        v = max(0, min(100, int(score or 0)))
+        ok = v >= 70
+        hl = " hl" if label.strip().upper() == best.upper() else ""
+        out.append(f'<div class="fr{hl}"><b>{html.escape(label)}</b><div class="ft"><div class="ff {"ok" if ok else "near"}" '
+                   f'style="width:{v}%"></div><i></i></div><span class="fs">{v}</span>'
+                   f'<u class="{"ok" if ok else "near"}">{"IN RANGE" if ok else "NEAR RANGE"}</u></div>')
+    return (f'<div class="fitwrap"><div class="pill">Sample player · fit score</div><div class="fitcard">'
+            f'<div class="fh">Athletic fit by level &nbsp;·&nbsp; out of 100</div>{"".join(out)}</div></div>')
+
+
+def gauge(kind, spec):
+    st = spec.get("stat") or ({"label": "60-yard dash", "value": "6.85", "unit": "SEC"} if kind == "stopwatch"
+                              else {"label": "Exit velocity", "value": "92.6", "unit": "MPH"})
+    lab, val, unit = (html.escape(str(st.get(k, ""))) for k in ("label", "value", "unit"))
+    if kind == "stopwatch":
+        ticks = "".join(f'<line x1="200" y1="62" x2="200" y2="{80 if i % 5 == 0 else 72}" stroke="#9aa4b1" '
+                        f'stroke-width="{4 if i % 5 == 0 else 2}" transform="rotate({i*6} 200 230)"/>' for i in range(60))
+        return f"""<div class="gwrap"><div class="pill">Sample reading</div>
+<div class="watch"><svg viewBox="0 0 400 460" width="430" height="494">
+<rect x="176" y="0" width="48" height="34" rx="6" fill="#c9d1db"/><rect x="186" y="30" width="28" height="22" fill="#9aa4b1"/>
+<rect x="292" y="40" width="34" height="22" rx="5" fill="#9aa4b1" transform="rotate(40 309 51)"/>
+<circle cx="200" cy="230" r="186" fill="#1a2533" stroke="#c9d1db" stroke-width="14"/>
+<circle cx="200" cy="230" r="164" fill="#0b121b"/>{ticks}
+<circle cx="200" cy="230" r="174" fill="none" stroke="{GREEN}" stroke-width="8" stroke-linecap="round"
+ stroke-dasharray="{2*3.1416*174*.68:.0f} 2000" transform="rotate(-90 200 230)"/></svg>
+<div class="wv"><div class="gl">{lab}</div><div class="gn">{val}</div><div class="gu">{unit}</div></div></div></div>"""
+    return f"""<div class="gwrap"><div class="pill">Sample reading</div>
+<div class="radar"><div class="rscreen"><div class="gl">{lab}</div><div class="gn">{val}</div><div class="gu">{unit}</div></div>
+<div class="rlens"></div></div><div class="rhandle"></div></div>"""
+
+
+def visual_html(spec, kind):
+    if kind == "photo" and spec.get("photo"):
+        return (f'<div class="photo" style="background-image:url({data_uri(ROOT / spec["photo"])})"></div>'
+                f'<div class="fade"></div>')
+    if kind == "fitcard":
+        inner = fitcard(spec)
+    elif kind in ("radar", "stopwatch"):
+        inner = gauge(kind, spec)
+    else:
+        inner = f'<img class="report" src="{data_uri(REPORT)}" alt="">'
+    return f'<div class="vis v-{kind}">{inner}</div>'
+
+
 def items_html(style, items, isize):
     out = []
     if style == "dodont":
@@ -149,8 +210,9 @@ def build(spec):
     photo = spec.get("photo")
     head = spec["headline"]
     hl = len(head.replace("*", ""))
-    wide = not photo
-    has_body = style != "statement" and items
+    vkind = spec.get("visual") or ("fitcard" if style == "bars" else "photo" if photo else "report")
+    wide = False  # every post carries a visual on the right; text sits in the left column
+    has_body = style not in ("statement", "bars") and items
 
     # Headline size: Anton is condensed, so it can run large.
     if style == "statement":
@@ -159,13 +221,13 @@ def build(spec):
         hsize = 116 if hl <= 18 else 100 if hl <= 28 else 88 if hl <= 40 else 78
     else:
         hsize = 120
-    if not wide:
-        hsize = int(hsize * .82)
-    if style == "bars" or n >= 5:
-        hsize = min(hsize, 84)
+    if style in ("statement", "bars"):
+        hsize = 92 if hl <= 24 else 84 if hl <= 34 else 74
+    else:
+        hsize = 84 if hl <= 18 else 76 if hl <= 28 else 68 if hl <= 40 else 62
     if style == "versus":
-        hsize = min(hsize, 104)
-    isize = 44 if n <= 3 else 41 if n <= 4 else 36
+        hsize = min(hsize, 76)
+    isize = 36 if n <= 3 else 34 if n <= 4 else 31
 
     body = ""
     if style == "versus" and n == 2:
@@ -175,8 +237,7 @@ def build(spec):
     elif has_body:
         body = items_html(style, items, isize)
 
-    bg = (f'<div class="photo" style="background-image:url({data_uri(ROOT / photo)})"></div><div class="fade"></div>'
-          if photo else "")
+    bg = visual_html(spec, vkind)
     kicker = f'<div class="kick">{html.escape(spec["kicker"])}</div>' if spec.get("kicker") else ""
     sub = f'<p class="sub">{rich(spec["sub"])}</p>' if spec.get("sub") else ""
     ask = f'<div class="ask">{rich(spec["ask"])}</div>' if spec.get("ask") else ""
@@ -192,6 +253,38 @@ body{{width:1080px;height:1080px;overflow:hidden;position:relative;color:{INK};f
  radial-gradient(50% 40% at 100% 0%,rgba(30,60,110,.22) 0%,rgba(6,11,18,0) 70%),
  linear-gradient(180deg,#0c1622 0%,{BLACK} 100%)}}
 .decor{{position:absolute;inset:0}}
+.vis{{position:absolute;right:0;top:132px;width:460px;height:740px;display:grid;place-items:center;z-index:1}}
+.vis.v-report{{right:-150px;width:720px}}
+.report{{width:720px;transform:rotate(-2deg);
+ -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 16%,#000 100%)}}
+.pill{{position:relative;z-index:2;align-self:flex-start;margin:0 0 -18px 22px;background:{GREEN};color:#fff;
+ font:800 19px/1 Barlow;letter-spacing:.1em;text-transform:uppercase;padding:11px 18px;border-radius:999px;border:3px solid #fff}}
+.fitwrap,.gwrap{{display:flex;flex-direction:column;transform:rotate(-3deg)}}
+.gwrap{{transform:rotate(-3deg) scale(.86)}}
+.fitcard{{width:436px;background:#fff;border:6px solid {GREEN};border-radius:26px;padding:38px 18px 18px;color:#13243b;
+ box-shadow:0 30px 60px rgba(0,0,0,.55)}}
+.fh{{font:700 15px/1 Barlow;letter-spacing:.1em;text-transform:uppercase;color:#4c5b6e;margin:0 0 14px 8px}}
+.fr{{display:flex;align-items:center;gap:10px;padding:10px 8px;border-radius:8px}}
+.fr.hl{{background:#e6f3e8}}
+.fr b{{width:60px;font:800 25px/1 Barlow;color:#13243b}}
+.ft{{flex:1;height:18px;border-radius:9px;background:#e1e6ec;position:relative}}
+.ff{{height:100%;border-radius:9px}} .ff.ok{{background:#2b8c47}} .ff.near{{background:#2f7fd6}}
+.ft i{{position:absolute;left:70%;top:-5px;bottom:-5px;width:2.5px;background:#13243b}}
+.fs{{width:34px;text-align:right;font:600 22px/1 Barlow;color:#5b6878}}
+.fr u{{width:104px;text-align:right;text-decoration:none;font:800 16px/1 Barlow;letter-spacing:.04em}}
+.fr u.ok{{color:#2b8c47}} .fr u.near{{color:#2f7fd6}}
+.gwrap{{align-items:center}} .gwrap .pill{{margin:0 0 -16px 0;align-self:center}}
+.radar{{width:460px;height:330px;border-radius:40px;background:linear-gradient(160deg,#3a4250,#161b22 70%);padding:26px;
+ display:flex;gap:18px;box-shadow:0 30px 60px rgba(0,0,0,.6),inset 0 2px 0 rgba(255,255,255,.15)}}
+.rscreen{{flex:1;border-radius:22px;background:#04090b;border:3px solid #232a33;display:flex;flex-direction:column;
+ align-items:center;justify-content:center;gap:4px}}
+.rlens{{width:70px;border-radius:18px;background:radial-gradient(circle at 40% 35%,#56606e,#0d1117 70%)}}
+.rhandle{{width:110px;height:170px;margin-top:-6px;border-radius:0 0 30px 30px;background:linear-gradient(90deg,#14181e,#2b323c,#14181e)}}
+.gl{{font:700 26px/1 Barlow;letter-spacing:.08em;text-transform:uppercase;color:#d7dde4}}
+.gn{{font:400 130px/1 Anton;color:{GREEN};letter-spacing:.02em}}
+.gu{{font:700 24px/1 Barlow;letter-spacing:.12em;color:#d7dde4}}
+.watch{{position:relative}} .wv{{position:absolute;left:0;right:0;top:150px;display:flex;flex-direction:column;align-items:center;gap:6px}}
+.watch .gn{{font-size:120px}} .watch .gl{{font-size:22px}}
 .photo{{position:absolute;right:0;top:0;bottom:0;width:640px;background-size:cover;background-position:center 25%}}
 .fade{{position:absolute;inset:0;background:linear-gradient(90deg,{BLACK} 38%,rgba(6,11,18,.75) 52%,rgba(6,11,18,0) 75%),
  linear-gradient(0deg,{BLACK} 0%,rgba(6,11,18,0) 30%)}}
@@ -199,21 +292,21 @@ body{{width:1080px;height:1080px;overflow:hidden;position:relative;color:{INK};f
 .brand{{display:flex;justify-content:{"center" if center else "flex-start"}}}
 .brand{{align-items:center;gap:18px}}
 .wm{{font:400 50px/1 Anton;letter-spacing:.02em;color:#f2f4f7}} .wm span{{color:{GREEN}}}
-.mid{{flex:1;display:flex;flex-direction:column;justify-content:center;{"align-items:center;text-align:center" if center else ""};
- max-width:{"100%" if wide else "560px"}}}
-.kick{{font:700 30px/1 Barlow;letter-spacing:.12em;text-transform:uppercase;color:{GREEN};margin-bottom:14px}}
+.mid{{flex:1;padding-right:0;display:flex;flex-direction:column;justify-content:center;{"align-items:center;text-align:center" if center else ""};
+ max-width:500px;position:relative;z-index:2}}
+.kick{{font:700 26px/1.15 Barlow;letter-spacing:.1em;text-transform:uppercase;color:{GREEN};margin-bottom:14px}}
 h1{{font:400 {hsize}px/.98 Anton;text-transform:uppercase;letter-spacing:.005em;text-shadow:0 4px 0 rgba(0,0,0,.35)}}
 h1 span{{display:inline-block;transform:skewX(-9deg)}}
 h1 .g{{font-style:normal;color:{GREEN}}}
-.brush{{display:block;width:{"78%" if center else "70%"};height:26px;margin:16px 0 0;{"align-self:center" if center else ""}}}
-.sub{{font:600 36px/1.25 Barlow;color:{SOFT};margin-top:20px;max-width:900px}}
+.brush{{display:block;width:{"78%" if center else "86%"};height:26px;margin:16px 0 0;{"align-self:center" if center else ""}}}
+.sub{{font:600 33px/1.25 Barlow;color:{SOFT};margin-top:20px}}
 .sub em{{font-style:normal;color:{GREEN};font-weight:800}}
 ul{{list-style:none;margin-top:30px;display:flex;flex-direction:column;gap:12px;align-self:stretch;text-align:left}}
-li{{display:flex;align-items:center;gap:22px;font:700 var(--is)/1.15 Barlow;color:{INK};
- background:{PANEL};border:1.5px solid {LINE};border-left:4px solid {GREEN};padding:14px 22px;transform:skewX(-6deg)}}
+li{{display:flex;align-items:center;gap:18px;font:700 var(--is)/1.15 Barlow;color:{INK};
+ background:{PANEL};border:1.5px solid {LINE};border-left:4px solid {GREEN};padding:12px 18px;transform:skewX(-6deg)}}
 li>*{{transform:skewX(6deg)}}
 li em{{font-style:normal;color:{GREEN}}}
-li b{{flex:none;width:56px;height:56px;display:grid;place-items:center;background:{GREEN};color:{BLACK};
+li b{{flex:none;width:50px;height:50px;display:grid;place-items:center;background:{GREEN};color:{BLACK};
  font:400 34px/1 Anton}}
 li b i{{font-style:normal;transform:skewX(-6deg)}}
 li.dont{{border-left-color:#ff5a5a}} li.dont b{{background:rgba(255,90,90,.12);border:2px solid #ff5a5a}}
@@ -222,17 +315,17 @@ li.bar{{gap:20px;padding:8px 22px}} li.bar b{{width:110px;background:none;color:
 .track{{flex:1;height:24px;background:rgba(255,255,255,.08)}}
 .fill{{height:100%;background:{GREEN}}}
 .score{{width:62px;text-align:right;font:400 38px/1 Anton;color:{INK}}}
-.vs{{margin-top:34px;display:grid;grid-template-columns:1fr 120px 1fr;align-items:center;align-self:stretch}}
+.vs{{margin-top:26px;display:flex;flex-direction:column;align-self:stretch}}
 .vc{{background:{PANEL};border:2px solid {LINE};border-top:4px solid {GREEN};padding:30px 28px 32px;display:flex;flex-direction:column;
- align-items:flex-start;gap:18px;text-align:left;font:800 40px/1.12 Barlow;text-transform:uppercase;min-height:260px;
+ flex-direction:row;align-items:center;gap:20px;padding:18px 22px;text-align:left;font:800 32px/1.12 Barlow;text-transform:uppercase;
  transform:skewX(-6deg)}}
 .vc>*{{transform:skewX(6deg)}} .vc em{{font-style:normal;color:{GREEN}}}
-.vc b{{width:70px;height:70px;display:grid;place-items:center;background:{GREEN};color:{BLACK};font:400 48px/1 Anton}}
+.vc b{{flex:none;width:58px;height:58px;display:grid;place-items:center;background:{GREEN};color:{BLACK};font:400 48px/1 Anton}}
 .vc b i{{font-style:normal}}
-.vsmark{{display:grid;place-items:center}}
-.vsmark span{{font:400 84px/1 Anton;transform:skewX(-10deg);color:{INK};
+.vsmark{{display:grid;place-items:center;margin:4px 0}}
+.vsmark span{{font:400 60px/1 Anton;transform:skewX(-10deg);color:{INK};
  text-shadow:4px 4px 0 {GREEN_DK}}}
-.ask{{margin-top:28px;align-self:stretch;text-align:center;font:400 52px/1.05 Anton;text-transform:uppercase;
+.ask{{margin-top:24px;align-self:stretch;text-align:center;font:400 40px/1.05 Anton;text-transform:uppercase;
  transform:skewX(-8deg);padding:16px 20px;border:2px solid {LINE};background:rgba(0,0,0,.45)}}
 .ask em{{font-style:normal;color:{GREEN}}}
 .foot{{margin:26px 0 0;display:flex;align-items:center;gap:26px;padding:18px 34px;border:2.5px solid {GREEN};
@@ -245,7 +338,7 @@ li.bar{{gap:20px;padding:8px 22px}} li.bar b{{width:110px;background:none;color:
 .hash:before,.hash:after{{content:"";flex:1;height:1.5px;background:linear-gradient(90deg,rgba(255,255,255,0),rgba(255,255,255,.25))}}
 .hash:after{{background:linear-gradient(90deg,rgba(255,255,255,.25),rgba(255,255,255,0))}}
 </style></head><body>
-{DECOR if not photo else ""}{bg}
+{DECOR if vkind != "photo" else ""}{bg}
 <div class="frame">
  <div class="brand">{logo(80)}<div class="wm">BASEBALL<span>FUTURE</span></div></div>
  <div class="mid">{kicker}<h1>{slanted(head)}</h1>{BRUSH}{sub}{body}{ask}</div>

@@ -69,8 +69,16 @@ One caption for X and Facebook (the X account is Premium, so long posts are fine
    Wrap 1 to 3 words of the headline in *asterisks* for the green highlight.
    For debates and polls, add an `"ask"` line such as `"No wrong answer. *What's your choice?*"`.
    The logo and the BaseballFuture.com footer are always drawn; there is no footer field to set.
-2. If `assets/photos/` contains photos, use one on roughly every other post (`"photo": "assets/photos/<file>"`),
-   choosing one not used in the last 10 posts.
+2. **Every graphic carries a visual on the right side** (set `"visual"`; see the `tools/render.py` docstring).
+   Pick the one that fits the topic, and don't use the same one two days in a row (check `posts/`):
+   - `"report"`: the BaseballFuture scouting-report mockup. Good for promotion days and "know your level" posts.
+   - `"fitcard"`: close-up of the "Athletic fit by level" bars. Good for level/fit debates and "what do the numbers say".
+     Set `"fit"` and `"best"` when the numbers should match the post; otherwise the sample player is used.
+   - `"radar"`: radar-gun readout (exit velo or pitching velo). Set `"stat"`, e.g. `{"label":"Pitching velo","value":"86","unit":"MPH"}`.
+   - `"stopwatch"`: 60-yard dash, home-to-first or pop time. Set `"stat"`, e.g. `{"label":"Pop time","value":"1.98","unit":"SEC"}`.
+   - `"photo"`: a player photo from `assets/photos/` (set `"photo"` too). When the folder has photos, use one on
+     roughly every other post, choosing one not used in the last 10 posts.
+   Numbers on visuals are always shown as a sample player or sample reading, never as a real player's stats.
 3. Render: `python3 tools/render.py <spec-only json> graphics/YYYY-MM-DD.png`
    - If it prints OVERFLOW, shorten the copy and render again.
    - Look at the PNG (Read tool) and check it reads cleanly before posting.
