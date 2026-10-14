@@ -30,7 +30,7 @@
     "x": {
       "09:20": "missed: run started 09:21 PDT",
       "13:00": "6acfac352efd93528818de33",
-      "16:00": "skipped: existing scheduled post already due 16:00 (6acd9616819102362c4a0e97)"
+      "16:00": "6acd9616819102362c4a0e97 (existing post updated to today's graphic and reworded caption)"
     },
     "instagram": {
       "09:20": "missed: run started 09:21 PDT",
@@ -40,7 +40,7 @@
     "facebook": {
       "09:20": "missed: run started 09:21 PDT",
       "13:00": "6acfac3960b490166248cb7b",
-      "16:00": "skipped: existing scheduled post already due 16:00 (6acd9616819102362c4a0e98)"
+      "16:00": "6acd9616819102362c4a0e98 (existing post updated to today's graphic and reworded caption)"
     }
   }
 }
