@@ -1,4 +1,46 @@
-{"kicker": "Parents: would you rather", "headline": "JUCO first or *D1 walk-on?*", "style": "versus",
- "items": ["Two years of *JUCO* reps, then transfer", "Walk on at a *D1* and earn a spot"],
- "ask": "No wrong answer. *What's your choice?*", "visual": "fitcard",
- "fit": ["D1|58", "D2|76", "D3|84", "NAIA|86", "JUCO|90"], "best": "JUCO", "hashtag": "#CollegeBaseball"}
+{
+  "date": "2026-10-14",
+  "theme": "Wednesday: Debate / would-you-rather",
+  "headline": "JUCO first or D1 walk-on?",
+  "caption": "Baseball parents, here's a fun one. Would you rather your player:\n\nA) Spend two years at a JUCO, play a lot, then transfer to a four-year school\nB) Walk on at a D1 program and work to earn a roster spot and innings\n\nThere's no wrong answer. Each path fits a different player.\n\n⚾ JUCO can mean more reps, more development time and a second look from four-year coaches.\n⚾ A D1 walk-on gets him in a top program, but a roster spot and playing time are never promised.\n\nThe best choice usually comes down to where his numbers fit today and how much he still has to grow.\n\nWhich would you pick, A or B? Tell us below 👇\n\nSee what the numbers say about your player's best fit:\nhttps://baseballfuture.com\n\n#BaseballRecruiting #CollegeBaseball #BaseballParents",
+  "caption_instagram": "Baseball parents, here's a fun one. Would you rather your player:\n\nA) Spend two years at a JUCO, play a lot, then transfer to a four-year school\nB) Walk on at a D1 program and work to earn a roster spot and innings\n\nThere's no wrong answer. Each path fits a different player.\n\n⚾ JUCO can mean more reps, more development time and a second look from four-year coaches.\n⚾ A D1 walk-on gets him in a top program, but a roster spot and playing time are never promised.\n\nThe best choice usually comes down to where his numbers fit today and how much he still has to grow.\n\nWhich would you pick, A or B? Tell us below 👇\n\nTap the link in our bio to see what the numbers say. 👆\n\n#BaseballRecruiting #CollegeBaseball #BaseballParents",
+  "include_url": true,
+  "photo": null,
+  "graphic": {
+    "kicker": "Parents: would you rather",
+    "headline": "JUCO first or *D1 walk-on?*",
+    "style": "versus",
+    "items": [
+      "Two years of *JUCO* reps, then transfer",
+      "Walk on at a *D1* and earn a spot"
+    ],
+    "ask": "No wrong answer. *What's your choice?*",
+    "visual": "fitcard",
+    "fit": [
+      "D1|58",
+      "D2|76",
+      "D3|84",
+      "NAIA|86",
+      "JUCO|90"
+    ],
+    "best": "JUCO",
+    "hashtag": "#CollegeBaseball"
+  },
+  "buffer_post_ids": {
+    "x": {
+      "09:20": "missed: run started 09:21 PDT",
+      "13:00": "6acfac352efd93528818de33",
+      "16:00": "skipped: existing scheduled post already due 16:00 (6acd9616819102362c4a0e97)"
+    },
+    "instagram": {
+      "09:20": "missed: run started 09:21 PDT",
+      "13:00": "6acfac3db9972ba8f6e5b38d",
+      "16:00": "skipped: existing scheduled post already due 16:00 (6acd9616819102362c4a0e99)"
+    },
+    "facebook": {
+      "09:20": "missed: run started 09:21 PDT",
+      "13:00": "6acfac3960b490166248cb7b",
+      "16:00": "skipped: existing scheduled post already due 16:00 (6acd9616819102362c4a0e98)"
+    }
+  }
+}
