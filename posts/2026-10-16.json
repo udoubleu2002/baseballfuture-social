@@ -48,5 +48,15 @@
       }
     }
   },
-  "buffer_post_ids": {}
+  "buffer_post_ids": {
+    "instagram": {
+      "09:00": "6ad2412a45dfa13a7239bf27",
+      "13:00": "6ad241327521b8760616ae94"
+    },
+    "facebook": {
+      "09:00": "6ad2412f45dfa13a7239c04d",
+      "13:00": "6ad241367521b8760616af49"
+    },
+    "x": "not used (Instagram and Facebook only)"
+  }
 }
