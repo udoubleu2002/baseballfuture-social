@@ -1,0 +1,52 @@
+{
+  "date": "2026-10-16",
+  "theme": "Friday: BaseballFuture promotion",
+  "include_url": true,
+  "photo": null,
+  "posts": {
+    "09:00": {
+      "headline": "Best fit beats biggest name",
+      "topic": "Use his numbers vs. typical ranges by level to pick target levels (best-fit preview)",
+      "caption": "Is your player chasing a name on a jersey, or a place where he'll actually play?\n\nA lot of families aim at the biggest program first and work backward. It's often smarter to start with his numbers.\n\n⚾ Compare his exit velo, 60 time, velo or pop time with typical ranges at D1, D2, D3, NAIA and JUCO\n⚾ Notice where he's already in range, not just where he's close\n⚾ Build his target list around the levels where he fits\n\nBest fit beats biggest name. A free best-fit preview is a simple place to start. (Fit scores are estimates, not a coach's evaluation.)\n\nWhere do you think his numbers fit today?\n\nSee what the numbers say about your player's best fit:\nhttps://baseballfuture.com\n\n#BaseballRecruiting #BaseballParents",
+      "caption_instagram": "Is your player chasing a name on a jersey, or a place where he'll actually play?\n\nA lot of families aim at the biggest program first and work backward. It's often smarter to start with his numbers.\n\n⚾ Compare his exit velo, 60 time, velo or pop time with typical ranges at D1, D2, D3, NAIA and JUCO\n⚾ Notice where he's already in range, not just where he's close\n⚾ Build his target list around the levels where he fits\n\nBest fit beats biggest name. A free best-fit preview is a simple place to start. (Fit scores are estimates, not a coach's evaluation.)\n\nWhere do you think his numbers fit today?\n\nTap the link in our bio to see what the numbers say. 👆\n\n#BaseballRecruiting #BaseballParents",
+      "graphic_file": "graphics/2026-10-16-0900.png",
+      "graphic": {
+        "kicker": "Parents: find his level",
+        "headline": "Best fit beats *biggest name*",
+        "style": "statement",
+        "sub": "Compare his numbers with typical ranges at every level. Then aim where he fits.",
+        "visual": "fitcard",
+        "fit": [
+          "D1|58",
+          "D2|79",
+          "D3|86",
+          "NAIA|82",
+          "JUCO|77"
+        ],
+        "best": "D3",
+        "hashtag": "#BaseballRecruiting"
+      }
+    },
+    "13:00": {
+      "headline": "What's in his full report",
+      "topic": "What the full report includes: level comparison, target list, 90-day plan, coach PDFs",
+      "caption": "Ever wish you had one clear plan instead of a pile of recruiting advice?\n\nThat's what the full BaseballFuture report is built for. It turns your player's numbers into next steps:\n\n✅ His numbers compared with typical ranges for D1, D2, D3, NAIA and JUCO\n✅ A school target list built around his best fit\n✅ A 90-day plan for what to work on next\n✅ PDFs you can send to college coaches\n\nIt won't promise a roster spot, and nothing honest can. It helps you spend your time and money on the right schools.\n\nWhat's the one recruiting question you'd most like answered this fall?\n\nSee what the numbers say about your player's best fit:\nhttps://baseballfuture.com\n\n#CollegeBaseball #BaseballRecruiting #BaseballParents",
+      "caption_instagram": "Ever wish you had one clear plan instead of a pile of recruiting advice?\n\nThat's what the full BaseballFuture report is built for. It turns your player's numbers into next steps:\n\n✅ His numbers compared with typical ranges for D1, D2, D3, NAIA and JUCO\n✅ A school target list built around his best fit\n✅ A 90-day plan for what to work on next\n✅ PDFs you can send to college coaches\n\nIt won't promise a roster spot, and nothing honest can. It helps you spend your time and money on the right schools.\n\nWhat's the one recruiting question you'd most like answered this fall?\n\nTap the link in our bio to see what the numbers say. 👆\n\n#CollegeBaseball #BaseballRecruiting #BaseballParents",
+      "graphic_file": "graphics/2026-10-16-1300.png",
+      "graphic": {
+        "kicker": "Parents: inside the report",
+        "headline": "What's in his *full report*",
+        "style": "list",
+        "items": [
+          "His numbers by level",
+          "A school target list",
+          "A 90-day action plan",
+          "PDFs ready for coaches"
+        ],
+        "visual": "report",
+        "hashtag": "#CollegeBaseball"
+      }
+    }
+  },
+  "buffer_post_ids": {}
+}
