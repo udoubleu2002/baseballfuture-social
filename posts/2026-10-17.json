@@ -1,0 +1,55 @@
+{
+  "date": "2026-10-17",
+  "theme": "Saturday: Player development / shareable discussion",
+  "include_url": true,
+  "photo": null,
+  "posts": {
+    "09:00": {
+      "headline": "Measure it before you chase it",
+      "topic": "Offseason development: baseline, pick 1-2 numbers, re-test, share real gains with coaches",
+      "caption": "Does your player know his numbers right now, or just roughly?\n\nThe offseason is the best time to get better. It's also the easiest time to lose track of whether the work is paying off.\n\n⚾ Test his baseline: 60 time, exit velo, velo or pop time, whatever fits his position\n⚾ Pick one or two numbers to improve, not ten\n⚾ Re-test every 6 to 8 weeks under the same conditions\n⚾ When a number really moves, update his profile and let coaches know\n\nMeasured progress is easier for a college coach to see than \"he's been working hard.\"\n\nWhich number is he working on this winter?\n\nSee what the numbers say about your player's best fit:\nhttps://baseballfuture.com\n\n#PlayerDevelopment #BaseballRecruiting #BaseballParents",
+      "caption_instagram": "Does your player know his numbers right now, or just roughly?\n\nThe offseason is the best time to get better. It's also the easiest time to lose track of whether the work is paying off.\n\n⚾ Test his baseline: 60 time, exit velo, velo or pop time, whatever fits his position\n⚾ Pick one or two numbers to improve, not ten\n⚾ Re-test every 6 to 8 weeks under the same conditions\n⚾ When a number really moves, update his profile and let coaches know\n\nMeasured progress is easier for a college coach to see than \"he's been working hard.\"\n\nWhich number is he working on this winter?\n\nTap the link in our bio to see what the numbers say. 👆\n\n#PlayerDevelopment #BaseballRecruiting #BaseballParents",
+      "graphic_file": "graphics/2026-10-17-0900.png",
+      "graphic": {
+        "kicker": "Parents: offseason plan",
+        "headline": "Measure it *before* you chase it",
+        "style": "list",
+        "items": [
+          "Test his baseline numbers",
+          "Pick 1 or 2 to improve",
+          "Re-test every 6-8 weeks",
+          "Share gains with coaches"
+        ],
+        "visual": "stopwatch",
+        "stat": {
+          "label": "60-yard dash",
+          "value": "7.05",
+          "unit": "SEC"
+        },
+        "hashtag": "#PlayerDevelopment"
+      }
+    },
+    "13:00": {
+      "headline": "Grades are a recruiting tool",
+      "topic": "Unpopular opinion: academics widen college options and support recruiting",
+      "caption": "Unpopular opinion: his report card is part of his recruiting profile.\n\nVelo, exit velo and the 60 get the attention. But grades quietly shape how many college options your player has.\n\n✅ Strong grades can widen his list of schools that fit\n✅ Academic aid can matter, especially at levels where athletic money is limited\n✅ Coaches notice players who won't be a risk to stay eligible\n\nA few extra MPH can help. A strong GPA can open doors his numbers alone can't.\n\nAgree or disagree? Tell us in the comments.\n\nSee what the numbers say about your player's best fit:\nhttps://baseballfuture.com\n\n#StudentAthlete #CollegeBaseball #BaseballParents",
+      "caption_instagram": "Unpopular opinion: his report card is part of his recruiting profile.\n\nVelo, exit velo and the 60 get the attention. But grades quietly shape how many college options your player has.\n\n✅ Strong grades can widen his list of schools that fit\n✅ Academic aid can matter, especially at levels where athletic money is limited\n✅ Coaches notice players who won't be a risk to stay eligible\n\nA few extra MPH can help. A strong GPA can open doors his numbers alone can't.\n\nAgree or disagree? Tell us in the comments.\n\nTap the link in our bio to see what the numbers say. 👆\n\n#StudentAthlete #CollegeBaseball #BaseballParents",
+      "graphic_file": "graphics/2026-10-17-1300.png",
+      "graphic": {
+        "kicker": "Unpopular opinion",
+        "headline": "Grades are a *recruiting tool*",
+        "style": "statement",
+        "sub": "Good grades can open more college doors than a few extra MPH.",
+        "visual": "radar",
+        "stat": {
+          "label": "Pitching velo",
+          "value": "84",
+          "unit": "MPH"
+        },
+        "ask": "Agree or disagree? *Tell us.*",
+        "hashtag": "#StudentAthlete"
+      }
+    }
+  },
+  "buffer_post_ids": {}
+}
