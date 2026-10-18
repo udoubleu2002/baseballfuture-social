@@ -1,0 +1,50 @@
+{
+  "date": "2026-10-18",
+  "theme": "Sunday: Parent engagement / audience question",
+  "include_url": true,
+  "photo": null,
+  "posts": {
+    "09:00": {
+      "headline": "Who emails the coach?",
+      "topic": "Would-you-rather: parent vs player sending the first email to a college coach; how parents can help behind the scenes",
+      "caption": "Who should send the first email to a college coach: you or your player?\n\nIt's a fair question. A lot of parents want to help, and most players would rather not write it.\n\nBut coaches are recruiting your player, not you. A short email in his own words, from his own address, shows a coach he's driving his own process.\n\nWhere parents can really help:\n✅ Proofread before he hits send\n✅ Keep a simple list of schools and replies\n✅ Make sure his video and numbers are ready to share\n\nSo in your house, who's sending it? A or B? 👇\n\nSee what the numbers say about your player's best fit:\nhttps://baseballfuture.com\n\n#BaseballRecruiting #BaseballParents",
+      "caption_instagram": "Who should send the first email to a college coach: you or your player?\n\nIt's a fair question. A lot of parents want to help, and most players would rather not write it.\n\nBut coaches are recruiting your player, not you. A short email in his own words, from his own address, shows a coach he's driving his own process.\n\nWhere parents can really help:\n✅ Proofread before he hits send\n✅ Keep a simple list of schools and replies\n✅ Make sure his video and numbers are ready to share\n\nSo in your house, who's sending it? A or B? 👇\n\nTap the link in our bio to see what the numbers say. 👆\n\n#BaseballRecruiting #BaseballParents",
+      "graphic_file": "graphics/2026-10-18-0900.png",
+      "graphic": {
+        "kicker": "Would you rather",
+        "headline": "Who emails *the coach?*",
+        "style": "versus",
+        "items": [
+          "*Parent* writes and sends it",
+          "*Player* writes and sends it"
+        ],
+        "ask": "No wrong answer. *A or B?*",
+        "visual": "report",
+        "hashtag": "#BaseballRecruiting"
+      }
+    },
+    "13:00": {
+      "headline": "Ask on every visit",
+      "topic": "Four questions parents should ask on every college visit; engagement ask for parents to add their own",
+      "caption": "Campus visits can feel like a sales pitch. The right questions turn them into real information.\n\nBefore your next visit, save these four:\n\n⚾ What role do you see for him as a freshman?\n⚾ How many players are on the roster at his position?\n⚾ What does a typical week look like, in season and out?\n⚾ What financial aid is realistic for him here, athletic and academic?\n\nThe answers help you compare schools on fit, not just on facilities.\n\nParents who've been through it: what's the one question you'd add? 👇\n\nSee what the numbers say about your player's best fit:\nhttps://baseballfuture.com\n\n#CollegeBaseball #BaseballParents #StudentAthlete",
+      "caption_instagram": "Campus visits can feel like a sales pitch. The right questions turn them into real information.\n\nBefore your next visit, save these four:\n\n⚾ What role do you see for him as a freshman?\n⚾ How many players are on the roster at his position?\n⚾ What does a typical week look like, in season and out?\n⚾ What financial aid is realistic for him here, athletic and academic?\n\nThe answers help you compare schools on fit, not just on facilities.\n\nParents who've been through it: what's the one question you'd add? 👇\n\nTap the link in our bio to see what the numbers say. 👆\n\n#CollegeBaseball #BaseballParents #StudentAthlete",
+      "graphic_file": "graphics/2026-10-18-1300.png",
+      "graphic": {
+        "kicker": "Parents: save this",
+        "headline": "Ask on *every visit*",
+        "style": "list",
+        "items": [
+          "His role as a freshman?",
+          "How many at his position?",
+          "What's a typical week?",
+          "What aid is realistic?"
+        ],
+        "ask": "What would *you add?*",
+        "visual": "fitcard",
+        "hashtag": "#BaseballParents"
+      }
+    }
+  },
+  "note": "Separate 09:20 poll (posts/2026-10-18-poll.json) was already scheduled on Oct 14 and is left as is.",
+  "buffer_post_ids": {}
+}
