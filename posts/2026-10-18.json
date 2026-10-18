@@ -46,5 +46,15 @@
     }
   },
   "note": "Separate 09:20 poll (posts/2026-10-18-poll.json) was already scheduled on Oct 14 and is left as is.",
-  "buffer_post_ids": {}
+  "buffer_post_ids": {
+    "instagram": {
+      "09:00": "6ad4e4760b0d72757a2a629f",
+      "13:00": "6ad4e47d938409f1d0d76df0"
+    },
+    "facebook": {
+      "09:00": "6ad4e479ae173d6e0009481f",
+      "13:00": "6ad4e481a48c8f8371a2bb83"
+    },
+    "x": "not used (Instagram and Facebook only)"
+  }
 }
