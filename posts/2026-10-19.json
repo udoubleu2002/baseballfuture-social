@@ -1,0 +1,54 @@
+{
+  "date": "2026-10-19",
+  "theme": "Monday: Shareable myth-buster / know your level",
+  "include_url": true,
+  "photo": null,
+  "posts": {
+    "09:00": {
+      "headline": "Myth: only D1 has baseball money",
+      "topic": "Myth-buster: athletic aid exists at D2, NAIA and many JUCO programs; D3 aid is academic and need-based",
+      "caption": "\"If he's not D1, there's no baseball money.\"\n\nWe hear this from parents all the time. It isn't true, and believing it can shrink your player's list before it even starts.\n\n⚾ D2 and NAIA programs can offer athletic aid.\n⚾ Many JUCO programs can, too.\n⚾ D3 schools don't give athletic scholarships, but academic and need-based aid can make them very affordable.\n\nThe better question isn't \"Is it D1?\" It's \"Where does he fit, and what will it really cost us?\" Compare the actual aid packages, not just the division.\n\nWhich level did you assume was out of reach? 👇\n\nSee what the numbers say about your player's best fit:\nhttps://baseballfuture.com\n\n#BaseballRecruiting #BaseballParents",
+      "caption_instagram": "\"If he's not D1, there's no baseball money.\"\n\nWe hear this from parents all the time. It isn't true, and believing it can shrink your player's list before it even starts.\n\n⚾ D2 and NAIA programs can offer athletic aid.\n⚾ Many JUCO programs can, too.\n⚾ D3 schools don't give athletic scholarships, but academic and need-based aid can make them very affordable.\n\nThe better question isn't \"Is it D1?\" It's \"Where does he fit, and what will it really cost us?\" Compare the actual aid packages, not just the division.\n\nWhich level did you assume was out of reach? 👇\n\nTap the link in our bio to see what the numbers say. 👆\n\n#BaseballRecruiting #BaseballParents",
+      "graphic_file": "graphics/2026-10-19-0900.png",
+      "graphic": {
+        "kicker": "Myth vs. fact",
+        "headline": "Myth: only D1 has *baseball money*",
+        "style": "statement",
+        "sub": "Fact: D2, NAIA and many JUCO programs can offer athletic aid. At D3, aid comes from academics and financial need.",
+        "visual": "radar",
+        "stat": {
+          "label": "Pitching velo",
+          "value": "84",
+          "unit": "MPH"
+        },
+        "hashtag": "#BaseballParents"
+      }
+    },
+    "13:00": {
+      "headline": "Know his level before you email",
+      "topic": "Know your level: 4-step order (numbers, compare by level, mixed list, email best-fit coaches first)",
+      "caption": "Is your player emailing coaches at schools where he doesn't fit yet?\n\nIt's one of the most common ways families lose a year. Before the next email goes out, try this order:\n\n1️⃣ Get verified numbers: velo, exit velo, 60 time, pop time.\n2️⃣ Compare them with typical ranges at D1, D2, D3, NAIA and JUCO.\n3️⃣ Build a mixed list: a few reach schools, mostly good fits.\n4️⃣ Email the best-fit coaches first, with video and numbers attached.\n\nNumbers aren't the whole story, and no list guarantees a roster spot. But knowing his level helps him spend his time where coaches are more likely to write back.\n\nDo you know where his numbers stack up?\n\nSee what the numbers say about your player's best fit:\nhttps://baseballfuture.com\n\n#CollegeBaseball #BaseballParents",
+      "caption_instagram": "Is your player emailing coaches at schools where he doesn't fit yet?\n\nIt's one of the most common ways families lose a year. Before the next email goes out, try this order:\n\n1️⃣ Get verified numbers: velo, exit velo, 60 time, pop time.\n2️⃣ Compare them with typical ranges at D1, D2, D3, NAIA and JUCO.\n3️⃣ Build a mixed list: a few reach schools, mostly good fits.\n4️⃣ Email the best-fit coaches first, with video and numbers attached.\n\nNumbers aren't the whole story, and no list guarantees a roster spot. But knowing his level helps him spend his time where coaches are more likely to write back.\n\nDo you know where his numbers stack up?\n\nTap the link in our bio to see what the numbers say. 👆\n\n#CollegeBaseball #BaseballParents",
+      "graphic_file": "graphics/2026-10-19-1300.png",
+      "graphic": {
+        "kicker": "Know your level",
+        "headline": "Know his level *before you email*",
+        "style": "list",
+        "items": [
+          "Get verified numbers",
+          "Compare them to each level",
+          "Build a mixed target list",
+          "Email best-fit coaches first"
+        ],
+        "ask": "Do you know *his best fit?*",
+        "visual": "stopwatch",
+        "stat": {
+          "label": "60-yard dash",
+          "value": "7.05",
+          "unit": "SEC"
+        },
+        "hashtag": "#BaseballRecruiting"
+      }
+    }
+  }
+}
