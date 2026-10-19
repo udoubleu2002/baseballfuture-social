@@ -27,8 +27,8 @@
     "13:00": {
       "headline": "Know his level before you email",
       "topic": "Know your level: 4-step order (numbers, compare by level, mixed list, email best-fit coaches first)",
-      "caption": "Is your player emailing coaches at schools where he doesn't fit yet?\n\nIt's one of the most common ways families lose a year. Before the next email goes out, try this order:\n\n1️⃣ Get verified numbers: velo, exit velo, 60 time, pop time.\n2️⃣ Compare them with typical ranges at D1, D2, D3, NAIA and JUCO.\n3️⃣ Build a mixed list: a few reach schools, mostly good fits.\n4️⃣ Email the best-fit coaches first, with video and numbers attached.\n\nNumbers aren't the whole story, and no list guarantees a roster spot. But knowing his level helps him spend his time where coaches are more likely to write back.\n\nDo you know where his numbers stack up?\n\nSee what the numbers say about your player's best fit:\nhttps://baseballfuture.com\n\n#CollegeBaseball #BaseballParents",
-      "caption_instagram": "Is your player emailing coaches at schools where he doesn't fit yet?\n\nIt's one of the most common ways families lose a year. Before the next email goes out, try this order:\n\n1️⃣ Get verified numbers: velo, exit velo, 60 time, pop time.\n2️⃣ Compare them with typical ranges at D1, D2, D3, NAIA and JUCO.\n3️⃣ Build a mixed list: a few reach schools, mostly good fits.\n4️⃣ Email the best-fit coaches first, with video and numbers attached.\n\nNumbers aren't the whole story, and no list guarantees a roster spot. But knowing his level helps him spend his time where coaches are more likely to write back.\n\nDo you know where his numbers stack up?\n\nTap the link in our bio to see what the numbers say. 👆\n\n#CollegeBaseball #BaseballParents",
+      "caption": "Is your player emailing coaches at schools where he doesn't fit yet?\n\nIt's an easy way to lose valuable time. Before the next email goes out, try this order:\n\n1️⃣ Get verified numbers: velo, exit velo, 60 time, pop time.\n2️⃣ Compare them with typical ranges at D1, D2, D3, NAIA and JUCO.\n3️⃣ Build a mixed list: a few reach schools, mostly good fits.\n4️⃣ Email the best-fit coaches first, with video and numbers attached.\n\nNumbers aren't the whole story, and no list guarantees a roster spot. But knowing his level helps him spend his time where coaches are more likely to write back.\n\nDo you know where his numbers stack up?\n\nSee what the numbers say about your player's best fit:\nhttps://baseballfuture.com\n\n#CollegeBaseball #BaseballParents",
+      "caption_instagram": "Is your player emailing coaches at schools where he doesn't fit yet?\n\nIt's an easy way to lose valuable time. Before the next email goes out, try this order:\n\n1️⃣ Get verified numbers: velo, exit velo, 60 time, pop time.\n2️⃣ Compare them with typical ranges at D1, D2, D3, NAIA and JUCO.\n3️⃣ Build a mixed list: a few reach schools, mostly good fits.\n4️⃣ Email the best-fit coaches first, with video and numbers attached.\n\nNumbers aren't the whole story, and no list guarantees a roster spot. But knowing his level helps him spend his time where coaches are more likely to write back.\n\nDo you know where his numbers stack up?\n\nTap the link in our bio to see what the numbers say. 👆\n\n#CollegeBaseball #BaseballParents",
       "graphic_file": "graphics/2026-10-19-1300.png",
       "graphic": {
         "kicker": "Know your level",
@@ -50,5 +50,17 @@
         "hashtag": "#BaseballRecruiting"
       }
     }
+  },
+  "link_rule_note": "PLAYBOOK.md requires a link on every post: URL in Facebook captions, 'link in our bio' line on Instagram.",
+  "buffer_post_ids": {
+    "instagram": {
+      "09:00": "6ad635d48e3b9aca8dcba600",
+      "13:00": "6ad635dc27c86cdd6c2c5ae8"
+    },
+    "facebook": {
+      "09:00": "6ad635d87c8bca7527d4b6ba",
+      "13:00": "6ad635e127c86cdd6c2c5c83"
+    },
+    "x": "not used (Instagram and Facebook only)"
   }
 }
