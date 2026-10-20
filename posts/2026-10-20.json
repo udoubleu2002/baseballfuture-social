@@ -1,0 +1,62 @@
+{
+  "date": "2026-10-20",
+  "theme": "Tuesday: Recruiting education (what coaches evaluate)",
+  "include_url": true,
+  "photo": null,
+  "posts": {
+    "09:00": {
+      "headline": "Pitchers: it's not just velo",
+      "topic": "What college coaches evaluate in a pitcher beyond velo: projection, strikes, repeatable delivery, competitiveness",
+      "caption": "Does your player's velo tell the whole story?\n\nIt's usually the first number coaches ask about. It's rarely the only thing they write down.\n\nWhen college coaches evaluate a high school pitcher, they're also watching:\n\n⚾ Where his velo is headed, not just where it is today\n⚾ Whether he throws strikes, especially when he's behind in the count\n⚾ A delivery he can repeat pitch after pitch\n⚾ How he competes after a walk, an error or a hard-hit ball\n\nVelo opens the conversation. Strikes and composure help keep it going.\n\nA good first step: know where his velo sits compared with typical ranges at D1, D2, D3, NAIA and JUCO.\n\nSee what the numbers say about your player's best fit:\nhttps://baseballfuture.com\n\n#Pitching #BaseballRecruiting",
+      "caption_instagram": "Does your player's velo tell the whole story?\n\nIt's usually the first number coaches ask about. It's rarely the only thing they write down.\n\nWhen college coaches evaluate a high school pitcher, they're also watching:\n\n⚾ Where his velo is headed, not just where it is today\n⚾ Whether he throws strikes, especially when he's behind in the count\n⚾ A delivery he can repeat pitch after pitch\n⚾ How he competes after a walk, an error or a hard-hit ball\n\nVelo opens the conversation. Strikes and composure help keep it going.\n\nA good first step: know where his velo sits compared with typical ranges at D1, D2, D3, NAIA and JUCO.\n\nTap the link in our bio to see what the numbers say. 👆\n\n#Pitching #BaseballRecruiting",
+      "graphic_file": "graphics/2026-10-20-0900.png",
+      "graphic": {
+        "kicker": "What college coaches evaluate",
+        "headline": "Pitchers: it's not *just velo*",
+        "style": "list",
+        "items": [
+          "Velo, and where it's headed",
+          "Throwing strikes",
+          "A repeatable delivery",
+          "How he competes"
+        ],
+        "ask": "Do you know *where his velo fits?*",
+        "visual": "fitcard",
+        "best": "D2",
+        "hashtag": "#Pitching"
+      }
+    },
+    "13:00": {
+      "headline": "What he does between pitches",
+      "topic": "Coaches evaluate body language and makeup: hustle, supporting teammates, reaction to strikeouts and umpires",
+      "caption": "What does your player do when the ball isn't in play?\n\nCoaches watch more than at-bats. Between pitches and between innings, they see how a player carries himself.\n\n✅ Does he hustle on and off the field?\n✅ Does he pick up a teammate after a mistake?\n❌ Does he sulk after a strikeout?\n❌ Does he argue balls and strikes with the umpire?\n\nNone of this shows up in a box score or on a radar gun. But it's part of the picture a coach forms, and it's something your player controls every single game.\n\nHis numbers can help get a coach to the field. His body language is part of what that coach sees once he's there.\n\nWhat's one habit you've seen help a player stand out? 👇\n\nSee what the numbers say about your player's best fit:\nhttps://baseballfuture.com\n\n#BaseballParents #CollegeBaseball",
+      "caption_instagram": "What does your player do when the ball isn't in play?\n\nCoaches watch more than at-bats. Between pitches and between innings, they see how a player carries himself.\n\n✅ Does he hustle on and off the field?\n✅ Does he pick up a teammate after a mistake?\n❌ Does he sulk after a strikeout?\n❌ Does he argue balls and strikes with the umpire?\n\nNone of this shows up in a box score or on a radar gun. But it's part of the picture a coach forms, and it's something your player controls every single game.\n\nHis numbers can help get a coach to the field. His body language is part of what that coach sees once he's there.\n\nWhat's one habit you've seen help a player stand out? 👇\n\nTap the link in our bio to see what the numbers say. 👆\n\n#BaseballParents #CollegeBaseball",
+      "graphic_file": "graphics/2026-10-20-1300.png",
+      "graphic": {
+        "kicker": "Coaches are watching",
+        "headline": "What he does *between pitches*",
+        "style": "dodont",
+        "items": [
+          "DO: Hustle on and off",
+          "DO: Pick up teammates",
+          "DON'T: Sulk after a K",
+          "DON'T: Argue with umps"
+        ],
+        "visual": "report",
+        "hashtag": "#BaseballParents"
+      }
+    }
+  },
+  "link_rule_note": "PLAYBOOK.md requires a link on every post: URL in Facebook captions, 'link in our bio' line on Instagram.",
+  "buffer_post_ids": {
+    "instagram": {
+      "09:00": "6ad788d52a3b888f3d99705b",
+      "13:00": "6ad788de464a4c9f78c323cd"
+    },
+    "facebook": {
+      "09:00": "6ad788d920e827f3d4e0080d",
+      "13:00": "6ad788e2464a4c9f78c3243f"
+    },
+    "x": "not used (Instagram and Facebook only)"
+  }
+}
