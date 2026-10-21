@@ -1,0 +1,66 @@
+{
+  "date": "2026-10-21",
+  "theme": "Wednesday: Debate / would-you-rather for parents",
+  "include_url": true,
+  "photo": null,
+  "posts": {
+    "09:00": {
+      "headline": "Commit early or keep options open?",
+      "topic": "Debate: commit early vs. keep recruiting options open; tie decision to where his numbers fit",
+      "caption": "Commit early, or keep his options open?\n\nBaseball parents land on both sides of this one, and there are good reasons for each.\n\n⚾ Commit early: the decision is made, the pressure eases and he can focus on playing and getting better.\n⚾ Keep options open: he has more time to develop, and his list of schools can change as his numbers and grades do.\n\nWhichever way your family leans, the strongest decisions usually start in the same place: an honest look at where his numbers fit today and where they're heading.\n\nWhere do you land? Reply A or B and tell us why. 👇\n\nSee what the numbers say about your player's best fit:\nhttps://baseballfuture.com\n\n#BaseballParents #BaseballRecruiting",
+      "caption_instagram": "Commit early, or keep his options open?\n\nBaseball parents land on both sides of this one, and there are good reasons for each.\n\n⚾ Commit early: the decision is made, the pressure eases and he can focus on playing and getting better.\n⚾ Keep options open: he has more time to develop, and his list of schools can change as his numbers and grades do.\n\nWhichever way your family leans, the strongest decisions usually start in the same place: an honest look at where his numbers fit today and where they're heading.\n\nWhere do you land? Reply A or B and tell us why. 👇\n\nTap the link in our bio to see what the numbers say. 👆\n\n#BaseballParents #BaseballRecruiting",
+      "graphic_file": "graphics/2026-10-21-0900.png",
+      "graphic": {
+        "kicker": "Parents, settle this one",
+        "headline": "Commit early or *keep options open?*",
+        "style": "versus",
+        "items": [
+          "Commit early",
+          "Keep options open"
+        ],
+        "ask": "No wrong answer. *What's your choice?*",
+        "visual": "stopwatch",
+        "stat": {
+          "label": "60-yard dash",
+          "value": "6.95",
+          "unit": "SEC"
+        },
+        "hashtag": "#BaseballParents"
+      }
+    },
+    "13:00": {
+      "headline": "His #1 college priority?",
+      "topic": "Poll: early playing time, academics, distance from home or cost after aid; knowing his level widens the realistic school list",
+      "caption": "If your family could only pick one, what matters most in his college choice?\n\nA) Early playing time\nB) Strong academics\nC) Close to home\nD) Lowest cost after aid\n\nEvery family weighs these differently, and that's the point. The right school for one player can be the wrong one for his teammate.\n\nHere's where the numbers help: knowing which levels his numbers fit (D1, D2, D3, NAIA or JUCO) can widen the list of schools worth a look. A longer, realistic list makes it easier to find one that checks your top box.\n\nReply with A, B, C or D. 👇\n\nSee what the numbers say about your player's best fit:\nhttps://baseballfuture.com\n\n#CollegeBaseball #BaseballParents",
+      "caption_instagram": "If your family could only pick one, what matters most in his college choice?\n\nA) Early playing time\nB) Strong academics\nC) Close to home\nD) Lowest cost after aid\n\nEvery family weighs these differently, and that's the point. The right school for one player can be the wrong one for his teammate.\n\nHere's where the numbers help: knowing which levels his numbers fit (D1, D2, D3, NAIA or JUCO) can widen the list of schools worth a look. A longer, realistic list makes it easier to find one that checks your top box.\n\nReply with A, B, C or D. 👇\n\nTap the link in our bio to see what the numbers say. 👆\n\n#CollegeBaseball #BaseballParents",
+      "graphic_file": "graphics/2026-10-21-1300.png",
+      "graphic": {
+        "kicker": "Parents, you pick one",
+        "headline": "His #1 *college priority?*",
+        "style": "poll",
+        "items": [
+          "Early playing time",
+          "Strong academics",
+          "Close to home",
+          "Lowest cost after aid"
+        ],
+        "ask": "Reply with *A, B, C or D*",
+        "visual": "fitcard",
+        "best": "D3",
+        "hashtag": "#CollegeBaseball"
+      }
+    }
+  },
+  "link_rule_note": "PLAYBOOK.md requires a link on every post: URL in Facebook captions, 'link in our bio' line on Instagram.",
+  "buffer_post_ids": {
+    "instagram": {
+      "09:00": "6ad8d9df528a4622a852654a",
+      "13:00": "6ad8d9e74f000a3fb97b92e6"
+    },
+    "facebook": {
+      "09:00": "6ad8d9e20fd9d0bd3959a21a",
+      "13:00": "6ad8d9eb7159dc2c40c0a468"
+    },
+    "x": "not used (Instagram and Facebook only)"
+  }
+}
