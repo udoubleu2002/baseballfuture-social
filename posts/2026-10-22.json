@@ -1,0 +1,64 @@
+{
+  "date": "2026-10-22",
+  "theme": "Thursday: Recruiting tips (do/don't, how-to)",
+  "include_url": true,
+  "photo": null,
+  "posts": {
+    "09:00": {
+      "headline": "Before you pay for a showcase",
+      "topic": "Do/don't: get numbers first, pick events where his levels' coaches attend, don't pay for every invite, follow up after",
+      "caption": "Before you write the next showcase check, ask one question: who will actually be watching?\n\nShowcases can help. They can also add up fast. A few habits make the money go further:\n\n✅ Get his numbers first: exit velo, 60 time, velo, grades. Knowing where they stack up tells you which levels to aim for.\n✅ Pick events where coaches from those levels show up. Ask the organizer which programs attended last time.\n❌ Don't pay for every invite that lands in your inbox. More events isn't the same as better exposure.\n❌ Don't skip the follow-up. A short email to the coaches you hoped would see him keeps the event working after it ends.\n\nWhich showcase lesson did your family learn the hard way? 👇\n\nSee what the numbers say about your player's best fit:\nhttps://baseballfuture.com\n\n#BaseballRecruiting #BaseballParents",
+      "caption_instagram": "Before you write the next showcase check, ask one question: who will actually be watching?\n\nShowcases can help. They can also add up fast. A few habits make the money go further:\n\n✅ Get his numbers first: exit velo, 60 time, velo, grades. Knowing where they stack up tells you which levels to aim for.\n✅ Pick events where coaches from those levels show up. Ask the organizer which programs attended last time.\n❌ Don't pay for every invite that lands in your inbox. More events isn't the same as better exposure.\n❌ Don't skip the follow-up. A short email to the coaches you hoped would see him keeps the event working after it ends.\n\nWhich showcase lesson did your family learn the hard way? 👇\n\nTap the link in our bio to see what the numbers say. 👆\n\n#BaseballRecruiting #BaseballParents",
+      "graphic_file": "graphics/2026-10-22-0900.png",
+      "graphic": {
+        "kicker": "Recruiting tips for parents",
+        "headline": "Before you pay for *a showcase*",
+        "style": "dodont",
+        "items": [
+          "DO: get his numbers first",
+          "DO: pick events his levels attend",
+          "DON'T: pay for every invite",
+          "DON'T: skip the follow-up email"
+        ],
+        "visual": "radar",
+        "stat": {
+          "label": "Exit velocity",
+          "value": "88.4",
+          "unit": "MPH"
+        },
+        "hashtag": "#BaseballRecruiting"
+      }
+    },
+    "13:00": {
+      "headline": "3 steps to follow up with a coach",
+      "topic": "How-to: follow up with a college coach after a camp (timing, what stood out, updated numbers + video)",
+      "caption": "The camp is over. Now what?\n\nMany families wait for the coach to reach out first. Often the more useful move is a short, polite follow-up from your player.\n\n⚾ Email within a week, while the camp is still fresh.\n⚾ Mention one thing that stood out: a drill, a piece of feedback, something he took away.\n⚾ Include updated numbers and a short video link, so the coach can see where he is today.\n\nKeep it brief and in his own words. It also shows a coach he can handle his own communication.\n\nIs your player writing his own coach emails yet? 👇\n\nSee what the numbers say about your player's best fit:\nhttps://baseballfuture.com\n\n#BaseballParents #CollegeBaseball",
+      "caption_instagram": "The camp is over. Now what?\n\nMany families wait for the coach to reach out first. Often the more useful move is a short, polite follow-up from your player.\n\n⚾ Email within a week, while the camp is still fresh.\n⚾ Mention one thing that stood out: a drill, a piece of feedback, something he took away.\n⚾ Include updated numbers and a short video link, so the coach can see where he is today.\n\nKeep it brief and in his own words. It also shows a coach he can handle his own communication.\n\nIs your player writing his own coach emails yet? 👇\n\nTap the link in our bio to see what the numbers say. 👆\n\n#BaseballParents #CollegeBaseball",
+      "graphic_file": "graphics/2026-10-22-1300.png",
+      "graphic": {
+        "kicker": "After the camp",
+        "headline": "3 steps to *follow up* with a coach",
+        "style": "list",
+        "items": [
+          "Email within a week",
+          "Mention what stood out",
+          "Send updated numbers + video"
+        ],
+        "visual": "report",
+        "hashtag": "#BaseballParents"
+      }
+    }
+  },
+  "link_rule_note": "PLAYBOOK.md requires a link on every post: URL in Facebook captions, 'link in our bio' line on Instagram.",
+  "buffer_post_ids": {
+    "instagram": {
+      "09:00": "6ada2cbebf6d801ac6f52a17",
+      "13:00": "6ada2ccfeb1348c17ac7f2c0"
+    },
+    "facebook": {
+      "09:00": "6ada2ccca6a09108d272d9f4",
+      "13:00": "6ada2cd2f09f431dcae6b6d2"
+    },
+    "x": "not used (Instagram and Facebook only)"
+  }
+}
