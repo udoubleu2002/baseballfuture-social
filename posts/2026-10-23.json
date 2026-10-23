@@ -1,0 +1,68 @@
+{
+  "date": "2026-10-23",
+  "theme": "Friday: BaseballFuture promotion",
+  "include_url": true,
+  "photo": null,
+  "posts": {
+    "09:00": {
+      "headline": "One player. Five levels.",
+      "topic": "Free best-fit preview: see how a player's numbers line up with typical ranges at D1, D2, D3, NAIA and JUCO side by side",
+      "caption": "Most families start the recruiting conversation with one question: \"Is he D1?\"\n\nA more useful question: where do his numbers fit across all five levels?\n\nD1, D2, D3, NAIA and JUCO each have their own typical ranges. A player can sit just outside one level and comfortably inside two or three others. Seeing all five side by side helps you aim his effort where he has real options.\n\nThat's what the free BaseballFuture best-fit preview does. Enter his measured numbers, like exit velo, 60 time, velocity and grades, and see how they line up with typical ranges at each level.\n\nIt's an estimate, not a coach's evaluation. It's a smarter starting point.\n\nWhich level surprises families the most? 👇\n\nSee what the numbers say about your player's best fit:\nhttps://baseballfuture.com\n\n#BaseballRecruiting #CollegeBaseball",
+      "caption_instagram": "Most families start the recruiting conversation with one question: \"Is he D1?\"\n\nA more useful question: where do his numbers fit across all five levels?\n\nD1, D2, D3, NAIA and JUCO each have their own typical ranges. A player can sit just outside one level and comfortably inside two or three others. Seeing all five side by side helps you aim his effort where he has real options.\n\nThat's what the free BaseballFuture best-fit preview does. Enter his measured numbers, like exit velo, 60 time, velocity and grades, and see how they line up with typical ranges at each level.\n\nIt's an estimate, not a coach's evaluation. It's a smarter starting point.\n\nWhich level surprises families the most? 👇\n\nTap the link in our bio to see what the numbers say. 👆\n\n#BaseballRecruiting #CollegeBaseball",
+      "graphic_file": "graphics/2026-10-23-0900.png",
+      "graphic": {
+        "kicker": "Sample player · fit out of 100",
+        "headline": "One player. *Five levels.*",
+        "style": "bars",
+        "items": [
+          "D1|61",
+          "D2|84",
+          "D3|79",
+          "NAIA|88",
+          "JUCO|80"
+        ],
+        "visual": "fitcard",
+        "hashtag": "#BaseballRecruiting",
+        "best": "NAIA",
+        "sub": "See where his numbers line up with typical ranges at every level."
+      }
+    },
+    "13:00": {
+      "headline": "From numbers to a plan",
+      "topic": "Full report path: numbers -> best-fit levels -> school target list -> 90-day plan",
+      "caption": "Knowing his numbers is step one. What you do with them is what moves recruiting forward.\n\nHere's a simple path many families can follow:\n\n1️⃣ Enter his numbers: exit velo, 60 time, velocity, pop time, grades.\n2️⃣ See which levels he fits best right now.\n3️⃣ Build a school target list at those levels, with a mix of reach and realistic options.\n4️⃣ Follow a 90-day plan: what to work on, which coaches to email, when to update his video.\n\nThe full BaseballFuture report puts all four in one place, with PDFs you can share with coaches.\n\nWhich step is your family on right now? 👇\n\nSee what the numbers say about your player's best fit:\nhttps://baseballfuture.com\n\n#BaseballParents #StudentAthlete",
+      "caption_instagram": "Knowing his numbers is step one. What you do with them is what moves recruiting forward.\n\nHere's a simple path many families can follow:\n\n1️⃣ Enter his numbers: exit velo, 60 time, velocity, pop time, grades.\n2️⃣ See which levels he fits best right now.\n3️⃣ Build a school target list at those levels, with a mix of reach and realistic options.\n4️⃣ Follow a 90-day plan: what to work on, which coaches to email, when to update his video.\n\nThe full BaseballFuture report puts all four in one place, with PDFs you can share with coaches.\n\nWhich step is your family on right now? 👇\n\nTap the link in our bio to see what the numbers say. 👆\n\n#BaseballParents #StudentAthlete",
+      "graphic_file": "graphics/2026-10-23-1300.png",
+      "graphic": {
+        "kicker": "4 steps for parents",
+        "headline": "From numbers *to a plan*",
+        "style": "list",
+        "items": [
+          "Enter his numbers",
+          "See his best-fit levels",
+          "Build a school target list",
+          "Follow a 90-day plan"
+        ],
+        "visual": "stopwatch",
+        "stat": {
+          "label": "60-yard dash",
+          "value": "7.05",
+          "unit": "SEC"
+        },
+        "hashtag": "#BaseballParents"
+      }
+    }
+  },
+  "link_rule_note": "PLAYBOOK.md requires a link on every post: URL in Facebook captions, 'link in our bio' line on Instagram.",
+  "buffer_post_ids": {
+    "instagram": {
+      "09:00": "6adb7c0010223fea566ee750",
+      "13:00": "6adb7c0210223fea566ee783"
+    },
+    "facebook": {
+      "09:00": "6adb7c016fe59a6ed27fca7b",
+      "13:00": "6adb7c027af932dee4e95cae"
+    },
+    "x": "not used (Instagram and Facebook only)"
+  }
+}
