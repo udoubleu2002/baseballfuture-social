@@ -1,0 +1,60 @@
+{
+  "date": "2026-10-24",
+  "theme": "Saturday: player development / shareable discussion (unpopular opinion)",
+  "include_url": true,
+  "photo": null,
+  "posts": {
+    "09:00": {
+      "headline": "His offseason > one more showcase",
+      "topic": "Unpopular opinion: offseason training moves the numbers; a showcase only measures them, so time showcases for when there is progress to show",
+      "caption": "Unpopular opinion: his offseason matters more than one more showcase.\n\nA showcase is a measuring stick. It records his exit velo, 60 time, velocity or pop time on one day.\n\nThe offseason is when those numbers actually move. Strength, speed and arm work done consistently between now and spring is what gives him something new to show.\n\nIf his numbers haven't changed, another event may just confirm what coaches already saw.\n\nThat doesn't make showcases a waste. Timing matters. Measure him, train with a plan, then get re-measured when there's progress to show.\n\nAgree or disagree? 👇\n\nSee what the numbers say about your player's best fit:\nhttps://baseballfuture.com\n\n#PlayerDevelopment #BaseballRecruiting",
+      "caption_instagram": "Unpopular opinion: his offseason matters more than one more showcase.\n\nA showcase is a measuring stick. It records his exit velo, 60 time, velocity or pop time on one day.\n\nThe offseason is when those numbers actually move. Strength, speed and arm work done consistently between now and spring is what gives him something new to show.\n\nIf his numbers haven't changed, another event may just confirm what coaches already saw.\n\nThat doesn't make showcases a waste. Timing matters. Measure him, train with a plan, then get re-measured when there's progress to show.\n\nAgree or disagree? 👇\n\nTap the link in our bio to see what the numbers say. 👆\n\n#PlayerDevelopment #BaseballRecruiting",
+      "graphic_file": "graphics/2026-10-24-0900.png",
+      "graphic": {
+        "kicker": "Unpopular opinion",
+        "headline": "His offseason > *one more showcase*",
+        "style": "statement",
+        "sub": "A showcase measures his numbers. The work he does this winter is what changes them.",
+        "visual": "radar",
+        "stat": {
+          "label": "Exit velocity",
+          "value": "88.4",
+          "unit": "MPH"
+        },
+        "hashtag": "#PlayerDevelopment"
+      }
+    },
+    "13:00": {
+      "headline": "Build his winter plan",
+      "topic": "Four-step offseason plan: baseline test, pick 1-2 numbers, train on a schedule, retest before spring",
+      "caption": "What's your player's plan between now and spring?\n\nLate fall and winter are quiet on the field, but they're often the best stretch of the year to improve the numbers coaches look at.\n\nA simple four-step winter plan:\n\n1️⃣ Test his numbers now: exit velo, 60 time, velocity or pop time, plus his grades.\n2️⃣ Pick one or two to improve. Focus beats trying to fix everything at once.\n3️⃣ Train on a set schedule, and keep it realistic around school.\n4️⃣ Retest before spring so you know what changed.\n\nA baseline today makes it much easier to show coaches real progress later.\n\nWhich number is he working on this winter? 👇\n\nSee what the numbers say about your player's best fit:\nhttps://baseballfuture.com\n\n#BaseballParents #HighSchoolBaseball",
+      "caption_instagram": "What's your player's plan between now and spring?\n\nLate fall and winter are quiet on the field, but they're often the best stretch of the year to improve the numbers coaches look at.\n\nA simple four-step winter plan:\n\n1️⃣ Test his numbers now: exit velo, 60 time, velocity or pop time, plus his grades.\n2️⃣ Pick one or two to improve. Focus beats trying to fix everything at once.\n3️⃣ Train on a set schedule, and keep it realistic around school.\n4️⃣ Retest before spring so you know what changed.\n\nA baseline today makes it much easier to show coaches real progress later.\n\nWhich number is he working on this winter? 👇\n\nTap the link in our bio to see what the numbers say. 👆\n\n#BaseballParents #HighSchoolBaseball",
+      "graphic_file": "graphics/2026-10-24-1300.png",
+      "graphic": {
+        "kicker": "Offseason · 4 steps",
+        "headline": "Build his *winter plan*",
+        "style": "list",
+        "items": [
+          "Test his numbers now",
+          "Pick 1 or 2 to improve",
+          "Train with a set schedule",
+          "Retest before spring"
+        ],
+        "visual": "report",
+        "hashtag": "#BaseballParents"
+      }
+    }
+  },
+  "link_rule_note": "PLAYBOOK.md requires a link on every post: URL in Facebook captions, 'link in our bio' line on Instagram.",
+  "buffer_post_ids": {
+    "instagram": {
+      "09:00": "6adccd3abd33ce99c32ce0f6",
+      "13:00": "6adccd3bbd33ce99c32ce16d"
+    },
+    "facebook": {
+      "09:00": "6adccd3bbd33ce99c32ce129",
+      "13:00": "6adccd3c8b3d437ddcc69356"
+    },
+    "x": "not used (Instagram and Facebook only)"
+  }
+}
