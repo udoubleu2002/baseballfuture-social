@@ -1,0 +1,73 @@
+{
+  "date": "2026-10-25",
+  "theme": "Sunday: parent engagement / audience research question (poll)",
+  "include_url": true,
+  "photo": null,
+  "posts": {
+    "09:00": {
+      "headline": "Where is he in recruiting?",
+      "topic": "Audience poll: which recruiting stage the family is in (getting started, testing numbers, emailing coaches, visiting schools)",
+      "caption": "Where is your family in the recruiting process right now?\n\nEvery family starts at a different point, and there's no single right timeline.\n\nA) Just getting started\nB) Testing his numbers\nC) Emailing coaches\nD) Visiting schools\n\nWherever you are, the next step usually gets clearer once you know where his numbers fit. Exit velo, 60 time, velocity, pop time and grades all help point him toward the levels where he has real options.\n\nReply with your letter 👇 Your answers help shape what we cover next.\n\nSee what the numbers say about your player's best fit:\nhttps://baseballfuture.com\n\n#BaseballParents #BaseballRecruiting",
+      "caption_instagram": "Where is your family in the recruiting process right now?\n\nEvery family starts at a different point, and there's no single right timeline.\n\nA) Just getting started\nB) Testing his numbers\nC) Emailing coaches\nD) Visiting schools\n\nWherever you are, the next step usually gets clearer once you know where his numbers fit. Exit velo, 60 time, velocity, pop time and grades all help point him toward the levels where he has real options.\n\nReply with your letter 👇 Your answers help shape what we cover next.\n\nTap the link in our bio to see what the numbers say. 👆\n\n#BaseballParents #BaseballRecruiting",
+      "graphic_file": "graphics/2026-10-25-0900.png",
+      "graphic": {
+        "kicker": "Parents, check in",
+        "headline": "Where is he *in recruiting?*",
+        "style": "poll",
+        "items": [
+          "Just getting started",
+          "Testing his numbers",
+          "Emailing coaches",
+          "Visiting schools"
+        ],
+        "ask": "No wrong answer. *Reply below*",
+        "visual": "stopwatch",
+        "stat": {
+          "label": "60-yard dash",
+          "value": "6.92",
+          "unit": "SEC"
+        },
+        "hashtag": "#BaseballParents"
+      }
+    },
+    "13:00": {
+      "headline": "Close to home or best fit?",
+      "topic": "Parent debate: a school close to home vs. the level his numbers fit best",
+      "caption": "Close to home, or the best baseball fit?\n\nIt's one of the biggest conversations families have, and both sides have a point.\n\nA) A school close to home\n✅ Easier for you to see him play\n✅ Familiar area, support nearby\n\nB) His best-fit level\n✅ A program where his numbers fit typical ranges\n✅ A better chance to compete for innings and keep developing\n\nSometimes those overlap. Often they don't. Knowing which levels fit his numbers shows you whether a nearby school is a realistic match, or whether widening the map gives him more options.\n\nWhich matters more to your family? Reply A or B 👇\n\nSee what the numbers say about your player's best fit:\nhttps://baseballfuture.com\n\n#CollegeBaseball #BaseballParents",
+      "caption_instagram": "Close to home, or the best baseball fit?\n\nIt's one of the biggest conversations families have, and both sides have a point.\n\nA) A school close to home\n✅ Easier for you to see him play\n✅ Familiar area, support nearby\n\nB) His best-fit level\n✅ A program where his numbers fit typical ranges\n✅ A better chance to compete for innings and keep developing\n\nSometimes those overlap. Often they don't. Knowing which levels fit his numbers shows you whether a nearby school is a realistic match, or whether widening the map gives him more options.\n\nWhich matters more to your family? Reply A or B 👇\n\nTap the link in our bio to see what the numbers say. 👆\n\n#CollegeBaseball #BaseballParents",
+      "graphic_file": "graphics/2026-10-25-1300.png",
+      "graphic": {
+        "kicker": "Parent debate",
+        "headline": "Close to home *or best fit?*",
+        "style": "versus",
+        "items": [
+          "A school close to home",
+          "His best-fit level"
+        ],
+        "ask": "*Which matters more?*",
+        "visual": "fitcard",
+        "fit": [
+          "D1|58",
+          "D2|81",
+          "D3|86",
+          "NAIA|83",
+          "JUCO|77"
+        ],
+        "best": "D3",
+        "hashtag": "#CollegeBaseball"
+      }
+    }
+  },
+  "link_rule_note": "PLAYBOOK.md requires a link on every post: URL in Facebook captions, 'link in our bio' line on Instagram.",
+  "buffer_post_ids": {
+    "instagram": {
+      "09:00": "6ade1eeebd33ce99c37a07e2",
+      "13:00": "6ade1ef00b5343d070da881c"
+    },
+    "facebook": {
+      "09:00": "6ade1eef3d5b27036bdbbd7a",
+      "13:00": "6ade1ef06887a2efc10fb781"
+    },
+    "x": "not used (Instagram and Facebook only)"
+  }
+}
