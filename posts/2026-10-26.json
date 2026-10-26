@@ -1,0 +1,56 @@
+{
+ "date": "2026-10-26",
+ "theme": "Monday: shareable myth-buster / know your level",
+ "include_url": true,
+ "photo": null,
+ "posts": {
+  "09:00": {
+   "headline": "Myth: coaches will find him",
+   "topic": "Myth-buster: coaches can't evaluate players they don't know about; families should learn where the numbers fit and reach out",
+   "caption": "Will college coaches find your player on their own?\n\nIt's one of the most common recruiting myths. ❌\n\nA coach can only evaluate a player he knows about. Waiting to be discovered can mean he's never seen by the programs that fit him best.\n\n✅ Know where his numbers fit: exit velo, 60 time, velocity, pop time, grades\n✅ Build a list of programs at the levels where he fits\n✅ Reach out with his numbers, video and schedule\n\nBeing proactive isn't pushy. It's how coaches learn who he is.\n\nHas your family started reaching out to coaches yet? 👇\n\nSee what the numbers say about your player's best fit:\nhttps://baseballfuture.com\n\n#BaseballRecruiting #BaseballParents",
+   "caption_instagram": "Will college coaches find your player on their own?\n\nIt's one of the most common recruiting myths. ❌\n\nA coach can only evaluate a player he knows about. Waiting to be discovered can mean he's never seen by the programs that fit him best.\n\n✅ Know where his numbers fit: exit velo, 60 time, velocity, pop time, grades\n✅ Build a list of programs at the levels where he fits\n✅ Reach out with his numbers, video and schedule\n\nBeing proactive isn't pushy. It's how coaches learn who he is.\n\nHas your family started reaching out to coaches yet? 👇\n\nTap the link in our bio to see what the numbers say. 👆\n\n#BaseballRecruiting #BaseballParents",
+   "graphic_file": "graphics/2026-10-26-0900.png",
+   "graphic": {
+    "kicker": "Myth vs. fact",
+    "headline": "Myth: coaches *will find him*",
+    "sub": "Fact: a coach can't evaluate a player he doesn't know about. Learn where his numbers fit, then reach out to the right programs.",
+    "style": "statement",
+    "visual": "radar",
+    "stat": {
+     "label": "Exit velocity",
+     "value": "88.4",
+     "unit": "MPH"
+    },
+    "hashtag": "#BaseballParents"
+   },
+   "buffer": {
+    "facebook": "6adf70f2bc208c66b5fefe48",
+    "instagram": "6adf70f3bc208c66b5fefe96"
+   }
+  },
+  "13:00": {
+   "headline": "4 numbers coaches check",
+   "topic": "Know your level: the measurables (exit velo, 60, throwing velo/pop time, GPA) that come up in recruiting conversations",
+   "caption": "Do you know which numbers coaches look at first?\n\nEvery program evaluates a little differently, but a few measurables come up in almost every recruiting conversation:\n\n⚾ Exit velocity: how hard he hits the ball\n⚾ 60-yard dash: his speed\n⚾ Throwing velo or pop time: arm strength for his position\n⚾ GPA and transcript: whether he can be admitted and stay eligible\n\nNumbers aren't the whole picture. Coaches also weigh video, game performance, makeup and fit. But knowing where his numbers stand helps you focus on the levels where he has real options: D1, D2, D3, NAIA or JUCO.\n\nWhich of these do you know for your player today? 👇\n\nSee what the numbers say about your player's best fit:\nhttps://baseballfuture.com\n\n#CollegeBaseball #HighSchoolBaseball",
+   "caption_instagram": "Do you know which numbers coaches look at first?\n\nEvery program evaluates a little differently, but a few measurables come up in almost every recruiting conversation:\n\n⚾ Exit velocity: how hard he hits the ball\n⚾ 60-yard dash: his speed\n⚾ Throwing velo or pop time: arm strength for his position\n⚾ GPA and transcript: whether he can be admitted and stay eligible\n\nNumbers aren't the whole picture. Coaches also weigh video, game performance, makeup and fit. But knowing where his numbers stand helps you focus on the levels where he has real options: D1, D2, D3, NAIA or JUCO.\n\nWhich of these do you know for your player today? 👇\n\nTap the link in our bio to see what the numbers say. 👆\n\n#CollegeBaseball #HighSchoolBaseball",
+   "graphic_file": "graphics/2026-10-26-1300.png",
+   "graphic": {
+    "kicker": "Know your level",
+    "headline": "4 numbers *coaches check*",
+    "style": "list",
+    "items": [
+     "Exit velocity",
+     "60-yard dash",
+     "Throwing velo or pop time",
+     "GPA and transcript"
+    ],
+    "visual": "report",
+    "hashtag": "#BaseballRecruiting"
+   },
+   "buffer": {
+    "facebook": "6adf70f46f512eb3b46863b8",
+    "instagram": "6adf70f46b7765f94d557a09"
+   }
+  }
+ }
+}
