@@ -1,0 +1,64 @@
+{
+ "date": "2026-10-27",
+ "theme": "Tuesday: recruiting education (what coaches evaluate)",
+ "include_url": true,
+ "photo": null,
+ "posts": {
+  "09:00": {
+   "headline": "Middle infielders: beyond the glove",
+   "topic": "What coaches evaluate in middle infielders: hands/footwork, first step, throws on the run, home-to-first speed",
+   "caption": "Is your player a shortstop or second baseman? Coaches are watching more than whether he catches the ball.\n\nWhen college coaches evaluate middle infielders, a few things come up again and again:\n\n⚾ Hands and footwork: clean exchanges, balanced feet\n⚾ First-step quickness: how fast he reads and reacts\n⚾ Throws on the run: accuracy when he can't set his feet\n⚾ Home-to-first speed: a measurable coaches can compare\n\nSome of these show up best on video. Others, like home-to-first time, are numbers you can measure and track. Knowing where those numbers sit helps you see which levels (D1, D2, D3, NAIA or JUCO) fit him today.\n\nWhich of these is his strongest right now? 👇\n\nSee what the numbers say about your player's best fit:\nhttps://baseballfuture.com\n\n#BaseballRecruiting #HighSchoolBaseball",
+   "caption_instagram": "Is your player a shortstop or second baseman? Coaches are watching more than whether he catches the ball.\n\nWhen college coaches evaluate middle infielders, a few things come up again and again:\n\n⚾ Hands and footwork: clean exchanges, balanced feet\n⚾ First-step quickness: how fast he reads and reacts\n⚾ Throws on the run: accuracy when he can't set his feet\n⚾ Home-to-first speed: a measurable coaches can compare\n\nSome of these show up best on video. Others, like home-to-first time, are numbers you can measure and track. Knowing where those numbers sit helps you see which levels (D1, D2, D3, NAIA or JUCO) fit him today.\n\nWhich of these is his strongest right now? 👇\n\nTap the link in our bio to see what the numbers say. 👆\n\n#BaseballRecruiting #HighSchoolBaseball",
+   "graphic_file": "graphics/2026-10-27-0900.png",
+   "graphic": {
+    "kicker": "What coaches evaluate",
+    "headline": "Middle infielders: *beyond the glove*",
+    "style": "list",
+    "items": [
+     "Hands and footwork",
+     "First-step quickness",
+     "Throws on the run",
+     "Home-to-first speed"
+    ],
+    "visual": "stopwatch",
+    "stat": {
+     "label": "Home to first",
+     "value": "4.25",
+     "unit": "SEC"
+    },
+    "hashtag": "#BaseballRecruiting"
+   },
+   "buffer": {
+    "facebook": "6ae0c3ff919ba5cc9ec85a76",
+    "instagram": "6ae0c3ff24d07dab298cbe6e"
+   }
+  },
+  "13:00": {
+   "headline": "Hitters: more than exit velo",
+   "topic": "What coaches evaluate in hitters: exit velo as a starting point for level fit, plus approach, swing decisions and results vs. good pitching",
+   "caption": "His exit velo is a great number to know. But is it the only thing a college coach looks at in a hitter?\n\nNot usually. Exit velocity shows how hard he can hit the ball, and it's one of the clearest ways to compare him with typical ranges at each level.\n\nCoaches also want to see:\n✅ His approach: does he have a plan at the plate?\n✅ Swing decisions: does he chase, or make pitchers work?\n✅ Results against good pitching, not just batting practice\n\nSo use the number as a starting point. It helps you focus on the levels where he fits best. Then make sure his video and game results show the rest of the hitter.\n\nDoes your player know his exit velo yet? 👇\n\nSee what the numbers say about your player's best fit:\nhttps://baseballfuture.com\n\n#CollegeBaseball #BaseballParents",
+   "caption_instagram": "His exit velo is a great number to know. But is it the only thing a college coach looks at in a hitter?\n\nNot usually. Exit velocity shows how hard he can hit the ball, and it's one of the clearest ways to compare him with typical ranges at each level.\n\nCoaches also want to see:\n✅ His approach: does he have a plan at the plate?\n✅ Swing decisions: does he chase, or make pitchers work?\n✅ Results against good pitching, not just batting practice\n\nSo use the number as a starting point. It helps you focus on the levels where he fits best. Then make sure his video and game results show the rest of the hitter.\n\nDoes your player know his exit velo yet? 👇\n\nTap the link in our bio to see what the numbers say. 👆\n\n#CollegeBaseball #BaseballParents",
+   "graphic_file": "graphics/2026-10-27-1300.png",
+   "graphic": {
+    "kicker": "What coaches evaluate",
+    "headline": "Hitters: more than *exit velo*",
+    "sub": "Coaches also watch his approach, swing decisions and how he handles good pitching. Exit velo helps show which levels fit.",
+    "style": "statement",
+    "visual": "fitcard",
+    "fit": [
+     "D1|58",
+     "D2|74",
+     "D3|86",
+     "NAIA|83",
+     "JUCO|80"
+    ],
+    "best": "D3",
+    "hashtag": "#BaseballParents"
+   },
+   "buffer": {
+    "facebook": "6ae0c40062bedda2a12bb7c4",
+    "instagram": "6ae0c4010574aed3d26927bb"
+   }
+  }
+ }
+}
