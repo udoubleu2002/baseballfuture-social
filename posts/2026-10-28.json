@@ -1,0 +1,60 @@
+{
+ "date": "2026-10-28",
+ "theme": "Wednesday: debate / would-you-rather for parents (The Baseball Parent Debate)",
+ "include_url": true,
+ "photo": null,
+ "posts": {
+  "09:00": {
+   "headline": "Multi-sport or baseball only?",
+   "topic": "Parent Debate: keep playing multiple sports vs. year-round baseball",
+   "caption": "Should your player keep playing other sports, or focus on baseball year-round?\n\nIt's one of the most common debates in baseball families, and both sides have real points.\n\nA) Keep playing two or three sports\n✅ Builds overall athleticism and movement skills\n✅ A break from the same throwing and swinging motions\n✅ He learns to compete in different settings\n\nB) Year-round baseball\n✅ More reps and more development time\n✅ More chances to get measured and seen\n✅ Time to build his numbers before recruiting heats up\n\nYou'll hear coaches and parents on both sides of this one. The right answer often depends on his age, his body and how much he loves each sport.\n\nWhich way did your family go, and what did you learn? Reply A or B and tell us why 👇\n\nSee what the numbers say about your player's best fit:\nhttps://baseballfuture.com\n\n#BaseballParents #HighSchoolBaseball",
+   "caption_instagram": "The Baseball Parent Debate: multi-sport or baseball only?\n\nA) Keep playing two or three sports: broader athleticism and a break from the same motions.\n\nB) Year-round baseball: more reps, more development time and more chances to get measured.\n\nBoth paths have produced college players. What matters is what fits your player right now.\n\nWhich would you choose, A or B? Tell us why in the comments, and share this with a baseball family who's deciding 👇\n\nTap the link in our bio to see what the numbers say. 👆\n\n#BaseballParents #HighSchoolBaseball",
+   "graphic_file": "graphics/2026-10-28-0900.png",
+   "graphic": {
+    "kicker": "The Baseball Parent Debate",
+    "headline": "Multi-sport *or baseball only?*",
+    "style": "versus",
+    "items": [
+     "Keep playing *two or three sports*",
+     "Go *year-round baseball*"
+    ],
+    "ask": "No wrong answer. *What's your choice?*",
+    "visual": "radar",
+    "stat": {
+     "label": "Exit velocity",
+     "value": "88.4",
+     "unit": "MPH"
+    },
+    "hashtag": "#BaseballParents"
+   },
+   "buffer": {
+    "facebook": "6ae1a37de673d1e58952c875",
+    "instagram": "6ae1a36e1b676814df9d63a8"
+   }
+  },
+  "13:00": {
+   "headline": "How to break the tie",
+   "topic": "Choosing between two interested schools: roster role, major, real cost after aid, daily coach",
+   "caption": "Two schools are interested in your player. Now what?\n\nWhen the logo and the gut feeling don't settle it, these four questions help:\n\n⚾ His role on the roster: How many players at his position are returning, and where would he fit? Ask the coach directly.\n⚾ His major is offered: Confirm it's there and ask how players balance it with baseball.\n⚾ Real cost after aid: Compare what your family would actually pay once any athletic, academic and need-based aid is counted, not the sticker price.\n⚾ Who coaches him daily: Find out who works with his position group every day, not just who recruited him.\n\nComparing his numbers with typical ranges at each level can also show which program is the more realistic fit right now.\n\nWhat other question helped your family decide? 👇\n\nSee what the numbers say about your player's best fit:\nhttps://baseballfuture.com\n\n#CollegeBaseball #BaseballRecruiting",
+   "caption_instagram": "Two schools interested? Here's how to break the tie.\n\n1. His role on the roster: who's returning at his position?\n2. His major is offered: and how it fits the baseball schedule\n3. Real cost after aid: compare what you'd actually pay, not the sticker price\n4. Who coaches him daily: not just who recruited him\n\nKnowing which levels fit his numbers helps too.\n\nSave this for when the decision comes, and send it to a baseball parent who's weighing offers. ✅\n\nTap the link in our bio to see what the numbers say. 👆\n\n#CollegeBaseball #BaseballRecruiting",
+   "graphic_file": "graphics/2026-10-28-1300.png",
+   "graphic": {
+    "kicker": "Two schools interested?",
+    "headline": "How to *break the tie*",
+    "style": "list",
+    "items": [
+     "His role on the roster",
+     "His major is offered",
+     "Real cost after aid",
+     "Who coaches him daily"
+    ],
+    "visual": "report",
+    "hashtag": "#CollegeBaseball"
+   },
+   "buffer": {
+    "facebook": "6ae1a37ef94c111d6ec07785",
+    "instagram": "6ae1a37ee673d1e58952c8d5"
+   }
+  }
+ }
+}
