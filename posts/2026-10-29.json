@@ -1,0 +1,72 @@
+{
+ "date": "2026-10-29",
+ "theme": "Thursday: recruiting tips (do/don't, how-to); Post 1 is this week's Recruiting Reality Check",
+ "include_url": true,
+ "photo": null,
+ "note": "Post 1 moved from 9:00 AM to 9:15 AM PDT: the run started at 8:49 AM, so 9:00 was less than 15 minutes out when the post was ready.",
+ "posts": {
+  "09:00": {
+   "scheduled_local": "2026-10-29T09:15:00-07:00",
+   "headline": "Junior year, quiet inbox?",
+   "topic": "Recruiting Reality Check: junior with limited recruiting interest; compare numbers by level, widen target list, keep reaching out",
+   "caption": "Recruiting Reality Check: your player is a junior, and the inbox is quiet. Is it too late?\n\nFor most families, no. But waiting for coaches to find him isn't a plan.\n\n✅ Compare his numbers with typical ranges by level, so you know where he realistically fits right now\n✅ Widen the target list to include D2, D3, NAIA and JUCO programs that match those numbers\n❌ Don't sit back and wait for the phone to ring\n❌ Don't panic, and don't stop reaching out. A short, specific email with updated numbers and video keeps doors open\n\nQuiet now doesn't mean quiet forever. Plenty of players keep developing, and many programs keep recruiting well into a player's junior and senior years.\n\nWhat's one recruiting question you want answered in a future Reality Check? Drop it below 👇\n\nSee what the numbers say about your player's best fit:\nhttps://baseballfuture.com\n\n#BaseballRecruiting #BaseballParents",
+   "caption_instagram": "Recruiting Reality Check: junior year, quiet inbox?\n\nIt's more common than most parents think, and it's rarely the end of the road.\n\n✅ DO compare his numbers by level, so you know where he fits now\n✅ DO widen his list to D2, D3, NAIA and JUCO programs that match\n❌ DON'T wait for coaches to call\n❌ DON'T panic or stop emailing\n\nQuiet now isn't quiet forever. Keep developing, keep reaching out.\n\nSave this for later, and send us your recruiting question for a future Reality Check 👇\n\nTap the link in our bio to see what the numbers say. 👆\n\n#BaseballRecruiting #BaseballParents",
+   "graphic_file": "graphics/2026-10-29-0900.png",
+   "graphic": {
+    "kicker": "Recruiting Reality Check",
+    "headline": "Junior year, *quiet inbox?*",
+    "style": "dodont",
+    "items": [
+     "DO: compare his numbers by level",
+     "DO: widen his target list",
+     "DON'T: wait for coaches to call",
+     "DON'T: panic or stop emailing"
+    ],
+    "visual": "fitcard",
+    "fit": [
+     "D1|48",
+     "D2|71",
+     "D3|86",
+     "NAIA|83",
+     "JUCO|88"
+    ],
+    "best": "D3",
+    "hashtag": "#BaseballRecruiting"
+   },
+   "buffer": {
+    "facebook": "6ae36cd310365a6fbef351ca",
+    "instagram": "6ae36cdcc073f399d5f17ced"
+   }
+  },
+  "13:00": {
+   "scheduled_local": "2026-10-29T13:00:00-07:00",
+   "headline": "What goes in his first email",
+   "topic": "How-to: coach intro email checklist (basics, 3-4 verified numbers, short video, why this program; player sends it)",
+   "caption": "Your player is ready to email college coaches. What actually belongs in that first message?\n\nThe emails that get read are short, specific and easy to act on. A simple checklist:\n\n⚾ The basics up top: grad year, position, high school and travel team, plus GPA\n⚾ 3 to 4 verified numbers: things like exit velo, 60 time, throwing velo or pop time, with where and when they were measured\n⚾ A short video link: a couple of minutes of clean, recent footage beats a long highlight reel\n⚾ Why this program: one or two sentences showing he's looked at the roster, the level and the academics\n\nHave your player write and send it himself, keep it to a few short paragraphs, and include his upcoming schedule.\n\nKnowing which levels fit his numbers first helps him email the right programs.\n\nWhat did your player include in his first coach email? 👇\n\nSee what the numbers say about your player's best fit:\nhttps://baseballfuture.com\n\n#BaseballParents #CollegeBaseball",
+   "caption_instagram": "What goes in his first coach email? Save this checklist ✅\n\n1. Grad year, position, school (plus GPA)\n2. 3 to 4 verified numbers, with where they were measured\n3. A short video link: recent, clean, a couple of minutes\n4. Why this program fits him, in a sentence or two\n\nShort and specific gets read. And it should come from your player, not from you.\n\nShare this with a baseball family whose player is about to hit send 👇\n\nTap the link in our bio to see what the numbers say. 👆\n\n#BaseballParents #CollegeBaseball",
+   "graphic_file": "graphics/2026-10-29-1300.png",
+   "graphic": {
+    "kicker": "Coach email checklist",
+    "headline": "What goes in *his first email*",
+    "style": "list",
+    "items": [
+     "Grad year, position, school",
+     "3-4 verified numbers",
+     "Short video link",
+     "Why this program fits him"
+    ],
+    "visual": "stopwatch",
+    "stat": {
+     "label": "60-yard dash",
+     "value": "7.05",
+     "unit": "SEC"
+    },
+    "hashtag": "#BaseballParents"
+   },
+   "buffer": {
+    "facebook": "6ae36ce4f3a8aff3f3570195",
+    "instagram": "6ae36ceb25e7fa4a8db6ad12"
+   }
+  }
+ }
+}
