@@ -1,0 +1,56 @@
+{
+ "date": "2026-10-30",
+ "theme": "Friday: BaseballFuture promotion; Post 1 is Baseball Family Friday (community prompt)",
+ "include_url": true,
+ "photo": null,
+ "note": "Post 1 moved from 9:00 AM to 9:15 AM PDT: run started 8:46 AM, so 9:00 was less than 15 minutes out when the post was ready. Hosted URLs verified via GitHub blob SHA match on main and Buffer resolving each image at 1080x1080 (direct raw fetch blocked by sandbox proxy).",
+ "posts": {
+  "09:00": {
+   "scheduled_local": "2026-10-30T09:15:00-07:00",
+   "headline": "What do you wish you knew sooner?",
+   "topic": "Baseball Family Friday: parents share one recruiting-journey lesson for families just starting out",
+   "graphic_file": "graphics/2026-10-30-0900.png",
+   "graphic": {
+    "kicker": "Baseball Family Friday",
+    "headline": "What do you wish *you knew sooner?*",
+    "sub": "Looking back on your son's high school baseball and recruiting journey, what's one lesson you'd pass along to a family just starting out?",
+    "style": "statement",
+    "ask": "Share yours below. *Help another family.*",
+    "visual": "radar",
+    "stat": {
+     "label": "Exit velocity",
+     "value": "88.4",
+     "unit": "MPH"
+    },
+    "hashtag": "#BaseballParents"
+   },
+   "buffer": {
+    "facebook": "6ae4bd3ca351214acf95ae77",
+    "instagram": "6ae4bd43a351214acf95b0d2"
+   }
+  },
+  "13:00": {
+   "scheduled_local": "2026-10-30T13:00:00-07:00",
+   "headline": "A target list that fits him",
+   "topic": "Promotion: build the college list from his numbers -> compare by level -> report target list -> email programs that fit",
+   "graphic_file": "graphics/2026-10-30-1300.png",
+   "graphic": {
+    "kicker": "The BaseballFuture report",
+    "headline": "A target list *that fits him*",
+    "style": "list",
+    "items": [
+     "Start with his numbers",
+     "Compare them by level",
+     "Get a school target list",
+     "Email programs that fit"
+    ],
+    "visual": "report",
+    "hashtag": "#BaseballRecruiting"
+   },
+   "buffer": {
+    "facebook": "6ae4bd51cd8290b9b9fac230",
+    "instagram": "6ae4bd5110a950f1372d8808"
+   }
+  }
+ }
+}
