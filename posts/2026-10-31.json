@@ -1,0 +1,64 @@
+{
+ "date": "2026-10-31",
+ "theme": "Saturday: player development / shareable discussion (unpopular opinion)",
+ "include_url": true,
+ "photo": null,
+ "note": "Run started 8:21 AM PDT; both slots on time. Link rule per PLAYBOOK (every post links): URL in Facebook captions, link-in-bio line on Instagram. Hosted URLs verified by GitHub blob SHA match on main and Buffer resolving each image at 1080x1080 (direct raw fetch blocked by sandbox proxy). No X channel used.",
+ "posts": {
+  "09:00": {
+   "scheduled_local": "2026-10-31T09:00:00-07:00",
+   "headline": "His 60 time is not set in stone",
+   "topic": "Unpopular opinion: speed is trainable (sprint mechanics, strength, recovery); test, train, retest before sharing gains with coaches",
+   "graphic_file": "graphics/2026-10-31-0900.png",
+   "graphic": {
+    "kicker": "Unpopular opinion",
+    "headline": "His 60 time is *not set in stone*",
+    "sub": "Speed is a skill. Sprint mechanics, strength and recovery can move it. Test it, train it, then test it again.",
+    "style": "statement",
+    "ask": "Agree? *Tell us why.*",
+    "visual": "stopwatch",
+    "stat": {
+     "label": "60-yard dash",
+     "value": "7.05",
+     "unit": "SEC"
+    },
+    "hashtag": "#PlayerDevelopment"
+   },
+   "buffer": {
+    "facebook": "6ae607c137c1acd2a0b7272c",
+    "instagram": "6ae607c1abbfa4c0cc1cf11a"
+   }
+  },
+  "13:00": {
+   "scheduled_local": "2026-10-31T13:00:00-07:00",
+   "headline": "Still growing? Plan for it.",
+   "topic": "Late-bloomer playbook: log size and numbers, retest every few months, keep a mix of levels, send coaches real updates",
+   "graphic_file": "graphics/2026-10-31-1300.png",
+   "graphic": {
+    "kicker": "Late bloomer playbook",
+    "headline": "Still growing? *Plan for it.*",
+    "style": "list",
+    "items": [
+     "Log his size and numbers",
+     "Retest every few months",
+     "Keep a mix of levels listed",
+     "Send coaches updates"
+    ],
+    "visual": "fitcard",
+    "fit": [
+     "D1|52",
+     "D2|66",
+     "D3|78",
+     "NAIA|74",
+     "JUCO|81"
+    ],
+    "best": "JUCO",
+    "hashtag": "#BaseballParents"
+   },
+   "buffer": {
+    "facebook": "6ae607cf1ee172cd6dab4ae5",
+    "instagram": "6ae607cfcf3a3112f3ac8e41"
+   }
+  }
+ }
+}
