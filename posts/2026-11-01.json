@@ -1,0 +1,63 @@
+{
+ "date": "2026-11-01",
+ "theme": "Sunday: parent engagement / audience research question (poll)",
+ "include_url": true,
+ "photo": null,
+ "note": "Run started 8:21 AM PST (DST ended today, offset -08:00). Link rule per PLAYBOOK (every post links): URL in Facebook captions, link-in-bio line on Instagram. Instagram + Facebook only; X not used.",
+ "posts": {
+  "09:00": {
+   "scheduled_local": "2026-11-01T09:00:00-08:00",
+   "headline": "The hardest part so far?",
+   "topic": "Poll: hardest part of recruiting (level, coach replies, showcases, school list)",
+   "graphic_file": "graphics/2026-11-01-0900.png",
+   "graphic": {
+    "kicker": "Parents, weigh in",
+    "headline": "The hardest part *so far?*",
+    "style": "poll",
+    "items": [
+     "Knowing his real level",
+     "Getting coaches to reply",
+     "Picking which showcases",
+     "Building the school list"
+    ],
+    "ask": "Pick one. *Tell us below.*",
+    "visual": "radar",
+    "stat": {
+     "label": "Exit velocity",
+     "value": "88.4",
+     "unit": "MPH"
+    },
+    "hashtag": "#BaseballParents"
+   },
+   "captions": {
+    "instagram": "Be honest: what's been the hardest part of the recruiting process so far?\n\nA. Knowing his real level\nB. Getting coaches to reply\nC. Picking which showcases are worth it\nD. Building the school list\n\nEvery family hits a different wall. Drop your letter below, and if you want, tell us what's made it hard. Your answer helps another parent who's a step behind you, and it helps us decide what to cover next.\n\nTap the link in our bio to see what the numbers say. 👆\n\n#BaseballParents #BaseballRecruiting",
+    "facebook": "Quick Sunday question for baseball parents: what's been the hardest part of recruiting so far?\n\nA. Knowing his real level\nB. Getting coaches to reply\nC. Picking which showcases are worth the money\nD. Building a school list that actually fits\n\nThere's no wrong answer. Comment your letter, and if you have a minute, share what made it tough or what finally helped. Plenty of families reading this are a year behind you and would love to hear it.\n\nIf \"knowing his level\" is your answer, start with his numbers:\nhttps://baseballfuture.com\n\n#BaseballParents #CollegeBaseball"
+   },
+   "buffer": {}
+  },
+  "13:00": {
+   "scheduled_local": "2026-11-01T13:00:00-08:00",
+   "headline": "Camp invite or real interest?",
+   "topic": "Recruiting Reality Check: telling a mass camp invite from genuine recruiting interest",
+   "graphic_file": "graphics/2026-11-01-1300.png",
+   "graphic": {
+    "kicker": "Recruiting Reality Check",
+    "headline": "Camp invite or *real interest?*",
+    "style": "list",
+    "items": [
+     "Written just to him?",
+     "Names his video or games?",
+     "A coach asks to talk?",
+     "You ask where he fits"
+    ],
+    "visual": "report",
+    "hashtag": "#BaseballRecruiting"
+   },
+   "captions": {
+    "instagram": "Recruiting Reality Check: does a camp invite mean a coach is interested in your player?\n\nSometimes. Often it's a mass email sent to a long list. A few ways to tell the difference:\n\n1️⃣ Was it written just to him, by name?\n2️⃣ Does it mention his video, a game or a specific number?\n3️⃣ Did a coach ask to talk, or just to register?\n4️⃣ If you're unsure, have him reply and ask where he fits on their list.\n\nCamps can still be worth it when the school is a real fit. Save this for the next invite, and send us your recruiting questions for future Reality Checks.\n\nTap the link in our bio to see what the numbers say. 👆\n\n#BaseballRecruiting #CollegeBaseball",
+    "facebook": "Recruiting Reality Check: \"Coach invited him to camp. Does that mean they're interested?\"\n\nMaybe. But many camp invites are mass emails that go to a long list of players. That's not a bad thing; it's just not the same as a coach recruiting your player.\n\nSigns of real interest:\n✅ The message is written to him by name, not \"Dear athlete\"\n✅ It mentions his video, a game they saw or a specific number\n✅ A coach asks for a call or a visit, not just a registration\n✅ You get follow-up after he replies\n\nNot sure? Have your player reply politely and ask where he fits on their board and what they'd want to see. A camp can still be a smart choice when the school is a realistic fit for his level and his grades.\n\nGot a recruiting question for our next Reality Check? Drop it in the comments.\n\nSee what the numbers say about his best-fit level:\nhttps://baseballfuture.com\n\n#BaseballRecruiting #BaseballParents"
+   },
+   "buffer": {}
+  }
+ }
+}
