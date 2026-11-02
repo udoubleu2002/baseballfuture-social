@@ -1,0 +1,65 @@
+{
+ "date": "2026-11-02",
+ "theme": "Monday: shareable myth-buster / know your level",
+ "include_url": true,
+ "photo": null,
+ "note": "Run started 8:59 AM PST (offset -08:00). 9:00 AM slot had passed by the time Post 1 was ready, so Post 1 moved to 10:00 AM PST per recovery rule. Link rule per PLAYBOOK (every post links): URL in Facebook captions, link-in-bio line on Instagram. Instagram + Facebook only; X not used. Sources: https://www.ncaa.org/student-athletes/scholarships-and-grants/ (D3 no athletic scholarships).",
+ "posts": {
+  "09:00": {
+   "scheduled_local": "2026-11-02T10:00:00-08:00",
+   "headline": "Myth: his team gets him recruited",
+   "topic": "Myth-buster: a travel team creates exposure, but coaches recruit the player (numbers, video, grades, outreach)",
+   "graphic_file": "graphics/2026-11-02-0900.png",
+   "graphic": {
+    "kicker": "Monday Myth-Buster",
+    "headline": "Myth: his team *gets him recruited*",
+    "sub": "A team can open doors. Coaches still recruit the player: his numbers, video, grades and outreach.",
+    "style": "statement",
+    "visual": "radar",
+    "stat": {
+     "label": "Exit velocity",
+     "value": "87.9",
+     "unit": "MPH"
+    },
+    "hashtag": "#BaseballParents"
+   },
+   "captions": {
+    "instagram": "Myth: the right travel team will get your player recruited.\n\nA good team can help. It can put him in front of coaches and in better games. But coaches don't recruit a jersey. They recruit the player.\n\nWhat they look at:\n⚾ His numbers and how they compare by level\n⚾ Video they can actually evaluate\n⚾ His grades and coachability\n⚾ Whether he's reached out to programs that fit\n\nThe team opens doors. He still has to walk through them. Share this with a baseball parent who's weighing travel teams this winter.\n\nTap the link in our bio to see what the numbers say. 👆\n\n#BaseballParents #BaseballRecruiting",
+    "facebook": "Monday myth-buster for baseball parents: \"If he's on the right travel team, he'll get recruited.\"\n\nA strong program can absolutely help. Better competition, more events, sometimes a coach who makes calls. That's real value.\n\nBut college coaches recruit players, not team names. When a coach looks at your son, he's asking: Where do his numbers fit? Is there video I can evaluate? How are his grades? Has he reached out to us?\n\nPlenty of players on well-known teams go overlooked because nobody knows where they fit or who to contact. Plenty of players on smaller teams get found because they did the work.\n\nIf you're choosing a team this winter, what mattered most in your decision? We'd love to hear it in the comments.\n\nSee what the numbers say about your player's best fit:\nhttps://baseballfuture.com\n\n#BaseballParents #BaseballRecruiting"
+   },
+   "buffer": {}
+  },
+  "13:00": {
+   "scheduled_local": "2026-11-02T13:00:00-08:00",
+   "headline": "College baseball beyond D1",
+   "topic": "Know your level: D2, D3, NAIA and JUCO explained for parents",
+   "graphic_file": "graphics/2026-11-02-1300.png",
+   "graphic": {
+    "kicker": "Know Your Level",
+    "headline": "College baseball *beyond D1*",
+    "style": "list",
+    "items": [
+     "D2: athletic aid, often split",
+     "D3: no athletic scholarships",
+     "NAIA: athletic aid too",
+     "JUCO: 2 years, then transfer"
+    ],
+    "visual": "fitcard",
+    "fit": [
+     "D1|58",
+     "D2|81",
+     "D3|86",
+     "NAIA|84",
+     "JUCO|88"
+    ],
+    "best": "D3",
+    "hashtag": "#CollegeBaseball"
+   },
+   "captions": {
+    "instagram": "If your family's college search starts and ends with D1, you're looking at a small slice of college baseball.\n\nThe levels in a nutshell:\n✅ D2: athletic aid exists, often split among players\n✅ D3: no athletic scholarships, but academic and need-based aid can help\n✅ NAIA: its own association, with athletic aid\n✅ JUCO: two-year colleges; many players move on to four-year programs\n\nThe best fit for him might be one he hasn't looked at yet. Save this for when you build his list.\n\nTap the link in our bio to see what the numbers say. 👆\n\n#CollegeBaseball #BaseballRecruiting",
+    "facebook": "Know your level: college baseball is a lot bigger than D1.\n\nA quick guide for parents who are just starting to sort it out:\n\n⚾ D2: NCAA programs that can offer athletic aid, usually split among several players.\n⚾ D3: NCAA programs that don't award athletic scholarships. Academic and need-based aid can still make a big difference.\n⚾ NAIA: a separate association with its own rules and athletic aid.\n⚾ JUCO: two-year colleges where players can develop and play, and many go on to four-year programs.\n\nRules and aid vary by school, so always ask each program directly. The goal isn't the biggest name. It's the level where his numbers, his grades and his goals line up.\n\nWhich level surprised your family the most once you looked closer?\n\nSee where your player's numbers fit at every level:\nhttps://baseballfuture.com\n\n#CollegeBaseball #BaseballParents"
+   },
+   "buffer": {}
+  }
+ }
+}
