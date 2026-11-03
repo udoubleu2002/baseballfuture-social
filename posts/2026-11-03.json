@@ -1,0 +1,63 @@
+{
+ "date": "2026-11-03",
+ "theme": "Tuesday: recruiting education (what coaches evaluate, by position)",
+ "include_url": true,
+ "photo": null,
+ "note": "Run started ~8:21 AM PST (offset -08:00); 9:00 AM slot met. Instagram + Facebook only; X not used. Link rule per PLAYBOOK (every post links): clickable URL on its own line in Facebook captions; Instagram captions include the URL text plus link-in-bio line. Hosted URLs verified by GitHub blob SHA match on main (e41f61f, 317b9c0) and Buffer resolving each image at 1080x1080 (direct raw fetch blocked by sandbox proxy). No rule/threshold claims; general position evaluation guidance only.",
+ "posts": {
+  "09:00": {
+   "scheduled_local": "2026-11-03T09:00:00-08:00",
+   "headline": "Catchers: is pop time everything?",
+   "topic": "Recruiting Reality Check: catcher evaluation beyond pop time (receiving, blocking, accuracy, leadership)",
+   "graphic_file": "graphics/2026-11-03-0900.png",
+   "graphic": {
+    "kicker": "Recruiting Reality Check",
+    "headline": "Catchers: is pop time *everything?*",
+    "sub": "It gets the attention. Coaches also watch receiving, blocking, accuracy and how he runs a game.",
+    "style": "statement",
+    "visual": "stopwatch",
+    "stat": {
+     "label": "Pop time",
+     "value": "2.02",
+     "unit": "SEC"
+    },
+    "hashtag": "#BaseballParents"
+   },
+   "captions": {
+    "instagram": "Recruiting Reality Check: if your son catches, is pop time the only number that matters?\n\nPop time gets the headlines. It's one of the first things a coach notices. But it's only part of how catchers get evaluated.\n\nWhat coaches also watch:\n⚾ Receiving: does he hold strikes quietly?\n⚾ Blocking: does he keep balls in the dirt in front of him?\n⚾ Accuracy: does the throw arrive on the bag, not just fast?\n⚾ Leadership: does he run the game and handle his pitchers?\n\nA quick pop with a wild throw doesn't help much. Make sure his video shows the whole job, not just one throw.\n\nGot a recruiting question for a future Reality Check? Drop it below 👇\n\nSee what the numbers say at https://baseballfuture.com (tap the link in our bio 👆)\n\n#BaseballParents #BaseballRecruiting",
+    "facebook": "Recruiting Reality Check for catcher parents: is pop time everything?\n\nIt's the number everyone asks about, and it matters. A strong, quick arm gets a coach's attention.\n\nBut when coaches evaluate a catcher, they're looking at the whole job:\n\n⚾ Receiving. Does he catch the ball quietly and give his pitcher a chance at the borderline strike?\n⚾ Blocking. Do balls in the dirt stay in front of him?\n⚾ Accuracy. A fast throw that pulls the shortstop off the bag isn't an out.\n⚾ Leadership. Does he communicate, manage his pitchers and take charge behind the plate?\n\nA practical step this winter: when you put together his video, include receiving and blocking reps along with throws to second. That gives a coach the full picture.\n\nCatcher parents, what has your son's coach told him to work on most? And if you have a recruiting question you'd like us to tackle in a future Reality Check, leave it in the comments.\n\nSee what the numbers say about your player's best fit:\nhttps://baseballfuture.com\n\n#BaseballParents #BaseballRecruiting"
+   },
+   "buffer": {
+    "instagram": "6aea0a79b75704f9ac62a49f",
+    "facebook": "6aea0a79ce22073f337cd377"
+   }
+  },
+  "13:00": {
+   "scheduled_local": "2026-11-03T13:00:00-08:00",
+   "headline": "Outfielders: beyond the catch",
+   "topic": "What coaches evaluate in outfielders: first step/range, routes, arm, bat",
+   "graphic_file": "graphics/2026-11-03-1300.png",
+   "graphic": {
+    "kicker": "What Coaches Evaluate",
+    "headline": "Outfielders: *beyond the catch*",
+    "style": "list",
+    "items": [
+     "First step and range",
+     "Routes to the ball",
+     "Arm strength and accuracy",
+     "A bat that plays"
+    ],
+    "visual": "report",
+    "hashtag": "#BaseballRecruiting"
+   },
+   "captions": {
+    "instagram": "Outfielders: a highlight catch is great. Coaches are watching what happens before it.\n\nWhat coaches look at in an outfielder:\n1️⃣ First step and range: how quickly he reads the ball off the bat\n2️⃣ Routes: does he take a clean line, or drift and recover?\n3️⃣ Arm: strength and accuracy hitting the cutoff or the bag\n4️⃣ The bat: outfielders are usually expected to hit\n\nThe diving catch makes the reel. The clean route that made it easy is what coaches notice.\n\nSave this for his next video session, and share it with an outfielder's parent.\n\nSee where his numbers fit at https://baseballfuture.com (tap the link in our bio 👆)\n\n#CollegeBaseball #BaseballRecruiting",
+    "facebook": "What do college coaches actually evaluate in an outfielder?\n\nParents often focus on the highlight catch. Coaches are usually watching the plays that look routine.\n\n⚾ First step and range. How fast does he read the ball off the bat and get moving?\n⚾ Routes. Does he take an efficient line to the ball, or drift and have to recover?\n⚾ Arm strength and accuracy. Can he hit the cutoff man or the bag on a line?\n⚾ A bat that plays. Outfield is an offensive position at most programs, so his hitting numbers matter too.\n\nSpeed helps everywhere out there, but a fast player with poor reads can look slow, and a good reader can look faster than his 60 time.\n\nIf he's building a skills video, include a few balls off the bat (not just fungo catches), throws to bases and some at-bats. That's closer to what a coach wants to see.\n\nOutfield parents: what part of his game has improved the most this year?\n\nSee where your player's numbers fit at every level:\nhttps://baseballfuture.com\n\n#CollegeBaseball #BaseballParents"
+   },
+   "buffer": {
+    "instagram": "6aea0a7a985f73e58259ecd4",
+    "facebook": "6aea0a7b985f73e58259ecff"
+   }
+  }
+ }
+}
