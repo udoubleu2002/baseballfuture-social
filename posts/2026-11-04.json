@@ -1,0 +1,68 @@
+{
+ "date": "2026-11-04",
+ "theme": "Wednesday: debate / would-you-rather (The Baseball Parent Debate)",
+ "include_url": true,
+ "photo": null,
+ "note": "Run started 8:21 AM PST (-08:00); both slots on time. Facebook BaseballFuture page is NOT connected in Buffer (list_channels returned only baseball.future IG, __insidethepark__ IG, _insidethepark X), so Facebook was not scheduled. X not used. Hosted URLs verified by GitHub blob SHA match on main (a66273b) and Buffer resolving each image at 1080x1080; direct raw fetch blocked by sandbox proxy. Instagram captions include baseballfuture.com URL text plus link-in-bio line.",
+ "posts": {
+  "09:00": {
+   "scheduled_local": "2026-11-04T09:00:00-08:00",
+   "headline": "D3 starter or D1 roster spot?",
+   "topic": "Baseball Parent Debate: starting right away at D3 vs competing for time at D1 (hypothetical)",
+   "graphic_file": "graphics/2026-11-04-0900.png",
+   "graphic": {
+    "kicker": "The Baseball Parent Debate",
+    "headline": "D3 starter or *D1 roster spot?*",
+    "sub": "Two hypothetical offers. Which would you pick?",
+    "style": "versus",
+    "items": [
+     "Start right away at D3",
+     "Compete for time at D1"
+    ],
+    "ask": "No wrong answer. *What's your choice?*",
+    "visual": "fitcard",
+    "fit": [
+     "D1|62",
+     "D2|78",
+     "D3|91",
+     "NAIA|86",
+     "JUCO|84"
+    ],
+    "best": "D3",
+    "hashtag": "#BaseballParents"
+   },
+   "buffer": {
+    "instagram": "6aeb5bdca6e828d63150f52b",
+    "facebook": null
+   }
+  },
+  "13:00": {
+   "scheduled_local": "2026-11-04T13:00:00-08:00",
+   "headline": "Ask the coach about playing time",
+   "topic": "Four playing-time questions to ask a coach before deciding",
+   "graphic_file": "graphics/2026-11-04-1300.png",
+   "graphic": {
+    "kicker": "Recruiting Checklist",
+    "headline": "Ask the coach *about playing time*",
+    "style": "list",
+    "items": [
+     "Who returns at his position?",
+     "How many recruits at his spot?",
+     "How do freshmen earn innings?",
+     "What would his first year look like?"
+    ],
+    "visual": "radar",
+    "stat": {
+     "label": "Exit velocity",
+     "value": "88.4",
+     "unit": "MPH"
+    },
+    "hashtag": "#BaseballRecruiting"
+   },
+   "buffer": {
+    "instagram": "6aeb5bdd42e663d17ba7077e",
+    "facebook": null
+   }
+  }
+ }
+}
