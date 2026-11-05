@@ -1,0 +1,60 @@
+{
+ "date": "2026-11-05",
+ "theme": "Thursday: recruiting tips (do/don't, how-to)",
+ "include_url": true,
+ "photo": null,
+ "note": "Run started 8:21 AM PST (-08:00); both slots on time. Facebook BaseballFuture page is NOT connected in Buffer (list_channels returned only baseball.future IG, __insidethepark__ IG, _insidethepark X), so Facebook was not scheduled. X not used. Hosted URLs verified by GitHub blob SHA match on main (80e674f) and Buffer resolving each image at 1080x1080; direct raw fetch blocked by sandbox proxy. Instagram captions include https://baseballfuture.com text plus link-in-bio line.",
+ "posts": {
+  "09:00": {
+   "scheduled_local": "2026-11-05T09:00:00-08:00",
+   "headline": "Coaches see his social media",
+   "topic": "Recruiting tips: social media do/don't for recruits (clips and updates, current bio, nothing he'd hide, no arguing online)",
+   "graphic_file": "graphics/2026-11-05-0900.png",
+   "graphic": {
+    "kicker": "Recruiting Tips",
+    "headline": "Coaches see *his social media*",
+    "style": "dodont",
+    "items": [
+     "DO: post game clips and updates",
+     "DO: keep his grad year current",
+     "DON'T: post what he'd hide",
+     "DON'T: argue with umps online"
+    ],
+    "visual": "report",
+    "hashtag": "#BaseballRecruiting"
+   },
+   "buffer": {
+    "instagram": "6aecad89edcdac2ffd685c8f",
+    "facebook": null
+   }
+  },
+  "13:00": {
+   "scheduled_local": "2026-11-05T13:00:00-08:00",
+   "headline": "A coach replied. Now what?",
+   "topic": "How-to: responding after a college coach replies (reply fast in his own words, answer every question, send schedule + video, keep updating)",
+   "graphic_file": "graphics/2026-11-05-1300.png",
+   "graphic": {
+    "kicker": "Recruiting How-To",
+    "headline": "A coach replied. *Now what?*",
+    "style": "list",
+    "items": [
+     "He replies within a day or two",
+     "He answers every question asked",
+     "He sends his schedule and video",
+     "He keeps the coach updated"
+    ],
+    "visual": "stopwatch",
+    "stat": {
+     "label": "60-yard dash",
+     "value": "6.92",
+     "unit": "SEC"
+    },
+    "hashtag": "#BaseballParents"
+   },
+   "buffer": {
+    "instagram": "6aecad8aedcdac2ffd685cbd",
+    "facebook": null
+   }
+  }
+ }
+}
