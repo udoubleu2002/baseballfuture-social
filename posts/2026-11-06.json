@@ -1,0 +1,64 @@
+{
+ "date": "2026-11-06",
+ "theme": "Friday: BaseballFuture promotion; Post 1 is Baseball Family Friday (community prompt)",
+ "include_url": true,
+ "photo": null,
+ "note": "Run started 8:20 AM PST (-08:00); both slots on time. Facebook BaseballFuture page is NOT connected in Buffer (list_channels returned only baseball.future IG, __insidethepark__ IG, _insidethepark X), so Facebook was not scheduled. X not used. Hosted URLs verified by GitHub blob SHA match on main (64b2381) and Buffer resolving each image at 1080x1080; direct raw fetch blocked by sandbox proxy. Instagram captions include https://baseballfuture.com text plus link-in-bio line.",
+ "posts": {
+  "09:00": {
+   "scheduled_local": "2026-11-06T09:00:00-08:00",
+   "headline": "Best advice a coach gave him?",
+   "topic": "Baseball Family Friday: parents share the best coaching advice their son got during high school baseball and recruiting",
+   "graphic_file": "graphics/2026-11-06-0900.png",
+   "graphic": {
+    "kicker": "Baseball Family Friday",
+    "headline": "Best advice *a coach gave him?*",
+    "sub": "Looking back on his high school baseball and recruiting journey, what coaching advice stuck?",
+    "style": "statement",
+    "ask": "Share it below. *Pass it on to another family.*",
+    "visual": "radar",
+    "stat": {
+     "label": "Pitching velo",
+     "value": "84",
+     "unit": "MPH"
+    },
+    "hashtag": "#BaseballParents"
+   },
+   "buffer": {
+    "instagram": "6aedfec7004e4879a7fe3c87",
+    "facebook": null
+   }
+  },
+  "13:00": {
+   "scheduled_local": "2026-11-06T13:00:00-08:00",
+   "headline": "New numbers? Recheck his fit.",
+   "topic": "Promotion: after summer/fall, retest measurables, update the free best-fit preview, see which levels moved, adjust the target list",
+   "graphic_file": "graphics/2026-11-06-1300.png",
+   "graphic": {
+    "kicker": "Free best-fit preview",
+    "headline": "New numbers? *Recheck his fit.*",
+    "style": "list",
+    "items": [
+     "Retest his 60 and exit velo",
+     "Update his best-fit preview",
+     "See which levels moved",
+     "Adjust his target list"
+    ],
+    "visual": "fitcard",
+    "fit": [
+     "D1|64",
+     "D2|81",
+     "D3|86",
+     "NAIA|83",
+     "JUCO|78"
+    ],
+    "best": "D3",
+    "hashtag": "#BaseballRecruiting"
+   },
+   "buffer": {
+    "instagram": "6aedfed19214322f6898b286",
+    "facebook": null
+   }
+  }
+ }
+}
