@@ -1,0 +1,61 @@
+{
+ "date": "2026-11-07",
+ "theme": "Saturday: player development / shareable discussion; Post 1 is The Baseball Parent Debate",
+ "include_url": true,
+ "photo": null,
+ "note": "Run started 8:21 AM PST (-08:00); both slots on time. Facebook BaseballFuture page still NOT connected in Buffer (list_channels: baseball.future IG, __insidethepark__ IG, _insidethepark X), so Facebook was not scheduled; FB captions drafted below. X not used. Hosted URLs verified by blob SHA match on origin/main (0429d64) and Buffer resolving each image at 1080x1080 PNG; direct raw fetch blocked by sandbox proxy. Every caption includes https://baseballfuture.com plus IG link-in-bio line. Buffer org scheduledPosts limit is 10 and InsideThePark X posts fill most of it.",
+ "posts": {
+  "09:00": {
+   "scheduled_local": "2026-11-07T09:00:00-08:00",
+   "headline": "Top travel team or every-day reps?",
+   "topic": "Debate: elite travel team with fewer innings vs solid team with full playing time",
+   "graphic_file": "graphics/2026-11-07-0900.png",
+   "graphic": {
+    "kicker": "The Baseball Parent Debate",
+    "headline": "Top travel team or *every-day reps?*",
+    "style": "versus",
+    "items": [
+     "Elite team, fewer innings",
+     "Solid team, plays every game"
+    ],
+    "ask": "No wrong answer. *Which would you pick?*",
+    "visual": "stopwatch",
+    "stat": {
+     "label": "Home to first",
+     "value": "4.25",
+     "unit": "SEC"
+    },
+    "hashtag": "#BaseballParents"
+   },
+   "facebook_caption_draft": "Baseball parents, here's one we hear a lot.\n\nYour son can join the top-ranked travel team, with bigger events and more college coaches watching, but he'd share time and may sit some innings. Or he can stay with a solid team where he plays every game.\n\nThe case for the top team: tougher competition and a real read on how he stacks up.\nThe case for staying: more at-bats, more innings, more game video and more room to develop.\n\nWhich would you choose, and what made the difference for your family? Share in the comments.\n\nSee what the numbers say about his best college fit:\nhttps://baseballfuture.com",
+   "buffer": {
+    "instagram": "6aef518a51492b796ee9b5a3",
+    "facebook": null
+   }
+  },
+  "13:00": {
+   "scheduled_local": "2026-11-07T13:00:00-08:00",
+   "headline": "Corner infielders: what to build",
+   "topic": "Player development for 1B/3B: game power, hands/feet, arm accuracy, at-bat plan; baseline and retest",
+   "graphic_file": "graphics/2026-11-07-1300.png",
+   "graphic": {
+    "kicker": "Player Development",
+    "headline": "Corner infielders: *what to build*",
+    "style": "list",
+    "items": [
+     "Power that shows up in games",
+     "Soft hands, quick feet",
+     "An accurate arm on the move",
+     "A plan in every at-bat"
+    ],
+    "visual": "report",
+    "hashtag": "#PlayerDevelopment"
+   },
+   "facebook_caption_draft": "If your son plays first or third, this winter is a good time to look past batting practice.\n\nCollege coaches expect corner infielders to hit, but they also watch the rest of his game:\n- Power that shows up in games\n- Soft hands and quick feet around the bag\n- An accurate arm, including throws on the move\n- A plan in every at-bat against good pitching\n\nPick one or two to work on, write down where he starts, and retest later so you can see real progress.\n\nWhat's your corner infielder working on this offseason?\n\nSee how his numbers compare by level:\nhttps://baseballfuture.com",
+   "buffer": {
+    "instagram": "6aef51919214322f6802b2ab",
+    "facebook": null
+   }
+  }
+ }
+}
