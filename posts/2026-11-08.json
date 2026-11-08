@@ -1,0 +1,72 @@
+{
+ "date": "2026-11-08",
+ "theme": "Sunday: parent engagement / poll; Post 2 is Recruiting Reality Check",
+ "include_url": true,
+ "photo": null,
+ "sources": [
+  "https://www.ncaa.org/sports/2021/2/8/about-resources-media-center-ncaa-101-our-three-divisions.aspx (D3 no athletic scholarships)",
+  "https://web3.ncaa.org/ecwr3/ (NCAA Eligibility Center core courses, D1/D2)"
+ ],
+ "posts": {
+  "09:00": {
+   "headline": "Who writes the coach emails?",
+   "topic": "Poll: who writes coach emails at your house (player / together / parent / not started)",
+   "graphic_file": "graphics/2026-11-08-0900.png",
+   "graphic": {
+    "kicker": "Parents, weigh in",
+    "headline": "Who writes the *coach emails?*",
+    "style": "poll",
+    "items": [
+     "He writes them himself",
+     "We write them together",
+     "Mostly me, honestly",
+     "Nobody has started yet"
+    ],
+    "ask": "Pick a letter. *Tell us below.*",
+    "visual": "radar",
+    "stat": {
+     "label": "Pitching velo",
+     "value": "84",
+     "unit": "MPH"
+    },
+    "hashtag": "#BaseballParents"
+   },
+   "captions": {
+    "instagram": "Honest answer only: at your house, who's writing the emails to college coaches?\n\nA. He writes them himself\nB. We write them together\nC. Mostly me, honestly\nD. Nobody has started yet\n\nThere's no judgment here. Plenty of families start with a parent drafting and the player taking over. Coaches do want to hear from him, though, so the goal is for his voice to be the one they get to know.\n\nDrop your letter in the comments. We'll use your answers to shape an upcoming post on coach emails.\n\nSee what the numbers say about his best fit:\nhttps://baseballfuture.com\n(Tap the link in our bio. 👆)\n\n#BaseballParents #BaseballRecruiting",
+    "facebook": "Sunday question for baseball parents: who's actually writing the emails to college coaches at your house?\n\nA. He writes them himself\nB. We write them together\nC. Mostly me, honestly\nD. Nobody has started yet\n\nEvery family lands somewhere different on this one, and that's fine. A lot of parents help with the first few, especially when he's not sure what to say. Over time, coaches want to hear from the player, so it helps if he's the one hitting send and following up.\n\nWhich letter is your family? And if you've found a system that works, share it below. Another parent will thank you.\n\nSee what the numbers say about his best college fit:\nhttps://baseballfuture.com\n\n#BaseballParents #BaseballRecruiting"
+   },
+   "buffer": {}
+  },
+  "13:00": {
+   "headline": "Do grades really matter?",
+   "topic": "Recruiting Reality Check: GPA and academic fit (D3 no athletic aid, D1/D2 core courses, coaches ask GPA)",
+   "graphic_file": "graphics/2026-11-08-1300.png",
+   "graphic": {
+    "kicker": "Recruiting Reality Check",
+    "headline": "Do grades *really matter?*",
+    "style": "list",
+    "items": [
+     "Grades widen his list",
+     "D3 aid isn't athletic",
+     "D1/D2 track core classes",
+     "Coaches ask for his GPA"
+    ],
+    "visual": "fitcard",
+    "best": "D3",
+    "fit": [
+     "D1|64",
+     "D2|79",
+     "D3|90",
+     "NAIA|86",
+     "JUCO|88"
+    ],
+    "hashtag": "#StudentAthlete"
+   },
+   "captions": {
+    "instagram": "Recruiting Reality Check: do grades really matter in baseball recruiting?\n\nYes, and often more than families expect.\n\n⚾ Good grades widen his list. More schools are realistic options.\n⚾ D3 programs don't offer athletic scholarships, so academic aid can matter a lot.\n⚾ D1 and D2 have NCAA academic eligibility standards, including core courses.\n⚾ Coaches commonly ask for GPA early, often in recruiting questionnaires.\n\nHis GPA is a recruiting number, just like his 60 or his velo. Save this for the next report card conversation.\n\nHave a recruiting question? Send it to us for a future Reality Check.\n\nSee where his numbers fit:\nhttps://baseballfuture.com\n(Tap the link in our bio. 👆)\n\n#StudentAthlete #CollegeBaseball",
+    "facebook": "Recruiting Reality Check: do grades really matter, or is it all about the numbers on the field?\n\nGrades matter, and here's why parents should treat GPA like any other recruiting number:\n\n✅ Strong grades widen the list of realistic schools.\n✅ NCAA Division III schools don't offer athletic scholarships, so academic aid and admission can carry a lot of weight.\n✅ D1 and D2 have NCAA academic eligibility standards, including core-course requirements, so it's worth checking his schedule with his school counselor now.\n✅ Coaches commonly ask for GPA early, often on recruiting questionnaires and in first conversations.\n\nNone of this replaces his play on the field. But a player with solid grades gives coaches one less reason to hesitate.\n\nWhat recruiting question should we tackle in the next Reality Check? Drop it in the comments.\n\nSee how his numbers compare by level:\nhttps://baseballfuture.com\n\n#StudentAthlete #CollegeBaseball"
+   },
+   "buffer": {}
+  }
+ }
+}
