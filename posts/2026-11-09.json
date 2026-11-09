@@ -1,0 +1,68 @@
+{
+ "date": "2026-11-09",
+ "theme": "Monday: myth-buster / know your level",
+ "include_url": true,
+ "photo": null,
+ "sources": [
+  "https://www.ncaa.org/about/division-ii-partial-scholarship-model (D2 partial athletic scholarships)",
+  "https://www.ncaa.org/sports/2014/1/2/what-does-division-iii-have-to-offer.aspx (D3 no athletic scholarships)",
+  "https://www.uni2study.com/articles/njcaa-recruiting-junior-college-to-four-year-program (JUCO to four-year pathway)"
+ ],
+ "posts": {
+  "09:00": {
+   "headline": "Myth: JUCO is a last resort",
+   "topic": "Myth-buster: junior college as an intentional pathway (innings, development, transfer to four-year, cost)",
+   "graphic_file": "graphics/2026-11-09-0900.png",
+   "graphic": {
+    "kicker": "Monday Myth-Buster",
+    "headline": "Myth: *JUCO is a last resort*",
+    "style": "statement",
+    "sub": "For many players, junior college is a smart route: real innings, time to develop, and a path to four-year programs.",
+    "visual": "stopwatch",
+    "stat": {
+     "label": "60-yard dash",
+     "value": "6.92",
+     "unit": "SEC"
+    },
+    "hashtag": "#CollegeBaseball"
+   },
+   "captions": {
+    "instagram": "Myth: JUCO is where players end up when nothing else works out.\n\nReality: for a lot of baseball families, junior college is a smart, intentional choice.\n\n⚾ He can compete for real innings early instead of waiting his turn.\n⚾ He gets time to get stronger, faster and more polished.\n⚾ Many JUCO players move on to four-year programs after one or two seasons.\n⚾ Costs are often lower than at a four-year school.\n\nBest fit beats biggest name. The right first stop is the one where he plays and keeps growing.\n\nHas your family looked at JUCO? Tell us below, and share this with a baseball family who hasn't considered it.\n\nSee where his numbers fit by level, JUCO included:\nhttps://baseballfuture.com\n(Tap the link in our bio. 👆)\n\n#CollegeBaseball #BaseballRecruiting",
+    "facebook": "Monday Myth-Buster: \"JUCO is a last resort.\"\n\nWe hear this from parents all the time, and it sells junior college short.\n\nFor many players, JUCO is a deliberate first step:\n✅ A real chance to compete for innings as a freshman\n✅ A year or two to add strength, speed and polish before the next move\n✅ A well-worn path to four-year programs, with coaches who recruit JUCO players\n✅ Often a lower cost than starting at a four-year school\n\nIt isn't the right path for every player, and that's the point. The goal is finding where he'll actually play and develop, not chasing the biggest name on the list.\n\nDid your son (or a teammate) go the JUCO route? What would you tell a family weighing it right now?\n\nSee where his numbers fit at every level, JUCO included:\nhttps://baseballfuture.com\n\n#CollegeBaseball #BaseballRecruiting"
+   },
+   "buffer": {
+    "instagram": "6af1f381fa4f406f7bb39be4",
+    "facebook": null
+   },
+   "scheduled_local": "2026-11-09T09:00:00-08:00"
+  },
+  "13:00": {
+   "headline": "D2 vs. D3: what's different?",
+   "topic": "Know your level: D2 partial athletic aid + Eligibility Center vs D3 no athletic aid; grades matter at both",
+   "graphic_file": "graphics/2026-11-09-1300.png",
+   "graphic": {
+    "kicker": "Know Your Level",
+    "headline": "D2 vs. D3: *what's different?*",
+    "style": "list",
+    "items": [
+     "D2 can offer athletic aid",
+     "D3 has no athletic aid",
+     "D2 needs NCAA certification",
+     "Both reward strong grades"
+    ],
+    "visual": "report",
+    "hashtag": "#BaseballRecruiting"
+   },
+   "captions": {
+    "instagram": "D2 or D3? They're both great college baseball. They just work differently.\n\n⚾ D2 programs can offer athletic scholarships, usually split into partial awards.\n⚾ D3 programs don't offer athletic scholarships. Aid comes from academic merit and need-based packages.\n⚾ To play D2, he needs to be certified through the NCAA Eligibility Center. D3 doesn't require that certification.\n⚾ At both levels, strong grades widen his options.\n\nNeither level is \"better.\" The right fit depends on his numbers, his grades and what your family needs.\n\nSave this for your next college-list conversation.\n\nSee how his numbers compare at D2, D3 and beyond:\nhttps://baseballfuture.com\n(Tap the link in our bio. 👆)\n\n#CollegeBaseball #StudentAthlete",
+    "facebook": "Know your level: what's actually different between D2 and D3 baseball?\n\nA lot of families lump them together. Here's the practical difference for parents:\n\n⚾ Money: D2 programs can offer athletic scholarships, usually as partial awards. D3 programs don't offer athletic scholarships, so aid comes through academic merit and need-based packages.\n⚾ Paperwork: D2 requires certification through the NCAA Eligibility Center. D3 doesn't require that certification, but admissions standards still matter.\n⚾ Grades: at both levels, a strong GPA opens more doors and can make a big difference in the final cost.\n\nBoth levels have competitive baseball and real development. The better question is which one fits your player's numbers, academics and budget.\n\nIs your family looking at D2, D3 or both? Tell us what's driving the decision.\n\nCompare his numbers with typical ranges at D2, D3 and every other level:\nhttps://baseballfuture.com\n\n#CollegeBaseball #StudentAthlete"
+   },
+   "buffer": {
+    "instagram": "6af1f3820b813b465064cd65",
+    "facebook": null
+   },
+   "scheduled_local": "2026-11-09T13:00:00-08:00"
+  }
+ },
+ "note": "Run started 8:22 AM PST (-08:00); both slots on time. Facebook BaseballFuture page still NOT connected in Buffer (channels: baseball.future IG, __insidethepark__ IG, _insidethepark X), so Facebook not scheduled; FB captions drafted. X not used. Hosted URLs verified by blob SHA match on origin/main and Buffer resolving each image at 1080x1080 PNG; direct raw fetch blocked by sandbox proxy. Every caption includes https://baseballfuture.com."
+}
