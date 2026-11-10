@@ -1,0 +1,71 @@
+{
+ "date": "2026-11-10",
+ "theme": "Tuesday: recruiting education (what coaches evaluate, by position or topic)",
+ "include_url": true,
+ "photo": null,
+ "sources": [
+  "General recruiting guidance; no rules, deadlines or benchmarks cited. 84 mph and fit bars labeled as sample."
+ ],
+ "note": "Run started 8:20 AM PST (-08:00). Facebook BaseballFuture page NOT connected in Buffer (channels: baseball.future IG, __insidethepark__ IG, _insidethepark X), so Facebook not scheduled; FB captions drafted. X not used.",
+ "posts": {
+  "09:00": {
+   "headline": "Pitchers: beyond the radar gun",
+   "topic": "What college coaches evaluate in pitchers: velo and projection, command, secondary pitch, repeatable delivery",
+   "graphic_file": "graphics/2026-11-10-0900.png",
+   "graphic": {
+    "kicker": "What college coaches evaluate",
+    "headline": "Pitchers: *beyond the radar gun*",
+    "items": [
+     "Velo, and where it's headed",
+     "Strikes and command",
+     "A secondary pitch he trusts",
+     "A repeatable delivery"
+    ],
+    "style": "list",
+    "visual": "radar",
+    "stat": {
+     "label": "Pitching velo",
+     "value": "84",
+     "unit": "MPH"
+    },
+    "hashtag": "#Pitching"
+   },
+   "captions": {
+    "instagram": "Your son throws 84. Is that what college coaches are really looking at?\n\nVelocity gets attention. It's rarely the whole story.\n\n⚾ Velo, and where it's headed as he gets stronger\n⚾ Strikes: can he command the zone when it counts?\n⚾ A secondary pitch he trusts in any count\n⚾ A delivery he can repeat pitch after pitch\n\nA pitcher who fills the zone and is still adding velo can be a better fit for a program than a harder thrower who walks the bases loaded.\n\nSave this before his next bullpen or showcase.\n\nSee where his numbers fit at D1, D2, D3, NAIA and JUCO:\nhttps://baseballfuture.com\n(Tap the link in our bio. 👆)\n\n#Pitching #BaseballRecruiting",
+    "facebook": "Pitcher parents: the radar gun matters, but it's only one line on a coach's notes.\n\nWhen college coaches watch a high school pitcher, they're usually asking a few questions:\n✅ What's his velo today, and how much room does he have to add more?\n✅ Does he throw strikes, and can he hit spots when he's behind in the count?\n✅ Does he have a second pitch he can trust?\n✅ Is his delivery repeatable and under control?\n\n(The 84 on our graphic is a sample reading, not a real player.)\n\nEvery coach weighs these a little differently, and fit by level matters as much as any single number.\n\nWhat's the one thing your son's pitching coach keeps telling him to work on?\n\nSee what the numbers say about his best college fit:\nhttps://baseballfuture.com\n\n#Pitching #BaseballRecruiting"
+   },
+   "buffer": {
+    "instagram": null,
+    "facebook": null
+   },
+   "scheduled_local": "2026-11-10T09:00:00-08:00"
+  },
+  "13:00": {
+   "headline": "His skills video: what to show",
+   "topic": "Skills video do's and don'ts for recruiting",
+   "graphic_file": "graphics/2026-11-10-1300.png",
+   "graphic": {
+    "kicker": "Recruiting Education: Video",
+    "headline": "His skills video: *what to show*",
+    "items": [
+     "DO: Lead with his best skills",
+     "DO: Add date, height, weight",
+     "DON'T: Make it 10 minutes long",
+     "DON'T: Add music and effects"
+    ],
+    "style": "dodont",
+    "visual": "fitcard",
+    "hashtag": "#BaseballRecruiting"
+   },
+   "captions": {
+    "instagram": "A coach may give his skills video a minute or two. Make it count.\n\n✅ Lead with his best skills, not a long intro\n✅ Put the date, his height, weight, grad year and position on screen\n❌ Don't make it 10 minutes long\n❌ Don't bury it in music and effects\n\nClean angles, real game speed, and recent footage tell a coach more than a highlight reel set to a song.\n\nKnow a family filming this winter? Share this with them.\n\nSee what the numbers say about his best-fit level:\nhttps://baseballfuture.com\n(Tap the link in our bio. 👆)\n\n#BaseballRecruiting #HighSchoolBaseball",
+    "facebook": "Off-season is a good time to film or update your son's skills video. A few simple rules help coaches actually use it:\n\nDO lead with his best skills right away. Coaches are busy.\nDO put the recording date, height, weight, grad year and position on screen.\nDON'T stretch it to 10 minutes. Short and focused tends to get watched.\nDON'T add music and effects that get in the way of seeing the swing, the arm or the glove.\n\nA clear, recent, well-labeled video sent with a short email goes a long way.\n\nParents who've been through it: what did you learn from making his first video?\n\nSee what the numbers say about his best college fit:\nhttps://baseballfuture.com\n\n#BaseballRecruiting #HighSchoolBaseball"
+   },
+   "buffer": {
+    "instagram": null,
+    "facebook": null
+   },
+   "scheduled_local": "2026-11-10T13:00:00-08:00"
+  }
+ }
+}
