@@ -6,7 +6,7 @@
  "sources": [
   "General recruiting guidance; no rules, deadlines or benchmarks cited. 84 mph and fit bars labeled as sample."
  ],
- "note": "Run started 8:20 AM PST (-08:00). Facebook BaseballFuture page NOT connected in Buffer (channels: baseball.future IG, __insidethepark__ IG, _insidethepark X), so Facebook not scheduled; FB captions drafted. X not used.",
+ "note": "Run started 8:20 AM PST (-08:00). Facebook BaseballFuture page NOT connected in Buffer (channels: baseball.future IG, __insidethepark__ IG, _insidethepark X), so Facebook not scheduled; FB captions drafted. X not used. Hosted URLs verified by blob SHA match on origin/main and Buffer resolving each image at 1080x1080 PNG; direct raw fetch blocked by sandbox proxy. Every caption includes https://baseballfuture.com.",
  "posts": {
   "09:00": {
    "headline": "Pitchers: beyond the radar gun",
@@ -35,7 +35,7 @@
     "facebook": "Pitcher parents: the radar gun matters, but it's only one line on a coach's notes.\n\nWhen college coaches watch a high school pitcher, they're usually asking a few questions:\n✅ What's his velo today, and how much room does he have to add more?\n✅ Does he throw strikes, and can he hit spots when he's behind in the count?\n✅ Does he have a second pitch he can trust?\n✅ Is his delivery repeatable and under control?\n\n(The 84 on our graphic is a sample reading, not a real player.)\n\nEvery coach weighs these a little differently, and fit by level matters as much as any single number.\n\nWhat's the one thing your son's pitching coach keeps telling him to work on?\n\nSee what the numbers say about his best college fit:\nhttps://baseballfuture.com\n\n#Pitching #BaseballRecruiting"
    },
    "buffer": {
-    "instagram": null,
+    "instagram": "6af344ad825741bba844cd13",
     "facebook": null
    },
    "scheduled_local": "2026-11-10T09:00:00-08:00"
@@ -62,7 +62,7 @@
     "facebook": "Off-season is a good time to film or update your son's skills video. A few simple rules help coaches actually use it:\n\nDO lead with his best skills right away. Coaches are busy.\nDO put the recording date, height, weight, grad year and position on screen.\nDON'T stretch it to 10 minutes. Short and focused tends to get watched.\nDON'T add music and effects that get in the way of seeing the swing, the arm or the glove.\n\nA clear, recent, well-labeled video sent with a short email goes a long way.\n\nParents who've been through it: what did you learn from making his first video?\n\nSee what the numbers say about his best college fit:\nhttps://baseballfuture.com\n\n#BaseballRecruiting #HighSchoolBaseball"
    },
    "buffer": {
-    "instagram": null,
+    "instagram": "6af344b342d372a81f69acd7",
     "facebook": null
    },
    "scheduled_local": "2026-11-10T13:00:00-08:00"
