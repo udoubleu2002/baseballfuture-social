@@ -6,7 +6,7 @@
  "sources": [
   "General recruiting guidance; no NCAA rules, deadlines or benchmarks cited. 7.05 sec and report mockup labeled as sample."
  ],
- "note": "",
+ "note": "Run started 8:21 AM PST (-08:00). Facebook BaseballFuture page NOT connected in Buffer (channels: _baseballfuture X, _insidethepark X, baseball.future IG), so Facebook not scheduled; FB captions drafted. X not used. Hosted images verified by blob SHA match on origin/main (fd9ec36) and Buffer resolving each at 1080x1080 PNG; direct raw fetch blocked by sandbox proxy. Every caption includes https://baseballfuture.com.",
  "posts": {
   "09:00": {
    "headline": "Close to home or best fit?",
@@ -30,9 +30,10 @@
     "facebook": "The Baseball Parent Debate: close to home, or the best baseball fit?\n\nHere's a hypothetical. Your son has two options:\n\nA) A program that's a good fit, 30 minutes from home. You can make most home games and he's near family and friends.\nB) A program that's a slightly better fit, 6 hours away. The level, coaching style and academics line up a little better, but you'd see far fewer games.\n\nBoth are good outcomes. The right answer depends on things only your family can weigh: total cost (including travel), how ready he is to be on his own, where he's likely to play, and whether he'd be happy at that school even if baseball ended tomorrow.\n\nParents who've already been through it: which did your family choose, and would you choose it again?\n\nSee what the numbers say about his best college fit:\nhttps://baseballfuture.com\n\n#BaseballParents #CollegeBaseball"
    },
    "buffer": {
-    "instagram": null,
+    "instagram": "6af4966d8b79ccfb72f335f1",
     "facebook": null
-   }
+   },
+   "scheduled_local": "2026-11-11T09:00:00-08:00"
   },
   "13:00": {
    "headline": "Ask these 4 questions (before you pay for a showcase)",
@@ -61,9 +62,10 @@
     "facebook": "Winter and spring showcase invites are starting to land in a lot of inboxes. Before you pay, a few questions worth asking the organizer:\n\n✅ Which college coaches are expected to attend, and from which levels (D1, D2, D3, NAIA, JUCO)?\n✅ How many players are registered at your son's position? More players can mean fewer reps in front of coaches.\n✅ Will his numbers be measured and shared afterward, so he has something to send coaches?\n✅ Do the attending schools line up with his realistic target list?\n\nIf the answers are vague, it may be worth putting that money toward a camp at a school he's genuinely interested in, or a better skills video.\n\n(The 7.05 on our graphic is a sample reading, not a real player.)\n\nWhat's one question you wish you'd asked before your first showcase?\n\nCheck where his numbers fit before you pick events:\nhttps://baseballfuture.com\n\n#BaseballRecruiting #HighSchoolBaseball"
    },
    "buffer": {
-    "instagram": null,
+    "instagram": "6af4966e444c2727360e56a0",
     "facebook": null
-   }
+   },
+   "scheduled_local": "2026-11-11T13:00:00-08:00"
   }
  }
 }
