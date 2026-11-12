@@ -1,0 +1,80 @@
+{
+ "date": "2026-11-12",
+ "theme": "Thursday: recruiting tips (do/don't, how-to); includes weekly Recruiting Reality Check",
+ "include_url": true,
+ "photo": null,
+ "sources": [
+  "General recruiting guidance only; no NCAA rules, deadlines or benchmarks cited. 88.4 mph and fit scores labeled as sample on graphics."
+ ],
+ "note": "Run started 8:21 AM PST (-08:00). Facebook BaseballFuture page NOT connected in Buffer (channels: _baseballfuture X, _insidethepark X, baseball.future IG), so Facebook not scheduled; FB captions drafted below. X not used. Hosted images verified by blob SHA match on main (7e1d14b) via GitHub API and Buffer resolving each at 1080x1080 PNG; direct raw fetch blocked by sandbox proxy. Every caption includes https://baseballfuture.com.",
+ "posts": {
+  "09:00": {
+   "headline": "After the camp: follow up",
+   "topic": "Recruiting Reality Check: post-camp follow-up email do/don't",
+   "graphic_file": "graphics/2026-11-12-0900.png",
+   "graphic": {
+    "kicker": "Recruiting Reality Check",
+    "headline": "After the camp: *follow up*",
+    "sub": "The camp is step one. The email after it is step two.",
+    "style": "dodont",
+    "items": [
+     "DO: Email within a few days",
+     "DO: Mention one specific moment",
+     "DON'T: Send a generic blast",
+     "DON'T: Let a parent write it"
+    ],
+    "visual": "radar",
+    "stat": {
+     "label": "Exit velocity",
+     "value": "88.4",
+     "unit": "MPH"
+    },
+    "hashtag": "#BaseballRecruiting"
+   },
+   "captions": {
+    "instagram": "(as scheduled in Buffer 6af5e7b83376877bfe6d02f4)",
+    "facebook": "Recruiting Reality Check: your son went to the camp. Now what?\n\nA lot of families treat the camp as the finish line. It's really the start. Coaches can see dozens of players in a single day, and a short, specific follow-up email is one of the simplest ways to help them remember yours.\n\nWhat works:\n✅ Send it within a few days, while the camp is still fresh.\n✅ Mention one specific moment: a drill, a piece of feedback, a conversation with a coach.\n✅ Keep it short: a thank-you, that moment, his grad year and position, and his video link.\n\nWhat doesn't:\n❌ The same copy-and-paste message to every school.\n❌ A parent writing it. Coaches want to hear from the player himself.\n\nParents who've been through it: did a follow-up email ever lead to a real conversation with a coach? And if you have a recruiting question, leave it below. We may answer it in a future Reality Check.\n\nSee what the numbers say about his best college fit:\nhttps://baseballfuture.com\n\n#BaseballRecruiting #BaseballParents"
+   },
+   "buffer": {
+    "instagram": "6af5e7b83376877bfe6d02f4",
+    "facebook": null
+   },
+   "scheduled_local": "2026-11-12T09:00:00-08:00"
+  },
+  "13:00": {
+   "headline": "4 moves before spring",
+   "topic": "Winter recruiting game plan checklist",
+   "graphic_file": "graphics/2026-11-12-1300.png",
+   "graphic": {
+    "kicker": "Your winter game plan",
+    "headline": "4 moves *before spring*",
+    "items": [
+     "Retest his key numbers",
+     "Update his skills video",
+     "Refresh his target list",
+     "Send coaches his schedule"
+    ],
+    "style": "list",
+    "visual": "fitcard",
+    "fit": [
+     "D1|58",
+     "D2|76",
+     "D3|84",
+     "NAIA|81",
+     "JUCO|79"
+    ],
+    "best": "D3",
+    "hashtag": "#HighSchoolBaseball"
+   },
+   "captions": {
+    "instagram": "(as scheduled in Buffer 6af5e7c17721c1913c5ca2cf)",
+    "facebook": "The offseason is when a lot of recruiting work quietly gets done. Here's a simple winter game plan before spring arrives:\n\n1. Retest his key numbers. Exit velo, 60 time, velocity or pop time. Coaches care about where he is now, not where he was last summer.\n2. Update his skills video with his best current clips.\n3. Refresh his target list. If his numbers moved, the levels that fit him best may have moved too.\n4. Email coaches his spring schedule. Dates and locations make it easy for a coach to come see him play.\n\nNone of these guarantee interest from a program. They make sure the coaches he's contacting see the most current, most accurate version of him.\n\nWhich of these is your family tackling first this winter? Or what would you add to the list?\n\nCheck which college levels his new numbers fit:\nhttps://baseballfuture.com\n\n#HighSchoolBaseball #BaseballRecruiting"
+   },
+   "buffer": {
+    "instagram": "6af5e7c17721c1913c5ca2cf",
+    "facebook": null
+   },
+   "scheduled_local": "2026-11-12T13:00:00-08:00"
+  }
+ }
+}
