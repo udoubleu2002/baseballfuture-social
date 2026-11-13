@@ -1,0 +1,67 @@
+{
+ "date": "2026-11-13",
+ "theme": "Friday: BaseballFuture promotion; Post 1 is Baseball Family Friday",
+ "include_url": true,
+ "photo": null,
+ "sources": [
+  "No NCAA rules, deadlines or benchmarks cited. 4.21 sec home-to-first and fit scores labeled as sample on graphics. Fit-score framing matches PLAYBOOK BaseballFuture facts."
+ ],
+ "note": "Run started 8:37 AM PST (-08:00); both slots on time. Facebook BaseballFuture page NOT connected in Buffer (channels: _baseballfuture X, _insidethepark X, baseball.future IG), so Facebook not scheduled; FB captions drafted below. X not used. Hosted images verified by blob SHA match on main (a15ec75) via GitHub API and Buffer resolving each at 1080x1080 PNG; direct raw fetch blocked by sandbox proxy. Every caption includes https://baseballfuture.com.",
+ "posts": {
+  "09:00": {
+   "headline": "The moment it was all worth it",
+   "topic": "Baseball Family Friday: the moment the sacrifices felt worth it",
+   "graphic_file": "graphics/2026-11-13-0900.png",
+   "graphic": {
+    "kicker": "Baseball Family Friday",
+    "headline": "The moment it was *all worth it*",
+    "sub": "The early mornings. The long drives. The weekends at the field. When did it pay off for your family?",
+    "style": "statement",
+    "ask": "Share it in the comments. *We'd love to hear it.*",
+    "visual": "stopwatch",
+    "stat": {
+     "label": "Home to first",
+     "value": "4.21",
+     "unit": "SEC"
+    },
+    "hashtag": "#BaseballFamilyFriday"
+   },
+   "captions": {
+    "instagram": "(as scheduled in Buffer 6af73d2c9a25e252d0633bf6)",
+    "facebook": "Baseball Family Friday\n\nThe early alarms. The long drives to weekend tournaments. The hotel breakfasts, the gas money, the time off work.\n\nEvery baseball family has a moment when it all felt worth it. Maybe a coach pulled your son aside after a showcase. Maybe a college finally emailed back. Maybe it was senior night, or a quiet ride home when he said thanks.\n\nWhat was that moment for your family? Share it in the comments, and add a photo if you'd like. Parents who are just starting the recruiting journey will be glad to read it.\n\nPlanning his next step? See what the numbers say about his best college fit:\nhttps://baseballfuture.com\n\n#BaseballFamilyFriday #BaseballParents"
+   },
+   "buffer": {
+    "instagram": "6af73d2c9a25e252d0633bf6",
+    "facebook": null
+   },
+   "scheduled_local": "2026-11-13T09:00:00-08:00"
+  },
+  "13:00": {
+   "headline": "What a fit score really means",
+   "topic": "Product education: how to read a fit score (estimate, not an offer)",
+   "graphic_file": "graphics/2026-11-13-1300.png",
+   "graphic": {
+    "kicker": "Know what you're looking at",
+    "headline": "What a fit score *really means*",
+    "style": "dodont",
+    "items": [
+     "DO: Read it as an estimate",
+     "DO: Use it to build his list",
+     "DON'T: Treat it as an offer",
+     "DON'T: Skip coach feedback"
+    ],
+    "visual": "report",
+    "hashtag": "#BaseballRecruiting"
+   },
+   "captions": {
+    "instagram": "(as scheduled in Buffer 6af73d344d5a2b44be9c32ef)",
+    "facebook": "A fit score is a starting point, not a verdict.\n\nWhen parents first see their son's numbers compared with typical recruiting ranges for D1, D2, D3, NAIA and JUCO, it's natural to read it as a prediction. Here's a better way to use it:\n\n✅ Read it as an estimate built from measurable things like exit velo, 60 time, velocity and grades.\n✅ Use it to build a smarter target list, so his emails go to programs where he's more likely to fit.\n❌ Don't treat it as an offer. Only a coach can evaluate and recruit him.\n❌ Don't skip coach feedback. What coaches say after camps and visits matters more than any score.\n\nHas a number ever changed how your family thought about which schools to target?\n\nSee his free best-fit preview:\nhttps://baseballfuture.com\n\n#BaseballRecruiting #CollegeBaseball"
+   },
+   "buffer": {
+    "instagram": "6af73d344d5a2b44be9c32ef",
+    "facebook": null
+   },
+   "scheduled_local": "2026-11-13T13:00:00-08:00"
+  }
+ }
+}
