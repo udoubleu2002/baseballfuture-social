@@ -1,0 +1,67 @@
+{
+ "date": "2026-11-14",
+ "theme": "Saturday: player development / shareable discussion (unpopular opinion)",
+ "include_url": true,
+ "photo": null,
+ "sources": [
+  "Arm-care habits kept general (rest, gradual build-up, qualified strength coach, report pain); no specific rest-period numbers cited. General guidance reference: https://www.mlb.com/pitch-smart . No NCAA rules or benchmarks cited. 84 mph labeled SAMPLE READING; fit card labeled sample player."
+ ],
+ "note": "Run started 8:20 AM PST (-08:00); both slots on time. Facebook BaseballFuture page still NOT connected in Buffer (channels: _baseballfuture X, _insidethepark X, baseball.future IG), so Facebook not scheduled; FB captions drafted below. X not used. Hosted images verified by blob SHA match on main (779ff43) via GitHub API and Buffer resolving each at 1080x1080 PNG; direct raw fetch blocked by sandbox proxy. Every caption includes https://baseballfuture.com.",
+ "posts": {
+  "09:00": {
+   "headline": "Coaches scout the dugout too",
+   "topic": "Unpopular opinion: coaches evaluate body language, effort and how a player treats teammates, not just numbers",
+   "graphic_file": "graphics/2026-11-14-0900.png",
+   "graphic": {
+    "kicker": "Unpopular opinion",
+    "headline": "Coaches scout *the dugout too*",
+    "sub": "How he reacts to a strikeout, an error or a teammate's big hit tells a coach a lot. Numbers get him noticed. Character keeps him on the list.",
+    "style": "statement",
+    "ask": "Agree? *Tell us why.*",
+    "visual": "fitcard",
+    "hashtag": "#BaseballParents"
+   },
+   "captions": {
+    "instagram": "(as scheduled in Buffer 6af88a99e86a5789a6ba0e72)",
+    "facebook": "Unpopular opinion: college coaches are watching the dugout, not just the batter's box.\n\nHow does he handle a strikeout? What does he do after an error? Is he the first one to the rail when a teammate comes through?\n\nNumbers like exit velo and 60 time help get a player noticed. But many parents tell us the conversations with coaches turn to effort, attitude and how a player treats teammates. Those things show up every inning, whether he's 4-for-4 or 0-for-4.\n\nDo you agree, or do the numbers matter more than people admit? Tell us why in the comments.\n\nSee what the numbers say about his best college fit:\nhttps://baseballfuture.com\n\n#BaseballRecruiting #BaseballParents"
+   },
+   "buffer": {
+    "instagram": "6af88a99e86a5789a6ba0e72",
+    "facebook": null
+   },
+   "scheduled_local": "2026-11-14T09:00:00-08:00"
+  },
+  "13:00": {
+   "headline": "Winter arm care: 4 habits",
+   "topic": "Player development: offseason arm-care habits for pitchers (rest, build back, strength, report pain)",
+   "graphic_file": "graphics/2026-11-14-1300.png",
+   "graphic": {
+    "kicker": "Player development",
+    "headline": "Winter arm care: *4 habits*",
+    "style": "list",
+    "items": [
+     "Take a real break from throwing",
+     "Build back with a throwing plan",
+     "Train strength with a qualified coach",
+     "Speak up about pain or soreness"
+    ],
+    "visual": "radar",
+    "stat": {
+     "label": "Pitching velo",
+     "value": "84",
+     "unit": "MPH"
+    },
+    "hashtag": "#Pitching"
+   },
+   "captions": {
+    "instagram": "(as scheduled in Buffer 6af88aa0e5a113497a943d9e)",
+    "facebook": "Winter is when a lot of pitchers build their spring, and when a healthy arm gets protected.\n\nFour arm-care habits worth talking about at home this offseason:\n\n1. Take a real break from throwing after the season.\n2. Build back gradually with a structured throwing plan, not a few weekend bullpens.\n3. Train strength with a qualified coach or trainer.\n4. Speak up early about pain or soreness, and get it checked.\n\nA healthy arm in February is worth more than a rushed velo jump. USA Baseball and MLB's Pitch Smart guidelines are a good place to start the conversation with his coach.\n\nWhat does your player's offseason throwing plan look like?\n\nWhen spring numbers come in, see where they fit by level:\nhttps://baseballfuture.com\n\n#Pitching #PlayerDevelopment"
+   },
+   "buffer": {
+    "instagram": "6af88aa0e5a113497a943d9e",
+    "facebook": null
+   },
+   "scheduled_local": "2026-11-14T13:00:00-08:00"
+  }
+ }
+}
