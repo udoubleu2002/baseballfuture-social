@@ -1,0 +1,75 @@
+{
+ "date": "2026-11-15",
+ "theme": "Sunday: parent engagement / audience research poll",
+ "include_url": true,
+ "photo": null,
+ "sources": [
+  "No NCAA rules, deadlines or benchmarks cited. Roster-reading advice is general guidance. 7.05 sec 60-yard dash labeled SAMPLE READING; report mockup is the sample player."
+ ],
+ "note": "Run started 8:21 AM PST (-08:00); both slots on time. Facebook BaseballFuture page still NOT connected in Buffer (channels: _baseballfuture X, _insidethepark X, baseball.future IG), so Facebook not scheduled; FB captions drafted below. X not used. Hosted images verified by blob SHA match on main (7993b60) via GitHub API and Buffer resolving each at 1080x1080 PNG; direct raw fetch blocked by sandbox proxy. Every caption includes https://baseballfuture.com.",
+ "posts": {
+  "09:00": {
+   "headline": "Your #1 recruiting question?",
+   "topic": "Sunday audience-research poll: level fit, coach contact timing, which events are worth it, paying for college; feeds future Recruiting Reality Check topics",
+   "graphic_file": "graphics/2026-11-15-0900.png",
+   "image_url": "https://raw.githubusercontent.com/udoubleu2002/baseballfuture-social/main/graphics/2026-11-15-0900.png",
+   "graphic": {
+    "kicker": "For baseball parents",
+    "headline": "Your *#1 recruiting* question?",
+    "style": "poll",
+    "items": [
+     "Which level fits him",
+     "When to email coaches",
+     "Which events are worth it",
+     "How to pay for college"
+    ],
+    "ask": "Pick one. *Tell us why.*",
+    "visual": "stopwatch",
+    "stat": {
+     "label": "60-yard dash",
+     "value": "7.05",
+     "unit": "SEC"
+    },
+    "hashtag": "#BaseballParents"
+   },
+   "captions": {
+    "instagram": "(as scheduled in Buffer 6af9dc67c5b364e062693b6d)",
+    "facebook": "Sunday question for baseball parents: if you could get one recruiting question answered this week, which would it be?\n\nA. Which college level really fits him\nB. When he should start emailing coaches\nC. Which camps and showcases are worth the money\nD. How to pay for college\n\nTell us your letter in the comments, and if you have a minute, the story behind it. We read every answer, and the most common questions become future Recruiting Reality Check posts.\n\nSee what the numbers say about his best college fit:\nhttps://baseballfuture.com\n\n#BaseballParents #BaseballRecruiting"
+   },
+   "buffer": {
+    "instagram": "6af9dc67c5b364e062693b6d",
+    "facebook": null
+   },
+   "scheduled_local": "2026-11-15T09:00:00-08:00"
+  },
+  "13:00": {
+   "headline": "Read the roster first",
+   "topic": "Recruiting Reality Check: read a program's roster (position depth, graduating seniors, where players come from, JUCO/transfer adds) before emailing coaches",
+   "graphic_file": "graphics/2026-11-15-1300.png",
+   "image_url": "https://raw.githubusercontent.com/udoubleu2002/baseballfuture-social/main/graphics/2026-11-15-1300.png",
+   "graphic": {
+    "kicker": "Recruiting Reality Check",
+    "headline": "Read the roster *first*",
+    "sub": "Before he emails a coach, spend 10 minutes on that team's roster.",
+    "style": "list",
+    "items": [
+     "Players at his position",
+     "Seniors graduating soon",
+     "Where players come from",
+     "JUCO and transfer adds"
+    ],
+    "visual": "report",
+    "hashtag": "#BaseballRecruiting"
+   },
+   "captions": {
+    "instagram": "(as scheduled in Buffer 6af9dc68c5b364e062693b9a)",
+    "facebook": "Recruiting Reality Check: before your player emails a college coach, has anyone in your house looked at that team's roster?\n\nIt takes about 10 minutes and tells you more than most families expect:\n\n1. How many players are at his position, and what years they are.\n2. How many seniors are about to graduate. Open spots often follow.\n3. Where the roster comes from. Home states and high schools hint at where the staff recruits.\n4. How many JUCO and transfer players they add. Some programs lean on older players.\n\nRosters change and coaches' needs shift, so treat it as a clue, not a verdict. But it helps him write fewer, sharper emails to programs that may actually need him.\n\nWhat's one thing you learned from reading a college roster? And if you have a recruiting question, drop it below for a future Reality Check.\n\nSee where his numbers fit by level:\nhttps://baseballfuture.com\n\n#BaseballRecruiting #CollegeBaseball"
+   },
+   "buffer": {
+    "instagram": "6af9dc68c5b364e062693b9a",
+    "facebook": null
+   },
+   "scheduled_local": "2026-11-15T13:00:00-08:00"
+  }
+ }
+}
