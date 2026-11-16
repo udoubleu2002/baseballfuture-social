@@ -1,0 +1,78 @@
+{
+ "date": "2026-11-16",
+ "theme": "Monday: myth-buster / know your level",
+ "include_url": true,
+ "photo": null,
+ "sources": [
+  "NCAA Division III does not award athletics-based financial aid (long-standing NCAA D-III rule; general knowledge, no new benchmarks cited). Fit-card numbers and 88.4 mph exit velo are labeled SAMPLE."
+ ],
+ "note": "Run started 8:21 AM PST (-08:00); both slots on time. Facebook BaseballFuture page still NOT connected in Buffer (channels: _baseballfuture X, _insidethepark X, baseball.future IG), so Facebook not scheduled; FB captions drafted below. X not used. Hosted images verified by blob SHA match on main (45adc64) via GitHub API and Buffer resolving each at 1080x1080 PNG; direct raw fetch blocked by sandbox proxy. Every caption includes https://baseballfuture.com.",
+ "posts": {
+  "09:00": {
+   "headline": "Myth: D3 is a step down",
+   "topic": "Myth-buster: D3 has no athletic scholarships but is competitive baseball; academic/need aid; fit over label",
+   "graphic_file": "graphics/2026-11-16-0900.png",
+   "image_url": "https://raw.githubusercontent.com/udoubleu2002/baseballfuture-social/main/graphics/2026-11-16-0900.png",
+   "graphic": {
+    "kicker": "Myth vs. fact",
+    "headline": "Myth: *D3 is a step down*",
+    "sub": "Fact: D3 schools don't offer athletic scholarships, but the baseball is competitive and well coached. The right level is the one that fits him.",
+    "style": "statement",
+    "ask": "Would your family consider D3? *Tell us why.*",
+    "visual": "radar",
+    "stat": {
+     "label": "Exit velocity",
+     "value": "88.4",
+     "unit": "MPH"
+    },
+    "hashtag": "#CollegeBaseball"
+   },
+   "captions": {
+    "instagram": "(as scheduled in Buffer 6afb2dbf0c8c027c5736c986)",
+    "facebook": "Myth: D3 is a step down.\n\nWe hear this one from baseball parents all the time, so let's be clear about what's true.\n\nNCAA Division III schools don't award athletic scholarships. That part is real. But D3 is competitive, well-coached college baseball, and many families find that academic and need-based aid change the math more than they expected.\n\nFor a lot of players, the right D3 program means real innings, a coach who knows him well, and a degree that fits his goals.\n\nThe right level isn't the one with the biggest name. It's the one where his numbers, grades and goals line up.\n\nWould your family consider D3? We'd love to hear why, or why not.\n\nSee what the numbers say about his best fit:\nhttps://baseballfuture.com\n\n#CollegeBaseball #BaseballParents"
+   },
+   "buffer": {
+    "instagram": "6afb2dbf0c8c027c5736c986",
+    "facebook": null
+   },
+   "scheduled_local": "2026-11-16T09:00:00-08:00"
+  },
+  "13:00": {
+   "headline": "Find his level in 4 steps",
+   "topic": "Know your level: verified measurables, compare by level, grades and cost, 3-tier target list",
+   "graphic_file": "graphics/2026-11-16-1300.png",
+   "image_url": "https://raw.githubusercontent.com/udoubleu2002/baseballfuture-social/main/graphics/2026-11-16-1300.png",
+   "graphic": {
+    "kicker": "Know your level",
+    "headline": "Find his level *in 4 steps*",
+    "sub": "Best fit beats biggest name.",
+    "style": "list",
+    "items": [
+     "Get verified measurables",
+     "Compare them by level",
+     "Weigh grades and cost",
+     "Build a 3-tier target list"
+    ],
+    "visual": "fitcard",
+    "fit": [
+     "D1|61",
+     "D2|79",
+     "D3|86",
+     "NAIA|83",
+     "JUCO|80"
+    ],
+    "best": "D3",
+    "hashtag": "#BaseballRecruiting"
+   },
+   "captions": {
+    "instagram": "(as scheduled in Buffer 6afb2dc0e944468195973cd2)",
+    "facebook": "If you're not sure what college level fits your player, you're in good company. Here's a simple way to start:\n\n1. Get verified measurables. Exit velo, 60 time, velo, pop time, from a reliable event or trainer.\n2. Compare them by level. See how they line up with typical ranges for D1, D2, D3, NAIA and JUCO.\n3. Weigh grades and cost. Academic fit and what your family can afford matter as much as the baseball.\n4. Build a 3-tier target list: a few reaches, a solid core of good fits, and a few likely options.\n\nBest fit beats biggest name.\n\nWhich step is your family on right now? And what's been the hardest part?\n\nSee what the numbers say about his best fit:\nhttps://baseballfuture.com\n\n#BaseballRecruiting #BaseballParents"
+   },
+   "buffer": {
+    "instagram": "6afb2dc0e944468195973cd2",
+    "facebook": null
+   },
+   "scheduled_local": "2026-11-16T13:00:00-08:00"
+  }
+ }
+}
