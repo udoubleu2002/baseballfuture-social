@@ -1,0 +1,69 @@
+{
+ "date": "2026-11-17",
+ "theme": "Tuesday: recruiting education (Recruiting Reality Check + position evaluation)",
+ "include_url": true,
+ "photo": null,
+ "sources": [
+  "General recruiting guidance only; no NCAA rules, dates or benchmarks cited. Claim that many D2/D3/NAIA/JUCO programs recruit into senior year is stated as general guidance ('many', not all). 7.05 sec 60 time labeled SAMPLE READING."
+ ],
+ "note": "Run started 8:20 AM PST (-08:00); both slots on time. Facebook page still NOT connected in Buffer (channels: baseball.future IG, _insidethepark X, CedarScoutSaunas Pinterest), so Facebook not scheduled; FB captions drafted below. X not used. Hosted images verified by blob SHA match on main (f6d78dd) via GitHub API and Buffer resolving each at 1080x1080 PNG; direct raw fetch blocked by sandbox proxy. Every caption includes https://baseballfuture.com.",
+ "posts": {
+  "09:00": {
+   "headline": "Junior, no interest yet? It's not too late",
+   "topic": "Recruiting Reality Check: junior with limited interest, what to do this winter",
+   "graphic_file": "graphics/2026-11-17-0900.png",
+   "image_url": "https://raw.githubusercontent.com/udoubleu2002/baseballfuture-social/main/graphics/2026-11-17-0900.png",
+   "graphic": {
+    "kicker": "Recruiting Reality Check",
+    "headline": "Junior, no interest yet? *It's not too late*",
+    "sub": "Many D2, D3, NAIA and JUCO programs are still building classes through senior year. Widen the list and keep reaching out.",
+    "style": "statement",
+    "ask": "Got a recruiting question? *Send it to us.*",
+    "visual": "stopwatch",
+    "stat": {
+     "label": "60-yard dash",
+     "value": "7.05",
+     "unit": "SEC"
+    },
+    "hashtag": "#BaseballRecruiting"
+   },
+   "captions": {
+    "instagram": "(as scheduled in Buffer 6afc7f287a7b613f168dab15)",
+    "facebook": "Recruiting Reality Check: your son is a junior and no college coach has reached out yet. Is it too late?\n\nNo, and you're not alone in asking.\n\nSome D1 programs do commit players early. But many D2, D3, NAIA and JUCO programs are still building their classes well into senior year. Quiet so far usually means the right coaches haven't seen him yet.\n\nA simple winter plan:\n1. Get his numbers verified at a reliable event or with a trainer.\n2. Widen the target list across more than one level.\n3. Update his skills video and his spring schedule.\n4. Email coaches directly, and follow up politely.\n\nHas your family been through a late recruiting process? What helped most? And if you have a recruiting question, leave it below for a future Reality Check.\n\nSee what the numbers say about his best fit:\nhttps://baseballfuture.com\n\n#BaseballRecruiting #BaseballParents"
+   },
+   "buffer": {
+    "instagram": "6afc7f287a7b613f168dab15",
+    "facebook": null
+   },
+   "scheduled_local": "2026-11-17T09:00:00-08:00"
+  },
+  "13:00": {
+   "headline": "Middle infielders: what coaches see",
+   "topic": "Position evaluation: middle infielders (hands, range, arm from the hole, footwork at the bag)",
+   "graphic_file": "graphics/2026-11-17-1300.png",
+   "image_url": "https://raw.githubusercontent.com/udoubleu2002/baseballfuture-social/main/graphics/2026-11-17-1300.png",
+   "graphic": {
+    "kicker": "What coaches evaluate",
+    "headline": "Middle infielders: *what coaches see*",
+    "style": "list",
+    "items": [
+     "Soft, quick hands",
+     "Range to both sides",
+     "Arm from the hole",
+     "Footwork around the bag"
+    ],
+    "visual": "report",
+    "hashtag": "#CollegeBaseball"
+   },
+   "captions": {
+    "instagram": "(as scheduled in Buffer 6afc7f290ec7d2b0822f138b)",
+    "facebook": "If your player is a shortstop or second baseman, here's what college coaches tend to watch for on defense:\n\n1. Soft, quick hands. Clean exchanges, especially on balls hit right at him.\n2. Range to both sides. A quick first step and good angles.\n3. Arm from the hole. The long throw with carry and accuracy.\n4. Footwork around the bag. Smooth, safe double-play turns.\n\nHis bat, speed and grades count too, but these four show up quickly on video and at events, so make sure his skills video shows each one clearly.\n\nInfield parents: what's the best drill or advice that helped your son's footwork?\n\nSee how his numbers compare by level:\nhttps://baseballfuture.com\n\n#CollegeBaseball #HighSchoolBaseball"
+   },
+   "buffer": {
+    "instagram": "6afc7f290ec7d2b0822f138b",
+    "facebook": null
+   },
+   "scheduled_local": "2026-11-17T13:00:00-08:00"
+  }
+ }
+}
