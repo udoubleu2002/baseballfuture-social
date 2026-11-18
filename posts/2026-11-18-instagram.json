@@ -26,5 +26,40 @@
    "website": "https://baseballfuture.com",
    "caption": "Pop time gets the headlines. Coaches watch everything that happens before and after the throw.\n\nIf your son catches, here's what college staffs tend to evaluate:\n\n⚾ Receiving. Does he catch the low strike quietly and give the umpire a clean look?\n⚾ Blocking. Can he keep balls in the dirt in front of him with runners on?\n⚾ Throwing. Pop time is the glove-to-glove time on a throw to second. Accuracy counts as much as speed.\n⚾ Running the game. How he works with pitchers, sets up hitters and talks to the infield.\n⚾ The bat. A catcher who can hit adds a lot of value to a lineup.\n\nCoaches often trust a catcher who receives and blocks well over one with a big arm and stiff hands.\n\nCatcher parents: which of these is your son working on this winter? 👇 Save this for his next skills video.\n\nSee where his numbers fit by level: tap the link in our bio.\n\n#CollegeBaseball #BaseballParents #HighSchoolBaseball"
   }
+ },
+ "afternoon_batch": {
+  "run_time_local": "2026-11-18T13:15:18-08:00",
+  "result": "0 scheduled",
+  "notes": [
+   "Shared Buffer capacity rule: 16 posts already scheduled across channels (9 _insidethepark X, 7 CedarScoutSaunas Pinterest) vs the 10-post shared limit in the master prompt, so available capacity = 0. Both posts are copy-ready below.",
+   "Instagram has had nothing scheduled or published since 2026-11-17 13:00 PT because of this rule (3 slots today lost so far). Buffer's own org limit reads 10 but it accepts 16, so it appears to be enforced per channel. Owner should confirm and adjust the prompt.",
+   "No BaseballFuture X channel connected in Buffer.",
+   "Pexels image not downloaded (sandbox proxy blocks images.pexels.com); chosen from the photo page (free license, no logos noted)."
+  ],
+  "posts": {
+   "15:30": {
+    "status": "unscheduled (capacity)",
+    "topic": "What a pitcher should track beyond velocity",
+    "category": "education",
+    "visual_type": "graphic (4-slide carousel)",
+    "concept": "Clean 'pitching log' notebook layout, cream paper texture on navy, green handwritten-style checkmarks; one metric per slide. Slide 1 hook: 'Velo gets the attention. These get him innings.' Slides 2-4: Strikes / Second pitch / Holding stuff late. Slide 5 takeaway: 'Track it all spring. Save this.'",
+    "headline": "Velo gets the attention. These get him innings.",
+    "website": "https://baseballfuture.com",
+    "caption": "Velocity gets the attention. Strikes get him innings.\n\nIf your son pitches, radar readings are only part of what college coaches look at. A few things worth tracking all spring:\n\n⚾ Strike rate. How often is he in the zone, especially on the first pitch?\n⚾ A second pitch he trusts. Can he throw it for a strike when he's behind in the count?\n⚾ Holding his stuff. Does his command stay sharp in the fourth and fifth innings?\n⚾ Walks. Free passes add up fast, and coaches notice.\n\nA simple notebook after every outing tells a clearer story than one radar reading at a showcase.\n\nPitching parents: does your son track anything besides velo? 👇 Save this for spring.\n\nSee where his numbers may fit by level: tap the link in our bio.\n\n#Pitching #CollegeBaseball #BaseballParents"
+   },
+   "19:30": {
+    "status": "unscheduled (capacity)",
+    "topic": "Playing time vs a bigger-name program",
+    "category": "conversation",
+    "visual_type": "photo",
+    "pexels_page": "https://www.pexels.com/photo/baseball-players-walking-onto-the-field-7260166/",
+    "photographer": "Miguel Marimon",
+    "overlay": "Small text overlay top-left: 'Would you rather...' with two lines 'A: Play as a freshman' / 'B: Bigger-name program'",
+    "alt_text": "Two baseball players in uniform walk onto the field together before a game.",
+    "headline": "Play now or bigger name?",
+    "website": "https://baseballfuture.com",
+    "caption": "Two offers on the table. Which way would your family lean?\n\nA. A smaller program where he's likely to compete for innings or at-bats as a freshman.\nB. A bigger-name program where he may wait a year or two to see the field.\n\nThere's no wrong answer. Some players grow by competing every day against older teammates. Others need game reps to keep developing. Academics, cost, coaching staff and how he handles a backup role all belong in the conversation.\n\nBest fit beats biggest name, but fit means something different for every player.\n\nReply A or B and tell us why. 👇 Send this to a baseball parent who's been there.\n\n#BaseballRecruiting #BaseballParents #CollegeBaseball"
+   }
+  }
  }
 }
