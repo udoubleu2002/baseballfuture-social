@@ -1,0 +1,31 @@
+{
+ "date": "2026-11-19",
+ "routine": "Instagram Growth Engine (master prompt v2: 4 posts/day, 6:45 / 11:15 / 3:30 / 7:30 PT)",
+ "batch": "morning",
+ "run_time_local": "2026-11-19T08:20:50-08:00",
+ "result": "1 scheduled",
+ "notes": [
+  "Slot 1 (6:45 AM) had already passed when the run started at 8:20 AM PT; skipped per rules.",
+  "Shared Buffer capacity: 0 posts scheduled across all channels at run start, so capacity was 10; after this run 9 remain.",
+  "Slot 2 uses the catcher post drafted 2026-11-18 that was never scheduled (capacity), so it has not appeared on Instagram.",
+  "Pexels image not viewable from the sandbox (proxy blocks images.pexels.com and baseballfuture.com); photo chosen from the Pexels search listing (alt text: young catcher in full gear crouching on a sunny field). Buffer fetched it at 1080x1350 JPEG.",
+  "Pexels license: free to use; no logos mentioned in the listing description."
+ ],
+ "posts": {
+  "11:15": {
+   "status": "scheduled",
+   "buffer_id": "6aff233d1d0dae1133a4bafe",
+   "due_at": "2026-11-19T11:15:00-08:00",
+   "topic": "What college coaches evaluate in a catcher",
+   "category": "education",
+   "visual_type": "photo",
+   "pexels_page": "https://www.pexels.com/photo/back-view-of-baseball-player-7924656/",
+   "pexels_image": "https://images.pexels.com/photos/7924656/pexels-photo-7924656.jpeg?auto=compress&cs=tinysrgb&w=1080&h=1350&fit=crop",
+   "photographer": "Bryce Carithers",
+   "headline": "Catchers: more than a pop time",
+   "website": "https://baseballfuture.com (bio link)",
+   "alt_text": "A young baseball catcher in full gear crouches behind the plate on a sunny field, ready for the pitch.",
+   "caption": "Pop time gets the headlines. Coaches watch everything that happens before and after the throw.\n\nIf your son catches, here's what college staffs tend to evaluate:\n\n⚾ Receiving. Does he catch the low strike quietly and give the umpire a clean look?\n⚾ Blocking. Can he keep balls in the dirt in front of him with runners on?\n⚾ Throwing. Pop time is the glove-to-glove time on a throw to second. Accuracy counts as much as speed.\n⚾ Running the game. How he works with pitchers, sets up hitters and talks to the infield.\n⚾ The bat. A catcher who can hit adds a lot of value to a lineup.\n\nCoaches often trust a catcher who receives and blocks well over one with a big arm and stiff hands.\n\nCatcher parents: which of these is your son working on this winter? 👇 Save this for his next skills video.\n\nSee where his numbers fit by level: tap the link in our bio.\n\n#CollegeBaseball #BaseballParents #HighSchoolBaseball"
+  }
+ }
+}
